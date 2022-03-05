@@ -9,6 +9,10 @@ import sys
 args = sys.argv
 init(args)
 
+#####TEST
+print(CURRENT_DOMAIN_ID)
+exit(1)
+
 # retrieve list of domains
 domains = readURLS()
 
