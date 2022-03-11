@@ -1,10 +1,25 @@
 from parsedomains import *
 import sys 
 
+# DONE LAST TIME: writing finished.
+# NEXT TIME: read and manipulate as test. 
+# TODO: get phishtank api key
+# TODO: automatically detect if domain is availabe via screenshot or html (screenshot preferred)
+
+# TODO: set up firebase
+# TODO: integrate screenshots into firebase
+# TODO: save all metadata to files to be used for later. save and retrieve in json format
+# TODO: deal with odd domains. may need other whois sources 
+    # (virustotal may be good with weird domains if it has scanned them before)
+# TODO: deal with exceptions when certains types of data are not available
+# TODO: take into account if the csv file is empty
+# TODO: check if columns titles of write data and csv file match
+# TODO: determine if keypoint feature analysis would be a possibility 
+
+
 #################
 # PROGRAM LOGIC #
 #################
-
 
 # initialize and validate program state
 args = sys.argv
@@ -36,10 +51,3 @@ writeCsv(data, whois_data, virus_data, ip_data, domains)
 """
 Get domain data and save as row in csv
 """
-# DONE LAST TIME: removed duplicate urls, got domain id even if csv does not exist/empty
-# NEXT TIME: write new domain data to csv file, integrate virustotal api
-# TODO: deal with odd domains. may need other whois sources 
-# 	(virustotal may be good with weird domains if it has scanned them before)
-# TODO: take into account if the csv file is empty
-
-        # TODO: check if columns titles of write data and csv file match

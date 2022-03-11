@@ -12,26 +12,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from PIL import Image
 
-# TODO: test system after adjusting all paths
-    # path to urls
-        # only reading
-    # path to screenshots
-        # only writing right now, but may want to add reading to avoid overwrite
-    # path to csv
-        # reading and writing
-    # path to metadata
-# TODO: deal with exceptions when certains types of data are not available
-# TODO: get all data inputting to csv correctly. Should just have to change a few lines to add more data
-            # TODO: CHANGE this to be more modular. increasing dimensionality of data should add col automatically
-            # pandas may be good for this
-# TODO: save all metadata to files to be used for later. save and retrieve in json format
-        # write to META dir
-# TODO: get phishtank api key
-# TODO: automatically detect if a domain is availabe via screenshot or html (screenshot preferred)
-# TODO: set up firebase
-# TODO: determine if keypoint feature analysis would be a possibility 
-
-
 ####################
 # HELPER FUNCTIONS #
 ####################
