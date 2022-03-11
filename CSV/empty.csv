@@ -1,1 +1,10 @@
-
+domain_id,phish_id,domain_name,open_code,virus_total_score,virus_total_engines,ip_address,ip_country,registrant_country,registrar
+1,,http://zhonghangjx.top/o.php,,17,"['AlienVault', 'Sophos', 'Fortinet', 'alphaMountain.ai', 'Lionic', 'Google Safebrowsing', 'CyRadar', 'Emsisoft', 'Webroot', 'Avira', 'Kaspersky', 'Netcraft', 'Phishing Database', 'BitDefender', 'G-Data', 'Forcepoint ThreatSeeker', 'ESET']",-,-,US,"NameSilo,LLC"
+2,,www.apnews.com,,1,['Quttera'],34.96.72.156,US,US,"Network Solutions, LLC"
+3,,www.hellow.com,,0,[],50.87.253.110,US,US,"GoDaddy.com, LLC"
+4,,www.ign.com,,0,[],151.101.193.135,US,US,"CSC CORPORATE DOMAINS, INC."
+5,,www.reddit.com,,0,[],151.101.193.140,US,US,"MarkMonitor, Inc."
+6,,www.unsplashed.com,,0,[],209.126.123.12,US,CZ,GRANSY S.R.O D/B/A SUBREG.CZ
+7,,www.google.com,,0,[],142.251.45.36,US,US,"MarkMonitor, Inc."
+8,,www.thenehemiahcompany.com,,0,[],67.222.128.162,US,US,"GoDaddy.com, LLC"
+9,,www.uta.edu,,0,[],13.226.200.59,US,,

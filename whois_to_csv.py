@@ -5,16 +5,14 @@ import sys
 # PROGRAM LOGIC #
 #################
 
+
 # initialize and validate program state
 args = sys.argv
-init(args)
-
-#####TEST
-print(CURRENT_DOMAIN_ID)
-exit(1)
+data = metadata()
+data.validate(args)
 
 # retrieve list of domains
-domains = readURLS()
+domains = readURLS(data)
 
 # take screenshots of each domain
 #	store in dir at PIC_PATH
@@ -22,8 +20,9 @@ domains = readURLS()
 
 # retrieve relevant data for each domain
 whois_data = getWhoIs(domains)
-virus_data = getVirusTotal(domains)
-ip_data = getIpInfo(domains)
+virus_data = getVirusTotal(data.VIRUS_TOTAL_ACCESS_TOKEN, domains)
+ip_data = getIpInfo(data.HANDLER, domains)
+
 """
 Example how to access
 print(virus_data[domains[0]]['data']['attributes']['last_final_url']) 
@@ -32,8 +31,7 @@ print(ip_data['www.reddit.com'].country)
 """
 
 # write data to csv file 
-writeCsv(whois_data, virus_data, ip_data, domains)
-
+writeCsv(data, whois_data, virus_data, ip_data, domains)
 
 """
 Get domain data and save as row in csv
@@ -44,3 +42,4 @@ Get domain data and save as row in csv
 # 	(virustotal may be good with weird domains if it has scanned them before)
 # TODO: take into account if the csv file is empty
 
+        # TODO: check if columns titles of write data and csv file match
