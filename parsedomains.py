@@ -1,4 +1,5 @@
 import os
+import copy
 import base64
 import socket
 import whois
@@ -6,7 +7,7 @@ import csv
 import ipinfo
 import requests
 import pandas as pd
-# from pandas.errors import EmptyDataError
+from pandas.errors import EmptyDataError
 import numpy as np
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -99,56 +100,152 @@ def readURLS(data):
             for i, url in enumerate(urls):
                 if url in url_rec:
                     urls.remove(urls[i])
-            
+
     return urls
 
 
 
-def takeScreenShots(urls):
-	"""TAKE SCREENSHOTS
+def screenshot(current_id, shot_path, urls):
+    """SCREENSHOT ANALYSIS
 
-	uses selenium to visit and screenshot urls in input list
-	screenshots are saved at dir_path and are named by their domain id
+    uses selenium to visit and screenshot urls in input list
+    screenshots are saved at dir_path and are named by their domain id
 
-	Parameters
-	----------
-	urls: (list)
-		list of urls to visit
+    Parameters
+    ----------
+    current_id:
 
-	Returns
-	-------
-	( None )
-	"""
-	try:
-		# set up selenium web driver
-		ser = Service('/home/kaifeng/chromedriver')
-		op = webdriver.ChromeOptions()
-		op.add_argument('--start-maximized')
-		driver = webdriver.Chrome(service=ser, options=op)
+    shot_path:
 
-		# warn user of potential screenshot overwrite 
-		message = "Screenshots will write to dir based on next csv domain id. Continue? (y/n)"
-		consent = input(message) 
+    urls: (list)
+        list of urls to visit
 
-		# take screenshots and save to SHOT_PATH
-		if consent == 'y':
-			domain_id = CURRENT_DOMAIN_ID + 1
-			for i, url in enumerate(urls):
-				# build path
-				pic = '{id}.png'.format(id = domain_id + i)
-				pic_path = SHOT_PATH + pic
+    Returns
+    -------
+    screenshot_paths: (dictionary)
+        full path to each screenshot, uses url as key
+    """
+    try:
+        # set up selenium web driver
+        ser = Service('/home/kaifeng/chromedriver')
+        op = webdriver.ChromeOptions()
+        op.add_argument('--start-maximized')
 
-				# screenshot
-				driver.get('https://' + url)
-				driver.save_screenshot(pic_path)
-		else:
-			print("Exiting...")
-			exit(1)
+        # warn user of potential screenshot overwrite 
+        message = "Screenshots will save to dir based on next domain id. Continue? (y/n)"
+        consent = input(message) 
 
-	except Exception as e:
-	 	print('Error. Screenshot failed')
-	 	exit(1)
+        # take screenshots and record activity of site
+        screenshot_paths = {}
+        if consent == 'y':
+            driver = webdriver.Chrome(service=ser, options=op)
+            domain_id = current_id + 1
+            for i, url in enumerate(urls):
+                # build path
+                url = url.replace('https://', '')
+                pic = '{id}.png'.format(id = domain_id + i)
+                pic_path = shot_path + pic
 
+                # screenshot
+                driver.get('https://' + url)
+                driver.save_screenshot(pic_path)
+
+                # save activity status
+                screenshot_paths[url] = pic_path
+        else:
+            print("Exiting...")
+            exit(1)
+
+    except Exception as e:
+        print('Error. screenshot analysis failed')
+        print(e)
+        exit(1)
+
+    return screenshot_paths
+
+
+def checkDomainActivity(domains, screenshot_paths):
+    """CHECK DOMAIN ACTIVITY
+
+    uses request module and CNN image classifier to determine
+    if a domain is currently active or inactive
+
+    Parameters
+    ----------
+    domains: (list)
+        urls to check 
+
+    screenshot_paths: (dictionary)
+        paths to screenshot of each url
+        url is the key to its own path
+
+    Returns
+    -------
+    activity_data: (dict)
+        activity data as classified by CNN model and python requests
+        module for each url
+
+        access data via:   activity_data[<url>]['req' or 'image']
+    """
+    x = 1
+
+def searchPhishTank(domains):
+    """SEARCH PHISH TANK
+
+    retrieve url, date added, phishtank id for each url using the phisherman scraper
+
+    Parameters:
+    -----------
+    domains: (list)
+        urls to lookup
+
+    Returns:
+    --------
+    phish_data: (dictionary)
+        phishtank data for url including data added to phishtank and phishtank id
+        data can be accessed via 'phish_data[<url>]['date' or 'phish_id']
+    """
+    # generate path to file
+    path_to_file = os.getcwd()
+    filename = 'log.csv'
+    full_path = path_to_file + '/PHISHERMAN/' + filename
+
+    # extract phishtank csv data
+    try:
+        df = pd.read_csv(full_path)
+    except EmptyDataError:
+        print("Search phishtank error. %s is empty." % (filename))
+        return None
+
+    # encapsulate url with its phishtank data
+    phish_data = {}
+    container = {}
+
+    for url in domains:
+        found = 0
+        # search each phishtank log record
+        for i in range(len(df)):
+            record = df.loc[i]
+
+            # phishtank data found
+            if record["url"] == url:
+                found = 1
+                container["phish_id"] = record["phish_id"]
+                container["date"] = record["date"]
+                phish_data[url] = copy.deepcopy(container)
+                break
+
+        # phishtank data not found
+        if found == 0:
+            print('t')
+            container["phish_id"] = '-'
+            container["date"] = '-'
+            phish_data[url] = copy.deepcopy(container)
+
+        # reset for nxt iteration
+        container.clear()
+    
+    return phish_data
 
 
 def getWhoIs(domains): 
@@ -387,26 +484,34 @@ def writeCsv(data, whois_data, virus_data, ip_data, domains):
 class metadata:
 
     def __init__(self):
+        # ACCESS TOKENS
         self.IPINFO_ACCESS_TOKEN = '2487a60e548477'                          
         self.VIRUS_TOTAL_ACCESS_TOKEN = 'd80137e9f5e82896483095b49a7f0e73b5fd0dbc7bd98f1d418ff3ae9c83951e'
-        self.CSV_FILE_CHOICE = 'empty.csv'               # csv file to write to (empty test file)
-        #self.CSV_FILE_CHOICE = 'Phishing.csv'               # csv file to write to (full record)
-        self.URL_FILE_CHOICE = 'urls.txt'                # url file to write to
+
+        # FILES PATHS
+        self.CSV_FILE_CHOICE = 'phish_log.csv'           # csv file to write to 
+        self.URL_FILE_CHOICE = 'phishtank_urls.txt'      # url file to read from
         self.CSV_RELATIVE_PATH = '/CSV'                  # relative path to csv folder 
         self.SHOT_RELATIVE_PATH = '/SCREENSHOTS'         # relative path to screenshot folder 
         self.URL_RELATIVE_PATH = '/URLFILES'             # relative path to url dir
-        self.META_RELATIVE_PATH = '/META'
-        self.CSV_FILE_PATH = ''	                         # absolute path to csv file, updated in init()
-        self.SHOT_PATH = ''                              # absolute path to screenshot dir, updated in init()
-        self.META_PATH = ''                              # absolute path to metadata dir, updated in init()
+        self.META_RELATIVE_PATH = '/META'                # relative path to metadata dir
+
+                                                         # PATHS BELOW ARE UPDATED IN init()
+        self.CSV_FILE_PATH = ''	                         # absolute path to csv file
+        self.SHOT_PATH = ''                              # absolute path to screenshot dir
+        self.META_PATH = ''                              # absolute path to metadata dir
         self.URL_FILE_PATH = ''                          # absolute path to urlfile 
-        self.NUM_OF_ARGS = 1                             # num of command line arguments
-        self.HANDLER = 0                                 # ipinfo handler to get ip data, updated in init()
-        #self.URLFILE = 1                                # arg position for name of url file
-        self.CURRENT_DOMAIN_ID = -1                      # last domain id used in csv file, update in init()
+
+        # VALUES UPDATED IN init()
+        self.HANDLER = 0                                 # ipinfo handler to get ip data
         self.CSV_FILE_EXISTS = True                      # determines if the data is written to old file or new
-        self.FIELD_TITLES = []                           # titles of columns in csv file, updated in init()
+        self.FIELD_TITLES = []                           # titles of columns in csv file
+        self.CURRENT_DOMAIN_ID = -1                      # last domain id used in csv file
         self.EMPTY = 0                                   # used to determine if csv file is empty
+
+        # CONSTS
+        self.NUM_OF_ARGS = 1                             # num of command line arguments
+        #self.URLFILE = 1                                # arg position for name of url file
         self.write_mode = 'w'                            # csv file write mode upon opening
         self.read_mode = 'r'                             # csv file read mode upon opening
         self.append_mode = 'a'                           # csv file append mode upon opening
@@ -425,8 +530,21 @@ class metadata:
         self.REGCOUNTRY = 8
         self.REGISTRAR = 9
 
+    def print_state(self):
+        # File paths
+        print("CSV file path:")
+        print(self.CSV_FILE_PATH)
+        print("\nURL file path:")
+        print(self.URL_FILE_PATH)
+        print("\nMETADATA file path:")
+        print(self.META_PATH)
+        print("\nSCREENSHOT file path:")
+        print(self.SHOT_PATH)
 
-    def validate(self, args): 
+        # Domain id
+        print("\nCurrent domain id: %d" % (self.CURRENT_DOMAIN_ID))
+
+    def init(self, args): 
         """ INIT
 
         performs validation on CL input and initializes 
