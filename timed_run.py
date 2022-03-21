@@ -13,6 +13,9 @@ domains = readURLS(data, remove_csv_duplicates = False)
 # 4 hrs (14,400s) / 10 mins (600s)
 ROUND_LIMIT = 24
 for i in range(ROUND_LIMIT):
+    # reset
+    print("\n____RUN %d____" % (i))
+    data.now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
     data.print_state()
 
     # take screenshots of each domain
@@ -46,4 +49,5 @@ for i in range(ROUND_LIMIT):
             domains)
 
     # wait 10 minutes before next run
+    print("__Done__")
     time.sleep(600)

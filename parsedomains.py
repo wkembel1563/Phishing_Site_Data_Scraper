@@ -100,7 +100,7 @@ def readURLS(data, remove_csv_duplicates = True):
 
         # retrieve urls currently in csv record
         # filter out duplicates from list
-        if remove_duplicates: 
+        if remove_csv_duplicates: 
             if data.CSV_FILE_EXISTS and data.CURRENT_DOMAIN_ID > 0:
 
                 # retrieve current record of urls from csv file
@@ -146,8 +146,9 @@ def screenshot(current_id, shot_path, urls):
         op.add_argument('--ignore-certificate-errors')
 
         # warn user of potential screenshot overwrite 
-        message = "Begin screenshots? (y/n): "
-        consent = input(message) 
+        #message = "Begin screenshots? (y/n): "
+        #consent = input(message) 
+        consent = 'y'
 
         # take screenshots and record activity of site
         screenshot_paths = {}
@@ -158,6 +159,7 @@ def screenshot(current_id, shot_path, urls):
             for i, url in enumerate(urls):
                 # clean domain name
                 clean_url = url.replace('https://', '')
+                clean_url = clean_url.replace('http://', '')
                 clean_url = clean_url.replace('www.', '')
                 url_size = len(clean_url)
 
@@ -549,14 +551,26 @@ def logMeta(data,
     ( None )
     """
     log = {}
-    now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
-    with open(data.META_PATH, data.append_mode) as logfile:
-        logfile.write("DATE\n")
-        logfile.write(now)
-        logfile.write('\n')
-        logfile.write("DATA\n")
-        for url in domains:
-            logfile.write(url)
+    domain_id = data.CURRENT_DOMAIN_ID + 1
+
+    for i, url in enumerate(domains):
+        # clean domain name
+        clean_url = url.replace('https://', '')
+        clean_url = clean_url.replace('http://', '')
+        clean_url = clean_url.replace('www.', '')
+        url_size = len(clean_url)
+
+        # pic name starts with id of domain in csv file
+        file_name = '{id}'.format(id = domain_id + i)
+        if url_size >= 4:
+            # name ends with first 4 chars of the url
+            file_name += '_' + clean_url[0:4]
+        else:
+            file_name += clean_url
+        file_name += '.json'
+        file_path = data.META_PATH + '/' + file_name
+
+        with open(file_path, 'w') as logfile:
             log["url"] = url
             log["phishtank_data"] = phishtank_data[url]
             log["activity_data"] = activity_data[url]
@@ -570,11 +584,9 @@ def logMeta(data,
 
             log_js = json.dumps(log, indent=1, sort_keys=True)
             logfile.write(log_js)
-            logfile.write('\n')
 
             # reset
             log.clear()
-        logfile.write("END\n")
 
 
 def writeCsv(data, 
@@ -780,7 +792,8 @@ class metadata:
         self.URL_FILE_PATH = base_path + self.URL_RELATIVE_PATH + '/' + self.URL_FILE_CHOICE
         self.CSV_FILE_PATH = base_path + self.CSV_RELATIVE_PATH + '/' + self.CSV_FILE_CHOICE
         self.SHOT_PATH = base_path + self.SHOT_RELATIVE_PATH
-        self.META_PATH = base_path + self.META_RELATIVE_PATH + '/' + self.META_FILE_CHOICE
+        #self.META_PATH = base_path + self.META_RELATIVE_PATH + '/' + self.META_FILE_CHOICE
+        self.META_PATH = base_path + self.META_RELATIVE_PATH
 
         # validate CL input length
         arg_len = len(args)
