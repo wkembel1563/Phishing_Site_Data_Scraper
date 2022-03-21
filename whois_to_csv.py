@@ -7,6 +7,7 @@ import sys
     # TODO: set up firebase
     # TODO: integrate screenshots into firebase
 # LOGGING
+    # create backup file each time the logs are changed
     # TODO: save all metadata to files to be used for later. save and retrieve in json format
     # TODO: deal with odd domains. may need other whois sources 
         # (virustotal may be good with weird domains if it has scanned them before)
@@ -32,27 +33,32 @@ data.print_state()
 domains = readURLS(data)
 
 # take screenshots of each domain
-#	store in dir at PIC_PATH
 screenshot_paths = screenshot(data.CURRENT_DOMAIN_ID, data.SHOT_PATH, domains)
-print(screenshot_paths)
-exit(1)
+
+# determine if the domains are active
 activity_data = checkDomainActivity(domains, screenshot_paths)
 
 # retrieve relevant data for each domain
-phishtank_data = searchPhishTank(domains)
 whois_data = getWhoIs(domains)
+phishtank_data = searchPhishTank(domains)
 virus_data = getVirusTotal(data.VIRUS_TOTAL_ACCESS_TOKEN, domains)
 ip_data = getIpInfo(data.HANDLER, domains)
 
-"""
-Example how to access
-print(virus_data[domains[0]]['data']['attributes']['last_final_url']) 
-print(virus_data[domains[1]]['data']['attributes']['last_final_url']) 
-print(ip_data['www.reddit.com'].country)
-"""
+# store metadata
+logMeta(data, 
+        phishtank_data,
+        activity_data,
+        whois_data,
+        virus_data,
+        ip_data, 
+        domains)
 
 # write data to csv file 
-writeCsv(data, phishtank_data, activity_data, whois_data, virus_data, ip_data, domains)
+writeCsv(data, 
+        phishtank_data,
+        activity_data,
+        whois_data,
+        virus_data,
+        ip_data, 
+        domains)
 
-# store metadata
-# TODO: logMeta(data)

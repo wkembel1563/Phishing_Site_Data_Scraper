@@ -1,5 +1,3 @@
-
-
 from pkgs.phisherman import Phisherman
 from pkgs.util import process_args, save_csv, remove_duplicate_urls
 

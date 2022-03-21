@@ -1,17 +1,26 @@
 import os
+import csv
+import json
 import copy
 import base64
 import socket
 import whois
-import csv
+import whois.parser
 import ipinfo
 import requests
+import urllib.parse as up
 import pandas as pd
-from pandas.errors import EmptyDataError
+import tensorflow as tf
 import numpy as np
+from ipinfo.handler_utils import cache_key
+from ipwhois import IPWhois
+from datetime import datetime
+from pandas.errors import EmptyDataError
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from PIL import Image
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.models import load_model
+from tensorflow.keras.applications.mobilenet import preprocess_input
 
 ####################
 # HELPER FUNCTIONS #
@@ -23,35 +32,37 @@ class failedFetch:
 
 
 def getFieldNames():
-	"""GET FIELD NAMES
+    """GET FIELD NAMES
 
 
-	defines column titles of csv file
-
-	
-	Parameters
-	----------
-	( None )
+    defines column titles of csv file
 
 
-	Returns  
-	-------
-	names : (list)
-		titles of the columns in the csv file
+    Parameters
+    ----------
+    ( None )
 
-	"""
-	names = ['domain_id']
-	names.append('phish_id')
-	names.append('domain_name')
-	names.append('open_code')
-	names.append('virus_total_score')
-	names.append('virus_total_engines')
-	names.append('ip_address')
-	names.append('ip_country')
-	names.append('registrant_country')
-	names.append('registrar')
 
-	return names
+    Returns  
+    -------
+    names : (list)
+            titles of the columns in the csv file
+
+    """
+    names = ['domain_id']
+    names.append('phish_id')
+    names.append('domain_name')
+    names.append('activity_img')
+    names.append('activity_req')
+    names.append('open_code')
+    names.append('virus_total_score')
+    names.append('virus_total_engines')
+    names.append('ip_address')
+    names.append('ip_country')
+    names.append('registrant_country')
+    names.append('registrar')
+
+    return names
 
 
 
@@ -129,10 +140,13 @@ def screenshot(current_id, shot_path, urls):
         # set up selenium web driver
         ser = Service('/home/kaifeng/chromedriver')
         op = webdriver.ChromeOptions()
+        op.set_capability('unhandledPromptBehavior', 'accept')
         op.add_argument('--start-maximized')
+        op.add_argument('--disable-web-security')
+        op.add_argument('--ignore-certificate-errors')
 
         # warn user of potential screenshot overwrite 
-        message = "Screenshots will save to dir based on next domain id. Continue? (y/n)"
+        message = "Begin screenshots? (y/n): "
         consent = input(message) 
 
         # take screenshots and record activity of site
@@ -140,17 +154,32 @@ def screenshot(current_id, shot_path, urls):
         if consent == 'y':
             driver = webdriver.Chrome(service=ser, options=op)
             domain_id = current_id + 1
+
             for i, url in enumerate(urls):
-                # build path
-                url = url.replace('https://', '')
-                pic = '{id}.png'.format(id = domain_id + i)
-                pic_path = shot_path + pic
+                # clean domain name
+                clean_url = url.replace('https://', '')
+                url_size = len(clean_url)
+
+                # pic name starts with id of domain in csv file
+                pic = '{id}'.format(id = domain_id + i)
+                if url_size >= 4:
+                    # name ends with first 4 chars of the url
+                    pic += '_' + clean_url[0:4]
+                else:
+                    pic += clean_url
+                pic += '.png'
+                pic_path = shot_path + '/' + pic
 
                 # screenshot
-                driver.get('https://' + url)
+                try:
+                    driver.get('https://' + clean_url)
+                except Exception as e:
+                    driver.save_screenshot(pic_path)
+                    screenshot_paths[url] = pic_path
+                    continue
                 driver.save_screenshot(pic_path)
 
-                # save activity status
+                # store pic path
                 screenshot_paths[url] = pic_path
         else:
             print("Exiting...")
@@ -159,7 +188,6 @@ def screenshot(current_id, shot_path, urls):
     except Exception as e:
         print('Error. screenshot analysis failed')
         print(e)
-        exit(1)
 
     return screenshot_paths
 
@@ -185,9 +213,49 @@ def checkDomainActivity(domains, screenshot_paths):
         activity data as classified by CNN model and python requests
         module for each url
 
-        access data via:   activity_data[<url>]['req' or 'image']
+        access data via:   
+            activity_data[<url>]['req']     for req module data
+            activity_data[<url>]['image']   for classifier data
     """
-    x = 1
+    activity_data = {}
+    ACTIVE = 0
+    INACTIVE = 1
+
+    print("\nIGNORE ERROR #################")
+    model = load_model('model.h5')
+    print("END IGNORE #################\n")
+
+    for url in domains:
+        activity_data[url] = {}
+        # get screenshot
+        path = screenshot_paths[url]
+        
+        # prepare screenshot for analysis
+        img = load_img(path, target_size=(224,224))
+        img_array = img_to_array(img)
+        expanded_img_array = np.expand_dims(img_array, axis=0)
+        preprocessed_img = preprocess_input(expanded_img_array)
+
+        # get cnn classifier result
+        prediction = model.predict(preprocessed_img)
+        if prediction[0][ACTIVE] >= 0.5:
+            activity_data[url]["image"] = "active"
+        else:
+            activity_data[url]["image"] = "inactive"
+
+        # get python request module result
+        try:
+            req_result = requests.get(url)
+        except Exception as e:
+            activity_data[url]["req"] = "inactive"
+
+        if req_result.ok:
+            activity_data[url]["req"] = "active"
+        else:
+            activity_data[url]["req"] = "inactive"
+
+    return activity_data
+
 
 def searchPhishTank(domains):
     """SEARCH PHISH TANK
@@ -230,7 +298,7 @@ def searchPhishTank(domains):
             # phishtank data found
             if record["url"] == url:
                 found = 1
-                container["phish_id"] = record["phish_id"]
+                container["phish_id"] = int(record["phish_id"])
                 container["date"] = record["date"]
                 phish_data[url] = copy.deepcopy(container)
                 break
@@ -249,51 +317,84 @@ def searchPhishTank(domains):
 
 
 def getWhoIs(domains): 
-	"""GET WHO IS
-	
-	retrieve relevant whois data from python_whois api
+    """GET WHO IS
+    
+    retrieve relevant whois data from python_whois api
 
-	PYTHON WHOIS FIELDS
-		_regex = {
-			'domain_name':          r'Domain Name: *(.+)',
-			'registrar':            r'Registrar: *(.+)',
-			'whois_server':         r'Whois Server: *(.+)',
-			'referral_url':         r'Referral URL: *(.+)',		# http url of whois_server
-			'updated_date':         r'Updated Date: *(.+)',
-			'creation_date':        r'Creation Date: *(.+)',
-			'expiration_date':      r'Expir\w+ Date: *(.+)',
-			'name_servers':         r'Name Server: *(.+)',		# list of name servers
-			'status':               r'Status: *(.+)',			# list of statuses
-			'emails':               EMAIL_REGEX,				# list of email s
-			'dnssec':               r'dnssec: *([\S]+)',
-			'name':                 r'Registrant Name: *(.+)',
-			'org':                  r'Registrant\s*Organization: *(.+)',
-			'address':              r'Registrant Street: *(.+)',
-			'city':                 r'Registrant City: *(.+)',
-			'state':                r'Registrant State/Province: *(.+)',
-			'zipcode':              r'Registrant Postal Code: *(.+)',
-			'country':              r'Registrant Country: *(.+)',
-    }
+    PYTHON WHOIS FIELDS
+            _regex = {
+                    'domain_name':
+                    'registrar': 
+                    'whois_server':
+                    'referral_url':
+                    'updated_date':
+                    'creation_date':
+                    'expiration_date':
+                    'name_servers':  
+                    'status':       
+                    'emails':      
+                    'dnssec':    
+                    'name':     
+                    'org':     
+                    'address': 
+                    'city':   
+                    'state': 
+                    'zipcode':
+                    'country': }
 
-	Parameters
-	----------
-	domains: (list)
-		list of domains to gather data on
+    Parameters
+    ----------
+    domains: (list)
+            list of domains to gather data on
 
-	Returns
-	-------
-	whois_data: (dict)
-		a dictionary of the whois data for each domain
-		the dictionary is indexed by domain url
-	"""
-	whois_data = {}
+    Returns
+    -------
+    whois_data: (dict)
+            a dictionary of the whois data for each domain
+            the dictionary is indexed by domain url
+    """
+    whois_data = {}
 
-	# build dictionary of whois data for each domain
-	for url in domains:
-		w = whois.whois(url)
-		whois_data[url] = w
+    # build dictionary of whois data for each domain
+    for url in domains:
 
-	return whois_data
+        try:
+            w = whois.whois(url)
+
+            # convert datetime objects to strings
+            #   updated date
+            if isinstance(w['updated_date'], list):
+                for i in range(len(w['updated_date'])): 
+                    up_date = w['updated_date'][i].strftime("%m/%d/%Y, %H:%M:%S")
+                    w['updated_date'][i] = up_date
+            elif w['updated_date'] is not None:
+                up_date = w['updated_date'].strftime("%m/%d/%Y, %H:%M:%S")
+                w['updated_date'] = up_date
+
+            #   creation date
+            if isinstance(w['creation_date'], list):
+                for i in range(len(w['creation_date'])): 
+                    create_date = w['creation_date'][i].strftime("%m/%d/%Y, %H:%M:%S")
+                    w['creation_date'][i] = create_date
+            elif w['creation_date'] is not None:
+                create_date = w['creation_date'].strftime("%m/%d/%Y, %H:%M:%S")
+                w['creation_date'] = create_date
+
+            #   expiration date
+            if isinstance(w['expiration_date'], list):
+                for i in range(len(w['expiration_date'])): 
+                    exp_date = w['expiration_date'][i].strftime("%m/%d/%Y, %H:%M:%S")
+                    w['expiration_date'][i] = exp_date
+            elif w['expiration_date'] is not None:
+                exp_date = w['expiration_date'].strftime("%m/%d/%Y, %H:%M:%S")
+                w['expiration_date'] = exp_date
+
+        except whois.parser.PywhoisError:
+            w = {}
+
+        whois_data[url] = w
+
+    return whois_data
 
 
 def getVirusTotal(token, domains): 
@@ -384,25 +485,43 @@ def getIpInfo(handler, domains):
     for url in domains:
         try:
             # retrieve data
-            ip = socket.gethostbyname(url)
+            parsed_url = up.urlparse(url)
+            ip = socket.gethostbyname(parsed_url.netloc)
             details = handler.getDetails(ip)
             ip_data[url] = details
         except (socket.gaierror, UnicodeError):
-            print("GetIpInfo Error: Invalid Domain: %s" % (url))
             ip_data[url] = failedFetch()
 
     return ip_data
 
+def logMeta(data, 
+            phishtank_data,
+            activity_data,
+            whois_data,
+            virus_data,
+            ip_data, 
+            domains): 
+    """LOG METADATA
 
-def writeCsv(data, whois_data, virus_data, ip_data, domains): 
-    """WRITE CSV
+    stores all metadata created for each url in a file
 
-    creates data record in csv file for each domain
+    data is stored as a dictionary which can be indexed using the url
+    and the type of data
+
+    i.e. to get phishtank data out of the file
+        log[url]["phishtank_data"]
 
     Parameters
     ----------
     data: (metadata class object)
         contains metadata about program state and files
+
+    phishtank_data: (dict)
+        contains url phishtank id and date added
+
+    activity_data: (dict)
+        contains cnn classifier activity prediction and request
+        module result for each url
 
     whois_data: (dict)
         whois data for each domain
@@ -415,6 +534,76 @@ def writeCsv(data, whois_data, virus_data, ip_data, domains):
     ip_data: (dict)
         ip data from ipinfo api for each domain
         indexed by url from input url file
+
+
+    Returns
+    -------
+    ( None )
+    """
+    log = {}
+    now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+    with open(data.META_PATH, data.append_mode) as logfile:
+        logfile.write("DATE\n")
+        logfile.write(now)
+        logfile.write('\n')
+        logfile.write("DATA\n")
+        for url in domains:
+            logfile.write(url)
+            log["url"] = url
+            log["phishtank_data"] = phishtank_data[url]
+            log["activity_data"] = activity_data[url]
+            log["whois_data"] = whois_data[url]
+            log["virus_data"] = virus_data[url]
+
+            # convert ip Details object to dict
+            ip_key = cache_key(ip_data[url].ip)
+            ip_dict = data.HANDLER.cache[ip_key]
+            log["ip_data"] = ip_dict
+
+            log_js = json.dumps(log, indent=1, sort_keys=True)
+            logfile.write(log_js)
+            logfile.write('\n')
+
+            # reset
+            log.clear()
+        logfile.write("END\n")
+
+
+def writeCsv(data, 
+            phishtank_data,
+            activity_data,
+            whois_data,
+            virus_data,
+            ip_data, 
+            domains): 
+    """WRITE CSV
+
+    creates data record in csv file for each domain
+
+    Parameters
+    ----------
+    data: (metadata class object)
+        contains metadata about program state and files
+
+    phishtank_data: (dict)
+        contians url phishtank id and date added
+
+    activity_data: (dict)
+        contains cnn classifier activity prediction and request
+        module result for each url
+
+    whois_data: (dict)
+        whois data for each domain
+        indexed by url from input url file
+
+    virus_data: (dict)
+        virus total api data for each domain
+        indexed by url from input url file
+
+    ip_data: (dict)
+        ip data from ipinfo api for each domain
+        indexed by url from input url file
+
 
     Returns
     -------
@@ -462,25 +651,32 @@ def writeCsv(data, whois_data, virus_data, ip_data, domains):
             malicious_list = []
 
             # save to csv
+            if whois_data[url] == {}:
+                country = ''
+                registrar = ''
+            else:
+                country = whois_data[url].country
+                registrar = whois_data[url].registrar
+
             writer.writerow({
                 data.FIELD_TITLES[data.DOMAINID]:domain_id,
-                data.FIELD_TITLES[data.PHISHID]:'',
+                data.FIELD_TITLES[data.PHISHID]:phishtank_data[url]["phish_id"],
                 data.FIELD_TITLES[data.DOMAINNAME]:url,
-                data.FIELD_TITLES[data.OPENCODE]:'',
+                data.FIELD_TITLES[data.ACTIVITY_IMG]:activity_data[url]["image"],
+                data.FIELD_TITLES[data.ACTIVITY_REQ]:activity_data[url]["req"],
+                data.FIELD_TITLES[data.OPENCODE]:'-',
                 data.FIELD_TITLES[data.VSCORE]:v_score,
                 data.FIELD_TITLES[data.VENGINES]:engines_malicious[url],
                 data.FIELD_TITLES[data.IP]:ip_data[url].ip,
                 data.FIELD_TITLES[data.IPCOUNTRY]:ip_data[url].country,
-                data.FIELD_TITLES[data.REGCOUNTRY]:whois_data[url].country,
-                data.FIELD_TITLES[data.REGISTRAR]:whois_data[url].registrar})
+                data.FIELD_TITLES[data.REGCOUNTRY]:country,
+                data.FIELD_TITLES[data.REGISTRAR]:registrar})
             domain_id += 1
 
 
-
-
-###################
-# GLOBAL VARIABLES#
-###################
+###########################
+# OBJECTS GLOBAL VARIABLES#
+###########################
 class metadata:
 
     def __init__(self):
@@ -489,8 +685,10 @@ class metadata:
         self.VIRUS_TOTAL_ACCESS_TOKEN = 'd80137e9f5e82896483095b49a7f0e73b5fd0dbc7bd98f1d418ff3ae9c83951e'
 
         # FILES PATHS
-        self.CSV_FILE_CHOICE = 'phish_log.csv'           # csv file to write to 
+        #self.CSV_FILE_CHOICE = 'phish_log.csv'           # csv file to write to 
+        self.CSV_FILE_CHOICE = 'test.csv'
         self.URL_FILE_CHOICE = 'phishtank_urls.txt'      # url file to read from
+        self.META_FILE_CHOICE = 'log.txt'
         self.CSV_RELATIVE_PATH = '/CSV'                  # relative path to csv folder 
         self.SHOT_RELATIVE_PATH = '/SCREENSHOTS'         # relative path to screenshot folder 
         self.URL_RELATIVE_PATH = '/URLFILES'             # relative path to url dir
@@ -522,13 +720,15 @@ class metadata:
         self.DOMAINID = 0
         self.PHISHID = 1
         self.DOMAINNAME = 2
-        self.OPENCODE = 3
-        self.VSCORE = 4
-        self.VENGINES = 5
-        self.IP = 6
-        self.IPCOUNTRY = 7
-        self.REGCOUNTRY = 8
-        self.REGISTRAR = 9
+        self.ACTIVITY_IMG = 3
+        self.ACTIVITY_REQ = 4
+        self.OPENCODE = 5
+        self.VSCORE = 6
+        self.VENGINES = 7
+        self.IP = 8
+        self.IPCOUNTRY = 9
+        self.REGCOUNTRY = 10
+        self.REGISTRAR = 11
 
     def print_state(self):
         # File paths
@@ -567,7 +767,7 @@ class metadata:
         self.URL_FILE_PATH = base_path + self.URL_RELATIVE_PATH + '/' + self.URL_FILE_CHOICE
         self.CSV_FILE_PATH = base_path + self.CSV_RELATIVE_PATH + '/' + self.CSV_FILE_CHOICE
         self.SHOT_PATH = base_path + self.SHOT_RELATIVE_PATH
-        self.META_PATH = base_path + self.META_RELATIVE_PATH
+        self.META_PATH = base_path + self.META_RELATIVE_PATH + '/' + self.META_FILE_CHOICE
 
         # validate CL input length
         arg_len = len(args)
