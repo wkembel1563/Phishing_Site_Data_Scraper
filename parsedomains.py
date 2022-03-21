@@ -66,7 +66,7 @@ def getFieldNames():
 
 
 
-def readURLS(data, remove_duplicates = True):
+def readURLS(data, remove_csv_duplicates = True):
     """READ URLS
 
     reads in all urls from the list passed via command line arg.
@@ -681,6 +681,9 @@ def writeCsv(data,
                 data.FIELD_TITLES[data.REGISTRAR]:registrar,
                 data.FIELD_TITLES[data.TIME]:data.now})
             domain_id += 1
+
+        # update current domain id
+        data.CURRENT_DOMAIN_ID = domain_id - 1
 
 
 ###########################
