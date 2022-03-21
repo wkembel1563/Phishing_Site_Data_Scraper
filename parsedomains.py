@@ -34,9 +34,7 @@ class failedFetch:
 def getFieldNames():
     """GET FIELD NAMES
 
-
     defines column titles of csv file
-
 
     Parameters
     ----------
@@ -61,13 +59,14 @@ def getFieldNames():
     names.append('ip_country')
     names.append('registrant_country')
     names.append('registrar')
+    names.append('time')
 
     return names
 
 
 
 
-def readURLS(data):
+def readURLS(data, remove_duplicates = True):
     """READ URLS
 
     reads in all urls from the list passed via command line arg.
@@ -101,16 +100,17 @@ def readURLS(data):
 
         # retrieve urls currently in csv record
         # filter out duplicates from list
-        if data.CSV_FILE_EXISTS and data.CURRENT_DOMAIN_ID > 0:
+        if remove_duplicates: 
+            if data.CSV_FILE_EXISTS and data.CURRENT_DOMAIN_ID > 0:
 
-            # retrieve current record of urls from csv file
-            df = pd.read_csv(data.CSV_FILE_PATH, na_values=['-', '', 'holder'])
-            url_rec = df.loc[:, 'domain_name'].to_numpy()
+                # retrieve current record of urls from csv file
+                df = pd.read_csv(data.CSV_FILE_PATH, na_values=['-', '', 'holder'])
+                url_rec = df.loc[:, 'domain_name'].to_numpy()
 
-            # remove urls from list which are present in record 
-            for i, url in enumerate(urls):
-                if url in url_rec:
-                    urls.remove(urls[i])
+                # remove urls from list which are present in record 
+                for i, url in enumerate(urls):
+                    if url in url_rec:
+                        urls.remove(urls[i])
 
     return urls
 
@@ -158,6 +158,7 @@ def screenshot(current_id, shot_path, urls):
             for i, url in enumerate(urls):
                 # clean domain name
                 clean_url = url.replace('https://', '')
+                clean_url = clean_url.replace('www.', '')
                 url_size = len(clean_url)
 
                 # pic name starts with id of domain in csv file
@@ -222,7 +223,7 @@ def checkDomainActivity(domains, screenshot_paths):
     INACTIVE = 1
 
     print("\nIGNORE ERROR #################")
-    model = load_model('model.h5')
+    model = load_model('model2.h5')
     print("END IGNORE #################\n")
 
     for url in domains:
@@ -246,13 +247,12 @@ def checkDomainActivity(domains, screenshot_paths):
         # get python request module result
         try:
             req_result = requests.get(url)
+            if req_result.ok:
+                activity_data[url]["req"] = "active"
+            else:
+                activity_data[url]["req"] = "inactive"
         except Exception as e:
-            activity_data[url]["req"] = "inactive"
-
-        if req_result.ok:
-            activity_data[url]["req"] = "active"
-        else:
-            activity_data[url]["req"] = "inactive"
+            activity_data[url]["req"] = "unknown"
 
     return activity_data
 
@@ -360,34 +360,42 @@ def getWhoIs(domains):
 
         try:
             w = whois.whois(url)
+            keys = list(w.keys())
 
             # convert datetime objects to strings
             #   updated date
-            if isinstance(w['updated_date'], list):
-                for i in range(len(w['updated_date'])): 
-                    up_date = w['updated_date'][i].strftime("%m/%d/%Y, %H:%M:%S")
-                    w['updated_date'][i] = up_date
-            elif w['updated_date'] is not None:
-                up_date = w['updated_date'].strftime("%m/%d/%Y, %H:%M:%S")
-                w['updated_date'] = up_date
+            time_pattern = "%m/%d/%Y, %H:%M:%S"
+            upd_date = 'updated_date'
+            c_date = 'creation_date'
+            exper_date = 'expiration_date'
+            if upd_date in keys:
+                if isinstance(w[upd_date], list):
+                    for i in range(len(w[upd_date])): 
+                        up_date = w[upd_date][i].strftime(time_pattern)
+                        w[upd_date][i] = up_date
+                elif w[upd_date] is not None:
+                    up_date = w[upd_date].strftime(time_pattern)
+                    w[upd_date] = up_date
 
             #   creation date
-            if isinstance(w['creation_date'], list):
-                for i in range(len(w['creation_date'])): 
-                    create_date = w['creation_date'][i].strftime("%m/%d/%Y, %H:%M:%S")
-                    w['creation_date'][i] = create_date
-            elif w['creation_date'] is not None:
-                create_date = w['creation_date'].strftime("%m/%d/%Y, %H:%M:%S")
-                w['creation_date'] = create_date
+            if c_date in keys:
+                if isinstance(w[c_date], list):
+                    for i in range(len(w[c_date])): 
+                        create_date = w[c_date][i].strftime(time_pattern)
+                        w[c_date][i] = create_date
+                elif w[c_date] is not None:
+                    create_date = w[c_date].strftime(time_pattern)
+                    w[c_date] = create_date
 
             #   expiration date
-            if isinstance(w['expiration_date'], list):
-                for i in range(len(w['expiration_date'])): 
-                    exp_date = w['expiration_date'][i].strftime("%m/%d/%Y, %H:%M:%S")
-                    w['expiration_date'][i] = exp_date
-            elif w['expiration_date'] is not None:
-                exp_date = w['expiration_date'].strftime("%m/%d/%Y, %H:%M:%S")
-                w['expiration_date'] = exp_date
+            if exper_date in keys:
+                if isinstance(w[exper_date], list):
+                    for i in range(len(w[exper_date])): 
+                        exp_date = w[exper_date][i].strftime(time_pattern)
+                        w[exper_date][i] = exp_date
+                elif w[exper_date] is not None:
+                    exp_date = w[exper_date].strftime(time_pattern)
+                    w[exper_date] = exp_date
 
         except whois.parser.PywhoisError:
             w = {}
@@ -670,7 +678,8 @@ def writeCsv(data,
                 data.FIELD_TITLES[data.IP]:ip_data[url].ip,
                 data.FIELD_TITLES[data.IPCOUNTRY]:ip_data[url].country,
                 data.FIELD_TITLES[data.REGCOUNTRY]:country,
-                data.FIELD_TITLES[data.REGISTRAR]:registrar})
+                data.FIELD_TITLES[data.REGISTRAR]:registrar,
+                data.FIELD_TITLES[data.TIME]:data.now})
             domain_id += 1
 
 
@@ -685,8 +694,7 @@ class metadata:
         self.VIRUS_TOTAL_ACCESS_TOKEN = 'd80137e9f5e82896483095b49a7f0e73b5fd0dbc7bd98f1d418ff3ae9c83951e'
 
         # FILES PATHS
-        #self.CSV_FILE_CHOICE = 'phish_log.csv'           # csv file to write to 
-        self.CSV_FILE_CHOICE = 'test.csv'
+        self.CSV_FILE_CHOICE = 'phish_data.csv'           # csv file to write to 
         self.URL_FILE_CHOICE = 'phishtank_urls.txt'      # url file to read from
         self.META_FILE_CHOICE = 'log.txt'
         self.CSV_RELATIVE_PATH = '/CSV'                  # relative path to csv folder 
@@ -713,6 +721,7 @@ class metadata:
         self.write_mode = 'w'                            # csv file write mode upon opening
         self.read_mode = 'r'                             # csv file read mode upon opening
         self.append_mode = 'a'                           # csv file append mode upon opening
+        self.now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
 
         ###################
         # CSV COL INDECES #
@@ -729,6 +738,7 @@ class metadata:
         self.IPCOUNTRY = 9
         self.REGCOUNTRY = 10
         self.REGISTRAR = 11
+        self.TIME = 12
 
     def print_state(self):
         # File paths

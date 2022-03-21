@@ -30,7 +30,7 @@ data.init(args)
 data.print_state()
 
 # retrieve list of domains
-domains = readURLS(data)
+domains = readURLS(data, remove_duplicates = False)
 
 # take screenshots of each domain
 screenshot_paths = screenshot(data.CURRENT_DOMAIN_ID, data.SHOT_PATH, domains)
