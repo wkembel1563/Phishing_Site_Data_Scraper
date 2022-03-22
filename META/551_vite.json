@@ -1,0 +1,45 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Feb 9th 2022 4:47 AM",
+  "awg_id": 7439296
+ },
+ "ip_data": {
+  "city": "Gunzenhausen",
+  "country": "DE",
+  "country_name": "Germany",
+  "hostname": "titan2.sixpol.com",
+  "ip": "116.203.92.137",
+  "latitude": "49.1166",
+  "loc": "49.1166,10.7597",
+  "longitude": "10.7597",
+  "org": "AS24940 Hetzner Online GmbH",
+  "postal": "91710",
+  "region": "Bavaria",
+  "timezone": "Europe/Berlin"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://viterra.eu",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly92aXRlcnJhLmV1\" not found"
+  }
+ },
+ "whois_data": {
+  "domain_name": "viterra.eu",
+  "name_servers": "ns2.sixpol.com",
+  "registrar": null,
+  "tech_email": null,
+  "tech_fax": null,
+  "tech_name": null,
+  "tech_org": null,
+  "tech_phone": null
+ }
+}
