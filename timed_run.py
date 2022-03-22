@@ -8,7 +8,7 @@ data = metadata()
 data.init(args)
 
 # retrieve list of domains
-domains = readURLS(data, remove_csv_duplicates = False)
+domains, awg_data = readURLS(data, remove_csv_duplicates = False)
 
 # 4 hrs (14,400s) / 10 mins (600s)
 ROUND_LIMIT = 24
@@ -37,6 +37,7 @@ for i in range(ROUND_LIMIT):
             whois_data,
             virus_data,
             ip_data, 
+            awg_data,
             domains)
 
     # write data to csv file 
@@ -46,6 +47,7 @@ for i in range(ROUND_LIMIT):
             whois_data,
             virus_data,
             ip_data, 
+            awg_data,
             domains)
 
     # wait 10 minutes before next run

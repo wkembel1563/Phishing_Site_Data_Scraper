@@ -1,0 +1,90 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "1647316800",
+  "awg_id": 95545058
+ },
+ "ip_data": {
+  "city": "Stockholm",
+  "country": "SE",
+  "country_name": "Sweden",
+  "hostname": "s3-r-w.eu-north-1.amazonaws.com",
+  "ip": "52.95.171.44",
+  "latitude": "59.3294",
+  "loc": "59.3294,18.0687",
+  "longitude": "18.0687",
+  "org": "AS16509 Amazon.com, Inc.",
+  "postal": "100 05",
+  "region": "Stockholm",
+  "timezone": "Europe/Stockholm"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://onepowerpoint.s3.eu-north-1.amazonaws.com/ind3x.html",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9vbmVwb3dlcnBvaW50LnMzLmV1LW5vcnRoLTEuYW1hem9uYXdzLmNvbS9pbmQzeC5odG1s\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "PO BOX 81226",
+  "city": "Seattle",
+  "country": "US",
+  "creation_date": "08/18/2005, 02:10:45",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "AMAZONAWS.COM",
+   "amazonaws.com"
+  ],
+  "emails": [
+   "abusecomplaints@markmonitor.com",
+   "hostmaster@amazon.com",
+   "whoisrequest@markmonitor.com"
+  ],
+  "expiration_date": [
+   "01/16/2024, 04:59:59",
+   "01/15/2024, 08:00:00"
+  ],
+  "name": "Legal Department",
+  "name_servers": [
+   "R1.AMAZONAWS.COM",
+   "R2.AMAZONAWS.COM",
+   "U1.AMAZONAWS.COM",
+   "U2.AMAZONAWS.COM",
+   "r1.amazonaws.com",
+   "u2.amazonaws.com",
+   "r2.amazonaws.com",
+   "u1.amazonaws.com"
+  ],
+  "org": "Amazon.com, Inc.",
+  "referral_url": null,
+  "registrar": "MarkMonitor, Inc.",
+  "state": "WA",
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited",
+   "serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited",
+   "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+   "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+   "clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)",
+   "clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)",
+   "clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)",
+   "serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)",
+   "serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)",
+   "serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)"
+  ],
+  "updated_date": [
+   "05/07/2019, 20:21:36",
+   "07/31/2021, 00:23:29"
+  ],
+  "whois_server": "whois.markmonitor.com",
+  "zipcode": "98108-1226"
+ }
+}

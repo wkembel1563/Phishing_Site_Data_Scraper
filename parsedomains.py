@@ -60,6 +60,8 @@ def getFieldNames():
     names.append('registrant_country')
     names.append('registrar')
     names.append('time')
+    names.append('awg_id')
+    names.append('awg_date_discovered')
 
     return names
 
@@ -84,35 +86,76 @@ def readURLS(data, remove_csv_duplicates = True):
             list of urls after conflicts/duplicates have been removed
 
     """
+    # determine if the url file is CSV format
+    CSV = False
+    if '.csv' in data.URL_FILE_PATH:
+        CSV = True
 
-    # Read in url's from file
-    with open(data.URL_FILE_PATH) as f: 
-        # get urls
-        urls = f.readlines()
+    if CSV:
 
-        # remove \n char
-        for i, line in enumerate(urls):
-            urls[i] = line[0:-1]
+        # extract phishtank csv data
+        try:
+            df = pd.read_csv(data.URL_FILE_PATH)
+        except EmptyDataError:
+            print("ReadURLs error. %s is empty." % (filename))
+            return None
+        container = {}
+        awg_data = {}
 
-        # remove duplicate urls from url list
-        urls = set(urls)
-        urls = sorted(urls)
+        # convert records into a dictionary with APWG data
+        urls = list(df.loc[:,'url'])
 
-        # retrieve urls currently in csv record
-        # filter out duplicates from list
-        if remove_csv_duplicates: 
-            if data.CSV_FILE_EXISTS and data.CURRENT_DOMAIN_ID > 0:
+        for url in urls:
+            found = 0
+            # locate csv record for url
+            for i in range(len(df)):
+                record = df.loc[i]
 
-                # retrieve current record of urls from csv file
-                df = pd.read_csv(data.CSV_FILE_PATH, na_values=['-', '', 'holder'])
-                url_rec = df.loc[:, 'domain_name'].to_numpy()
+                # store metadata in dictionary
+                if record["url"] == url:
+                    found = 1
+                    container["awg_id"] = int(record["id"])
+                    container["awg_date_discovered"] = str(record["date_discovered"])
+                    awg_data[url] = copy.deepcopy(container)
+                    break
 
-                # remove urls from list which are present in record 
-                for i, url in enumerate(urls):
-                    if url in url_rec:
-                        urls.remove(urls[i])
+            # url record not found
+            if found == 0:
+                print("ReadURL Error. Problem with read CSV file")
+                exit(1)
 
-    return urls
+            # reset for nxt iteration
+            container.clear()
+    else:
+        # Read in url's from file
+        with open(data.URL_FILE_PATH) as f: 
+            # get urls
+            urls = f.readlines()
+
+            # remove \n char
+            for i, line in enumerate(urls):
+                urls[i] = line[0:-1]
+
+            # remove duplicate urls from url list
+            urls = set(urls)
+            urls = sorted(urls)
+
+            # retrieve urls currently in csv record
+            # filter out duplicates from list
+            if remove_csv_duplicates: 
+                if data.CSV_FILE_EXISTS and data.CURRENT_DOMAIN_ID > 0:
+                    # retrieve current record of urls from csv file
+                    df = pd.read_csv(data.CSV_FILE_PATH, na_values=['-', '', 'holder'])
+                    url_rec = df.loc[:, 'domain_name'].to_numpy()
+
+                    # remove urls from list which are present in record 
+                    for i, url in enumerate(urls):
+                        if url in url_rec:
+                            urls.remove(urls[i])
+
+        awg_data = None
+
+    return urls, awg_data
 
 
 
@@ -307,7 +350,6 @@ def searchPhishTank(domains):
 
         # phishtank data not found
         if found == 0:
-            print('t')
             container["phish_id"] = '-'
             container["date"] = '-'
             phish_data[url] = copy.deepcopy(container)
@@ -510,6 +552,7 @@ def logMeta(data,
             whois_data,
             virus_data,
             ip_data, 
+            awg_data,
             domains): 
     """LOG METADATA
 
@@ -577,6 +620,9 @@ def logMeta(data,
             log["whois_data"] = whois_data[url]
             log["virus_data"] = virus_data[url]
 
+            if awg_data is not None:
+                log["awg_data"] = awg_data[url]
+
             # convert ip Details object to dict
             ip_key = cache_key(ip_data[url].ip)
             ip_dict = data.HANDLER.cache[ip_key]
@@ -595,6 +641,7 @@ def writeCsv(data,
             whois_data,
             virus_data,
             ip_data, 
+            awg_data,
             domains): 
     """WRITE CSV
 
@@ -657,15 +704,20 @@ def writeCsv(data,
         blacklist = ['malicious', 'phishing', 'suspicious', 'malware']
         for url in domains:
             # prepare list of engines that concluded malicious
-            url_results = virus_data[url]['data']['attributes']['last_analysis_results']
-            for engine in url_results.keys(): 
-                if url_results[engine]['result'] in blacklist:
-                    malicious_list.append(url_results[engine]['engine_name'])
-            engines_malicious[url] = malicious_list
+            try:
+                url_results = virus_data[url]['data']['attributes']['last_analysis_results']
+                for engine in url_results.keys(): 
+                    if url_results[engine]['result'] in blacklist:
+                        malicious_list.append(url_results[engine]['engine_name'])
+                engines_malicious[url] = malicious_list
 
-            m_score = virus_data[url]['data']['attributes']['last_analysis_stats']['malicious']
-            s_score = virus_data[url]['data']['attributes']['last_analysis_stats']['suspicious']
-            v_score = m_score + s_score
+                m_score = virus_data[url]['data']['attributes']['last_analysis_stats']['malicious']
+                s_score = virus_data[url]['data']['attributes']['last_analysis_stats']['suspicious']
+                v_score = m_score + s_score
+            except Exception as e:
+                print("No virus total record")
+                v_score = 0
+                engines_malicious[url] = "No data"
             
             # reset list
             malicious_list = []
@@ -677,6 +729,13 @@ def writeCsv(data,
             else:
                 country = whois_data[url].country
                 registrar = whois_data[url].registrar
+
+            if awg_data is None:
+                awg_id = '-'
+                awg_date = '-'
+            else:
+                awg_id = awg_data[url]["awg_id"]
+                awg_date = awg_data[url]["awg_date_discovered"]
 
             writer.writerow({
                 data.FIELD_TITLES[data.DOMAINID]:domain_id,
@@ -691,7 +750,9 @@ def writeCsv(data,
                 data.FIELD_TITLES[data.IPCOUNTRY]:ip_data[url].country,
                 data.FIELD_TITLES[data.REGCOUNTRY]:country,
                 data.FIELD_TITLES[data.REGISTRAR]:registrar,
-                data.FIELD_TITLES[data.TIME]:data.now})
+                data.FIELD_TITLES[data.TIME]:data.now,
+                data.FIELD_TITLES[data.AWG_ID]:awg_id,
+                data.FIELD_TITLES[data.AWG_DATE]:awg_date})
             domain_id += 1
 
         # update current domain id
@@ -732,7 +793,7 @@ class metadata:
 
         # CONSTS
         self.NUM_OF_ARGS = 1                             # num of command line arguments
-        #self.URLFILE = 1                                # arg position for name of url file
+        self.URLFILE = 1                                # arg position for name of url file
         self.write_mode = 'w'                            # csv file write mode upon opening
         self.read_mode = 'r'                             # csv file read mode upon opening
         self.append_mode = 'a'                           # csv file append mode upon opening
@@ -754,6 +815,8 @@ class metadata:
         self.REGCOUNTRY = 10
         self.REGISTRAR = 11
         self.TIME = 12
+        self.AWG_ID = 13
+        self.AWG_DATE = 14
 
     def print_state(self):
         # File paths
@@ -789,18 +852,26 @@ class metadata:
         # build file paths
         # to urlfile dir, screenshot dir, metadata dir and csv file
         base_path = os.getcwd()
-        self.URL_FILE_PATH = base_path + self.URL_RELATIVE_PATH + '/' + self.URL_FILE_CHOICE
         self.CSV_FILE_PATH = base_path + self.CSV_RELATIVE_PATH + '/' + self.CSV_FILE_CHOICE
         self.SHOT_PATH = base_path + self.SHOT_RELATIVE_PATH
         #self.META_PATH = base_path + self.META_RELATIVE_PATH + '/' + self.META_FILE_CHOICE
         self.META_PATH = base_path + self.META_RELATIVE_PATH
 
         # validate CL input length
+        #   two args means a url file was passed, contains relative path
         arg_len = len(args)
-        if arg_len != self.NUM_OF_ARGS:
-                #print("Arg Error. Please follow arg format below:\npython3 <pythonfile> <urlfile>")
-                print("Arg Error. Please follow arg format below:\npython3 <pythonfile>")
+        if arg_len == 2:
+            self.URL_FILE_PATH = base_path + '/' + args[self.URLFILE]
+
+        #   invalid num of args
+        elif arg_len != self.NUM_OF_ARGS:
+                print("Arg Error. Invalid CL input format")
                 exit(1)
+
+        #   one arg means use default files
+        else:
+            print("\nNO URL FILE SPECIFIED. Reverting to default...\n")
+            self.URL_FILE_PATH = base_path + self.URL_RELATIVE_PATH + '/' + self.URL_FILE_CHOICE
 
         # initialize global variables
         self.HANDLER = ipinfo.getHandler(self.IPINFO_ACCESS_TOKEN)
