@@ -11,8 +11,11 @@ data.init(args)
 # retrieve list of domains
 domains, awg_data = readURLS(data, remove_csv_duplicates = False)
 
-# 4 hrs (14,400s) / 10 mins (600s)
-ROUND_LIMIT = 100000
+# prep messaging functionality
+client = Client(data.twilio_sid, data.twilio_auth_token) 
+
+# 4 hrs (14,400s) / 10 mins (600s) = 24 rounds
+ROUND_LIMIT = 24
 for i in range(ROUND_LIMIT):
     # reset
     print("\n____RUN %d____" % (i))
@@ -61,6 +64,12 @@ for i in range(ROUND_LIMIT):
     time_spent = (t2 - t1).seconds
 
     # send me message the run as ended
+    message = "Run %d done" % (i)
+    client.messages.create(         
+        to='+12143648810',
+        from_='+19123965665',
+        body=message
+    ) 
 
     # wait 10 minutes before next run
     while time_spent < 600:

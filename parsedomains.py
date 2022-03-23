@@ -197,6 +197,8 @@ def screenshot(current_id, shot_path, urls):
         screenshot_paths = {}
         if consent == 'y':
             driver = webdriver.Chrome(service=ser, options=op)
+            # give each page 2 mins to load
+            driver.set_page_load_timeout(120)
             domain_id = current_id + 1
 
             for i, url in enumerate(urls):
@@ -769,6 +771,8 @@ class metadata:
         # ACCESS TOKENS
         self.IPINFO_ACCESS_TOKEN = '2487a60e548477'                          
         self.VIRUS_TOTAL_ACCESS_TOKEN = 'd80137e9f5e82896483095b49a7f0e73b5fd0dbc7bd98f1d418ff3ae9c83951e'
+        self.twilio_sid = 'AC643cb218d386523498c4e54cab0fdcf4' 
+        self.twilio_auth_token = '4794ef24fc522c0f5569afbd672896f0' 
 
         # FILES PATHS
         self.CSV_FILE_CHOICE = 'phish_data.csv'           # csv file to write to 
