@@ -25,6 +25,15 @@ for i in range(ROUND_LIMIT):
     # mark start time
     t1 = datetime.now()
 
+    # send me message the run as ended
+    message = "Run %d started at %s" % (i, data.now)
+    client.messages.create(         
+        to='+12143648810',
+        from_='+19123965665',
+        body=message
+    ) 
+
+
     # take screenshots of each domain
     screenshot_paths = screenshot(data.CURRENT_DOMAIN_ID, data.SHOT_PATH, domains)
 
@@ -62,14 +71,6 @@ for i in range(ROUND_LIMIT):
     # mark end time
     t2 = datetime.now()
     time_spent = (t2 - t1).seconds
-
-    # send me message the run as ended
-    message = "Run %d done" % (i)
-    client.messages.create(         
-        to='+12143648810',
-        from_='+19123965665',
-        body=message
-    ) 
 
     # wait 10 minutes before next run
     while time_spent < 600:

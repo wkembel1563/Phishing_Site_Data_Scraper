@@ -1,0 +1,67 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "inactive"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 7:09 PM",
+  "awg_id": 7470055
+ },
+ "ip_data": {
+  "city": "Washington",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "23.82.12.30",
+  "latitude": "38.8951",
+  "loc": "38.8951,-77.0364",
+  "longitude": "-77.0364",
+  "org": "AS30633 Leaseweb USA, Inc.",
+  "postal": "20004",
+  "region": "Washington, D.C.",
+  "timezone": "America/New_York"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://designer-home-decoration.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9kZXNpZ25lci1ob21lLWRlY29yYXRpb24uY29t\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Ocean Centre, Montagu Foreshore, East Bay Street",
+  "city": "Nassau",
+  "country": "BS",
+  "creation_date": "04/01/2021, 10:46:17",
+  "dnssec": "unsigned",
+  "domain_name": "DESIGNER-HOME-DECORATION.COM",
+  "emails": [
+   "abuse@internet.bs",
+   "designer-home-decoration.com-owner-dmo8@customers.whoisprivacycorp.com",
+   "designer-home-decoration.com-admin-cgu3@customers.whoisprivacycorp.com",
+   "designer-home-decoration.com-tech-strn@customers.whoisprivacycorp.com"
+  ],
+  "expiration_date": "04/01/2022, 10:46:17",
+  "name": "Domain Admin",
+  "name_servers": [
+   "NS1.THEDNSCLOUD.COM",
+   "NS2.THEDNSCLOUD.COM",
+   "ns1.thednscloud.com",
+   "ns2.thednscloud.com"
+  ],
+  "org": "Whois Privacy Corp.",
+  "referral_url": null,
+  "registrar": "Internet Domain Service BS Corp.",
+  "state": "New Providence",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited - http://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "01/16/2022, 18:38:03",
+  "whois_server": "whois.internet.bs",
+  "zipcode": null
+ }
+}

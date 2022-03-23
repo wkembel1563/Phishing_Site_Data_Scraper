@@ -229,6 +229,8 @@ def screenshot(current_id, shot_path, urls):
 
                 # store pic path
                 screenshot_paths[url] = pic_path
+
+            driver.quit()
         else:
             print("Exiting...")
             exit(1)
@@ -726,19 +728,22 @@ def writeCsv(data,
             malicious_list = []
 
             # save to csv
+            #   stopgaps
             if whois_data[url] == {}:
                 country = ''
                 registrar = ''
             else:
                 country = whois_data[url].country
                 registrar = whois_data[url].registrar
-
             if awg_data is None:
                 awg_id = '-'
                 awg_date = '-'
             else:
                 awg_id = awg_data[url]["awg_id"]
                 awg_date = awg_data[url]["awg_date_discovered"]
+
+            if ip_data[url].ip is not '-':
+                ip_country = ip_data[url].details.get('country', None)
 
             writer.writerow({
                 data.FIELD_TITLES[data.DOMAINID]:domain_id,
@@ -750,7 +755,7 @@ def writeCsv(data,
                 data.FIELD_TITLES[data.VSCORE]:v_score,
                 data.FIELD_TITLES[data.VENGINES]:engines_malicious[url],
                 data.FIELD_TITLES[data.IP]:ip_data[url].ip,
-                data.FIELD_TITLES[data.IPCOUNTRY]:ip_data[url].country,
+                data.FIELD_TITLES[data.IPCOUNTRY]:ip_country,
                 data.FIELD_TITLES[data.REGCOUNTRY]:country,
                 data.FIELD_TITLES[data.REGISTRAR]:registrar,
                 data.FIELD_TITLES[data.TIME]:data.now,
