@@ -1,0 +1,63 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 22nd 2022 7:56 PM",
+  "awg_id": 7469343
+ },
+ "ip_data": {
+  "city": "Chicago",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "servidor3327.tl.controladordns.com",
+  "ip": "67.227.236.79",
+  "latitude": "41.8500",
+  "loc": "41.8500,-87.6500",
+  "longitude": "-87.6500",
+  "org": "AS32244 Liquid Web, L.L.C",
+  "postal": "60666",
+  "region": "Illinois",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://cordes.com.mx/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9jb3JkZXMuY29tLm14Lw\" not found"
+  }
+ },
+ "whois_data": {
+  "admin": "Carlos  Linares",
+  "admin_city": "Tlalnepantla",
+  "admin_country": "Mexico",
+  "admin_state": "Mexico",
+  "billing_city": "Tlalnepantla",
+  "billing_country": "Mexico",
+  "billing_name": "Carlos  Linares",
+  "billing_state": "Mexico",
+  "creation_date": "06/18/2021, 00:00:00",
+  "domain_name": "cordes.com.mx",
+  "expiration_date": "06/18/2022, 00:00:00",
+  "name_servers": [
+   "ns3327.tl.controladordns.com",
+   "ns3328.tl.controladordns.com"
+  ],
+  "registrant_city": "Tlalnepantla",
+  "registrant_country": "Mexico",
+  "registrant_name": "Carlos  Linares",
+  "registrant_state": "Mexico",
+  "registrar": "Hospedando.Com.Mx",
+  "tech_city": "Tlalnepantla",
+  "tech_country": "Mexico",
+  "tech_name": "Carlos  Linares",
+  "tech_state": "Mexico",
+  "updated_date": "08/04/2021, 00:00:00",
+  "url": "http://www.hospedando.com.mx"
+ }
+}

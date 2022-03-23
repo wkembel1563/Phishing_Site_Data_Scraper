@@ -1,0 +1,68 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "inactive"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 9:28 AM",
+  "awg_id": 7469590
+ },
+ "ip_data": {
+  "city": "Wilmington",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "norevdns.getresponse.com",
+  "ip": "104.160.64.9",
+  "latitude": "39.7460",
+  "loc": "39.7460,-75.5466",
+  "longitude": "-75.5466",
+  "org": "AS46469 GETRESPONSE",
+  "postal": "19801",
+  "region": "Delaware",
+  "timezone": "America/New_York"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://app.getresponse.com/site2/e291c736915f317285397185cace944e/?u=QUiPL&webforms_id=SFJzl",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9hcHAuZ2V0cmVzcG9uc2UuY29tL3NpdGUyL2UyOTFjNzM2OTE1ZjMxNzI4NTM5NzE4NWNhY2U5NDRlLz91PVFVaVBMJndlYmZvcm1zX2lkPVNGSnps\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "5335 Gate Parkway care of Network Solutions PO Box 459",
+  "city": "Jacksonville",
+  "country": "US",
+  "creation_date": "10/04/1998, 04:00:00",
+  "dnssec": "unsigned",
+  "domain_name": "GETRESPONSE.COM",
+  "emails": [
+   "abuse@web.com",
+   "ww7fy8jy9w6@networksolutionsprivateregistration.com",
+   "domain.operations@web.com"
+  ],
+  "expiration_date": "11/09/2023, 21:20:37",
+  "name": "PERFECT PRIVACY, LLC",
+  "name_servers": [
+   "NS0.DNSMADEEASY.COM",
+   "NS1.DNSMADEEASY.COM",
+   "NS2.DNSMADEEASY.COM",
+   "NS3.DNSMADEEASY.COM",
+   "NS4.DNSMADEEASY.COM"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "Network Solutions, LLC",
+  "state": "FL",
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "09/17/2021, 11:34:09",
+   "09/17/2021, 11:35:31"
+  ],
+  "whois_server": "whois.networksolutions.com",
+  "zipcode": "32256"
+ }
+}

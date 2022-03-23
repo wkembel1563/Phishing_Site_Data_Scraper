@@ -1,0 +1,72 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 1:20 PM",
+  "awg_id": 7469736
+ },
+ "ip_data": {
+  "city": "Hong Kong",
+  "country": "HK",
+  "country_name": "Hong Kong",
+  "ip": "20.24.74.117",
+  "latitude": "22.2783",
+  "loc": "22.2783,114.1747",
+  "longitude": "114.1747",
+  "org": "AS8075 Microsoft Corporation",
+  "region": "Central and Western",
+  "timezone": "Asia/Hong_Kong"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.qjbaxed.xyz/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cucWpiYXhlZC54eXov\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Not disclosed, Not disclosed, Not disclosed",
+  "city": "Not disclosed",
+  "country": "AS",
+  "creation_date": "03/23/2022, 09:58:43",
+  "dnssec": "unsigned",
+  "domain_name": "QJBAXED.XYZ",
+  "emails": [
+   "abuse@tldregistrarsolutions.com",
+   "a84c04f595d4493236a1fa1d571fe64d.gdrp@customers.whoisprivacycorp.com"
+  ],
+  "expiration_date": "03/23/2023, 23:59:59",
+  "name": "Not disclosed Not disclosed",
+  "name_servers": [
+   "NS-872.AWSDNS-45.NET",
+   "NS-27.AWSDNS-03.COM",
+   "NS-1622.AWSDNS-10.CO.UK",
+   "NS-1278.AWSDNS-31.ORG",
+   "ns-1278.awsdns-31.org",
+   "ns-1622.awsdns-10.co.uk",
+   "ns-27.awsdns-03.com",
+   "ns-872.awsdns-45.net"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "TLD Registrar Solutions Ltd.",
+  "state": "ewewee",
+  "status": [
+   "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "addPeriod https://icann.org/epp#addPeriod",
+   "clientTransferProhibited - http://www.icann.org/epp#clientTransferProhibited",
+   "inactive - http://www.icann.org/epp#inactive",
+   "serverTransferProhibited - http://www.icann.org/epp#serverTransferProhibited"
+  ],
+  "updated_date": "03/23/2022, 10:16:03",
+  "whois_server": "whois.tldregistrarsolutions.com",
+  "zipcode": "Not disclosed"
+ }
+}

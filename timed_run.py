@@ -1,6 +1,7 @@
 from parsedomains import *
 import sys 
 import time
+from twilio.rest import Client
 
 # initialize and validate program state
 args = sys.argv
@@ -58,6 +59,8 @@ for i in range(ROUND_LIMIT):
     # mark end time
     t2 = datetime.now()
     time_spent = (t2 - t1).seconds
+
+    # send me message the run as ended
 
     # wait 10 minutes before next run
     while time_spent < 600:

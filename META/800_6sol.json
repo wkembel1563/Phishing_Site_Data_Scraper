@@ -1,0 +1,67 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 22nd 2022 8:03 PM",
+  "awg_id": 7469345
+ },
+ "ip_data": {
+  "city": "Los Angeles",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "server200.serverange.net",
+  "ip": "64.188.2.244",
+  "latitude": "33.9631",
+  "loc": "33.9631,-118.3941",
+  "longitude": "-118.3941",
+  "org": "AS8100 QuadraNet Enterprises LLC",
+  "postal": "90045",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://www.6solutions.com/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL3d3dy42c29sdXRpb25zLmNvbS8\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "REDACTED FOR PRIVACY",
+  "city": "REDACTED FOR PRIVACY",
+  "country": "MA",
+  "creation_date": [
+   "10/23/2014, 09:48:28",
+   "10/23/2014, 09:48:00"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "6SOLUTIONS.COM",
+   "6solutions.com"
+  ],
+  "emails": "ABUSE@ENOM.COM",
+  "expiration_date": "10/23/2022, 09:48:28",
+  "name": "REDACTED FOR PRIVACY",
+  "name_servers": [
+   "NS1.SERVERANGE.NET",
+   "NS2.SERVERANGE.NET"
+  ],
+  "org": "REDACTED FOR PRIVACY",
+  "referral_url": null,
+  "registrar": "ENOM, INC.",
+  "state": "meknes",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "09/25/2021, 23:36:51",
+  "whois_server": "WHOIS.ENOM.COM",
+  "zipcode": "REDACTED FOR PRIVACY"
+ }
+}

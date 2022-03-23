@@ -1,0 +1,72 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 1:15 PM",
+  "awg_id": 7469703
+ },
+ "ip_data": {
+  "city": "Hong Kong",
+  "country": "HK",
+  "country_name": "Hong Kong",
+  "ip": "20.24.74.117",
+  "latitude": "22.2783",
+  "loc": "22.2783,114.1747",
+  "longitude": "114.1747",
+  "org": "AS8075 Microsoft Corporation",
+  "region": "Central and Western",
+  "timezone": "Asia/Hong_Kong"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://h5.hgxsvtk.xyz/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9oNS5oZ3hzdnRrLnh5ei8\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "4846 Woodhill Avenue",
+  "city": "Fork",
+  "country": "TD",
+  "creation_date": "03/23/2022, 09:54:19",
+  "dnssec": "unsigned",
+  "domain_name": "HGXSVTK.XYZ",
+  "emails": [
+   "abuse@tldregistrarsolutions.com",
+   "cded691c3cd55e3bdc7ab72eb80cead4.gdrp@customers.whoisprivacycorp.com"
+  ],
+  "expiration_date": "03/23/2023, 23:59:59",
+  "name": "Not disclosed Not disclosed",
+  "name_servers": [
+   "NS-632.AWSDNS-15.NET",
+   "NS-1503.AWSDNS-59.ORG",
+   "NS-1822.AWSDNS-35.CO.UK",
+   "NS-240.AWSDNS-30.COM",
+   "ns-1503.awsdns-59.org",
+   "ns-1822.awsdns-35.co.uk",
+   "ns-240.awsdns-30.com",
+   "ns-632.awsdns-15.net"
+  ],
+  "org": "Pender",
+  "referral_url": null,
+  "registrar": "TLD Registrar Solutions Ltd.",
+  "state": "ee",
+  "status": [
+   "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "addPeriod https://icann.org/epp#addPeriod",
+   "clientTransferProhibited - http://www.icann.org/epp#clientTransferProhibited",
+   "inactive - http://www.icann.org/epp#inactive",
+   "serverTransferProhibited - http://www.icann.org/epp#serverTransferProhibited"
+  ],
+  "updated_date": "03/23/2022, 10:29:05",
+  "whois_server": "whois.tldregistrarsolutions.com",
+  "zipcode": "21051"
+ }
+}

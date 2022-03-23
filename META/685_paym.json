@@ -1,0 +1,72 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 5:15 AM",
+  "awg_id": 7469463
+ },
+ "ip_data": {
+  "city": "Washington",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "ip-70.32.1.32.hosted.by.gigenet.com",
+  "ip": "70.32.1.32",
+  "latitude": "38.8951",
+  "loc": "38.8951,-77.0364",
+  "longitude": "-77.0364",
+  "org": "AS32181 GigeNET",
+  "postal": "20004",
+  "region": "Washington, D.C.",
+  "timezone": "America/New_York"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://paymaya-official.net",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9wYXltYXlhLW9mZmljaWFsLm5ldA\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": "US",
+  "creation_date": [
+   "03/16/2022, 11:44:44",
+   "03/16/2022, 22:44:44"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": "PAYMAYA-OFFICIAL.NET",
+  "emails": [
+   "abuse@above.com",
+   "paymaya-official.net@privacy.above.com"
+  ],
+  "expiration_date": [
+   "03/16/2023, 11:44:44",
+   "03/16/2023, 22:44:44"
+  ],
+  "name": null,
+  "name_servers": [
+   "NS11.ABOVE.COM",
+   "NS12.ABOVE.COM",
+   "ns11.above.com",
+   "ns12.above.com"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "ABOVE.COM PTY LTD.",
+  "state": "Delaware",
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "03/16/2022, 11:45:38",
+   "03/16/2022, 22:44:44"
+  ],
+  "whois_server": "whois.above.com",
+  "zipcode": null
+ }
+}

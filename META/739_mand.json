@@ -1,0 +1,70 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 10:43 AM",
+  "awg_id": 7469616
+ },
+ "ip_data": {
+  "city": "St. Louis",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "mandiree.com",
+  "ip": "199.217.115.48",
+  "latitude": "38.6273",
+  "loc": "38.6273,-90.1979",
+  "longitude": "-90.1979",
+  "org": "AS30083 GoDaddy.com, LLC",
+  "postal": "63101",
+  "region": "Missouri",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://mandiree.com/c81e728d9d4c2f636f067f89cc14862c/f1b832437f4602cb3382188d07bf15a5/562c073ad286a793b9d03a7fff90429c/7516fd43adaa5e0b8a65a672c39845d2?subscribed=1&eid=Dt0TkayhuqJTDUaYSBycDaevdbJU",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL21hbmRpcmVlLmNvbS9jODFlNzI4ZDlkNGMyZjYzNmYwNjdmODljYzE0ODYyYy9mMWI4MzI0MzdmNDYwMmNiMzM4MjE4OGQwN2JmMTVhNS81NjJjMDczYWQyODZhNzkzYjlkMDNhN2ZmZjkwNDI5Yy83NTE2ZmQ0M2FkYWE1ZTBiOGE2NWE2NzJjMzk4NDVkMj9zdWJzY3JpYmVkPTEmZWlkPUR0MFRrYXlodXFKVERVYVlTQnljRGFldmRiSlU\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "PO Box 1769",
+  "city": "Denver",
+  "country": "US",
+  "creation_date": "11/21/2019, 18:28:51",
+  "dnssec": [
+   "unsigned",
+   "unSigned"
+  ],
+  "domain_name": "MANDIREE.COM",
+  "emails": "abuse@name.com",
+  "expiration_date": "11/21/2022, 18:28:51",
+  "name": "Whois Agent",
+  "name_servers": [
+   "NS1MPZ.NAME.COM",
+   "NS2BTZ.NAME.COM",
+   "NS3JMT.NAME.COM",
+   "NS4LNY.NAME.COM",
+   "ns1mpz.name.com",
+   "ns2btz.name.com",
+   "ns3jmt.name.com",
+   "ns4lny.name.com"
+  ],
+  "org": "Domain Protection Services, Inc.",
+  "referral_url": null,
+  "registrar": "Name.com, Inc.",
+  "state": "CO",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "11/22/2021, 08:22:03",
+  "whois_server": "whois.name.com",
+  "zipcode": "80201"
+ }
+}

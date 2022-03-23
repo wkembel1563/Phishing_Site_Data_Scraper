@@ -1,0 +1,39 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 1:16 PM",
+  "awg_id": 7469715
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://moofar.online/pge/87315823/1895292/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9tb29mYXIub25saW5lL3BnZS84NzMxNTgyMy8xODk1MjkyLw\" not found"
+  }
+ },
+ "whois_data": {
+  "admin_email": null,
+  "billing_email": null,
+  "creation_date": null,
+  "dnssec": null,
+  "domain__id": null,
+  "domain_name": null,
+  "expiration_date": null,
+  "name_servers": null,
+  "registrant_email": null,
+  "registrar": null,
+  "registrar_id": null,
+  "registrar_url": null,
+  "status": null,
+  "tech_email": null,
+  "updated_date": null,
+  "whois_server": null
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 1:36 PM",
+  "awg_id": 7469793
+ },
+ "ip_data": {
+  "city": "Dublin",
+  "country": "IE",
+  "country_name": "Ireland",
+  "hostname": "ec2-54-73-53-134.eu-west-1.compute.amazonaws.com",
+  "ip": "54.73.53.134",
+  "latitude": "53.3331",
+  "loc": "53.3331,-6.2489",
+  "longitude": "-6.2489",
+  "org": "AS16509 Amazon.com, Inc.",
+  "postal": "D02",
+  "region": "Leinster",
+  "timezone": "Europe/Dublin"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://app-claro-liberbank-es.herokuapp.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9hcHAtY2xhcm8tbGliZXJiYW5rLWVzLmhlcm9rdWFwcC5jb20\" not found"
+  }
+ },
+ "whois_data": {}
+}

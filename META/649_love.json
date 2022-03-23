@@ -1,0 +1,178 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 22nd 2022 8:29 PM",
+  "awg_id": 7469355
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "209-99-40-222.fwd.datafoundry.com",
+  "ip": "209.99.40.222",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS40034 Confluence Networks Inc",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://lovellscorporate.biz",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9sb3ZlbGxzY29ycG9yYXRlLmJpeg\" not found"
+  }
+ },
+ "whois_data": {
+  "admin_address": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "admin_city": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "admin_country": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "admin_email": [
+   "Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.",
+   "gdpr-masking@gdpr-masked.com"
+  ],
+  "admin_id": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "admin_name": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "admin_organization": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "admin_phone_number": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "admin_postal_code": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "admin_state_province": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "creation_date": "03/16/2021, 06:33:34",
+  "domain__id": [
+   "D2132FA6353154A468F28592DA5FD5809-NSR",
+   "Not Available From Registry"
+  ],
+  "domain_name": [
+   "lovellscorporate.biz",
+   "LOVELLSCORPORATE.BIZ"
+  ],
+  "expiration_date": "03/16/2022, 06:33:34",
+  "name_servers": [
+   "dns16.parkpage.foundationapi.com",
+   "dns15.parkpage.foundationapi.com"
+  ],
+  "registrant_address": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "registrant_city": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "registrant_country": "GB",
+  "registrant_country_code": null,
+  "registrant_email": [
+   "Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.",
+   "gdpr-masking@gdpr-masked.com"
+  ],
+  "registrant_id": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "registrant_name": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "registrant_phone_number": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "registrant_postal_code": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "registrant_state_province": "Bedfordshire",
+  "registrar": "PDR Ltd. d/b/a PublicDomainRegistry.com",
+  "registrar_email": [
+   "abuse@publicdomainregistry.com",
+   "abuse-contact@publicdomainregistry.com"
+  ],
+  "registrar_id": "303",
+  "registrar_phone": "+1.2013775952",
+  "registrar_url": [
+   "publicdomainregistry.com",
+   "www.publicdomainregistry.com"
+  ],
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "autoRenewPeriod https://icann.org/epp#autoRenewPeriod"
+  ],
+  "tech_address": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "tech_city": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "tech_country": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "tech_email": [
+   "Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.",
+   "gdpr-masking@gdpr-masked.com"
+  ],
+  "tech_id": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "tech_name": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "tech_organization": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "tech_phone_number": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "tech_postal_code": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "tech_state_province": [
+   "REDACTED FOR PRIVACY",
+   "GDPR Masked"
+  ],
+  "updated_date": "03/16/2022, 08:02:56"
+ }
+}
