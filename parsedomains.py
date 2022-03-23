@@ -624,9 +624,10 @@ def logMeta(data,
                 log["awg_data"] = awg_data[url]
 
             # convert ip Details object to dict
-            ip_key = cache_key(ip_data[url].ip)
-            ip_dict = data.HANDLER.cache[ip_key]
-            log["ip_data"] = ip_dict
+            if ip_data[url].ip is not '-':
+                ip_key = cache_key(ip_data[url].ip)
+                ip_dict = data.HANDLER.cache[ip_key]
+                log["ip_data"] = ip_dict
 
             log_js = json.dumps(log, indent=1, sort_keys=True)
             logfile.write(log_js)

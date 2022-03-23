@@ -1,0 +1,64 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 22nd 2022 9:53 PM",
+  "awg_id": 7469380
+ },
+ "ip_data": {
+  "city": "Council Bluffs",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "147.62.236.23.bc.googleusercontent.com",
+  "ip": "23.236.62.147",
+  "latitude": "41.2619",
+  "loc": "41.2619,-95.8608",
+  "longitude": "-95.8608",
+  "org": "AS15169 Google LLC",
+  "postal": "51502",
+  "region": "Iowa",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://protectionplusmore.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9wcm90ZWN0aW9ucGx1c21vcmUuY29t\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "REDACTED FOR PRIVACY",
+  "city": "REDACTED FOR PRIVACY",
+  "country": "US",
+  "creation_date": "10/24/2004, 23:54:45",
+  "dnssec": "unsigned",
+  "domain_name": "PROTECTIONPLUSMORE.COM",
+  "emails": "domainabuse@tucows.com",
+  "expiration_date": "10/24/2022, 23:54:45",
+  "name": "REDACTED FOR PRIVACY",
+  "name_servers": [
+   "NS8.WIXDNS.NET",
+   "NS9.WIXDNS.NET",
+   "YNS1.YAHOO.COM",
+   "YNS2.YAHOO.COM",
+   "yns1.yahoo.com",
+   "yns2.yahoo.com",
+   "ns8.wixdns.net",
+   "ns9.wixdns.net"
+  ],
+  "org": "REDACTED FOR PRIVACY",
+  "referral_url": null,
+  "registrar": "TUCOWS, INC.",
+  "state": "FL",
+  "status": "ok https://icann.org/epp#ok",
+  "updated_date": "09/26/2021, 05:20:27",
+  "whois_server": "whois.tucows.com",
+  "zipcode": "REDACTED FOR PRIVACY"
+ }
+}
