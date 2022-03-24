@@ -1,0 +1,55 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 11:22 PM",
+  "awg_id": 7470155
+ },
+ "ip_data": {
+  "city": "Madrid",
+  "country": "ES",
+  "country_name": "Spain",
+  "hostname": "dns154188.phdns15.es",
+  "ip": "185.177.154.188",
+  "latitude": "40.4165",
+  "loc": "40.4165,-3.7026",
+  "longitude": "-3.7026",
+  "org": "AS201446 Soluciones web on line s.l.",
+  "postal": "28001",
+  "region": "Madrid",
+  "timezone": "Europe/Madrid"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://congeladoshouse.es/modules/cookiesplus/views/js/u-kra/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9jb25nZWxhZG9zaG91c2UuZXMvbW9kdWxlcy9jb29raWVzcGx1cy92aWV3cy9qcy91LWtyYS8\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": null,
+  "dnssec": null,
+  "domain_name": null,
+  "emails": null,
+  "expiration_date": null,
+  "name": null,
+  "name_servers": null,
+  "org": null,
+  "referral_url": null,
+  "registrar": null,
+  "state": null,
+  "status": null,
+  "updated_date": null,
+  "whois_server": null,
+  "zipcode": null
+ }
+}

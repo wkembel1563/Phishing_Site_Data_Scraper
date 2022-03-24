@@ -1,0 +1,55 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 6:02 PM",
+  "awg_id": 7470029
+ },
+ "ip_data": {
+  "city": "Baldwin Park",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "server318-1.web-hosting.com",
+  "ip": "199.188.200.35",
+  "latitude": "34.0853",
+  "loc": "34.0853,-117.9609",
+  "longitude": "-117.9609",
+  "org": "AS22612 Namecheap, Inc.",
+  "postal": "91706",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://mfgroup.live",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9tZmdyb3VwLmxpdmU\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": null,
+  "dnssec": null,
+  "domain_name": null,
+  "emails": null,
+  "expiration_date": null,
+  "name": null,
+  "name_servers": null,
+  "org": null,
+  "referral_url": null,
+  "registrar": null,
+  "state": null,
+  "status": null,
+  "updated_date": null,
+  "whois_server": null,
+  "zipcode": null
+ }
+}

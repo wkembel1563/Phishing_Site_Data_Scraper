@@ -1,0 +1,59 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 10:09 PM",
+  "awg_id": 7470130
+ },
+ "ip_data": {
+  "anycast": true,
+  "city": "Ashburn",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "unalocated.63.wixsite.com",
+  "ip": "185.230.63.171",
+  "latitude": "39.0437",
+  "loc": "39.0437,-77.4875",
+  "longitude": "-77.4875",
+  "org": "AS58182 Wix.com Ltd.",
+  "postal": "20147",
+  "region": "Virginia",
+  "timezone": "America/New_York"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://diverr.org",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9kaXZlcnIub3Jn\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": "IS",
+  "creation_date": "01/25/2022, 03:31:19",
+  "dnssec": "unsigned",
+  "domain_name": "DIVERR.ORG",
+  "emails": "abuse@namecheap.com",
+  "expiration_date": "01/25/2023, 03:31:19",
+  "name": null,
+  "name_servers": [
+   "NS10.WIXDNS.NET",
+   "NS11.WIXDNS.NET"
+  ],
+  "org": "Privacy service provided by Withheld for Privacy ehf",
+  "referral_url": null,
+  "registrar": "NameCheap, Inc.",
+  "state": "Capital Region",
+  "status": "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+  "updated_date": "01/25/2022, 03:53:27",
+  "whois_server": "whois.namecheap.com",
+  "zipcode": null
+ }
+}

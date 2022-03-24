@@ -1,0 +1,71 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 9:22 PM",
+  "awg_id": 7470106
+ },
+ "ip_data": {
+  "city": "Jatibarang",
+  "country": "ID",
+  "country_name": "Indonesia",
+  "hostname": "iix50.cloudhost.id",
+  "ip": "103.28.53.243",
+  "latitude": "-6.4747",
+  "loc": "-6.4747,108.3153",
+  "longitude": "108.3153",
+  "org": "AS136052 PT Cloud Hosting Indonesia",
+  "region": "West Java",
+  "timezone": "Asia/Jakarta"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://fiverr.rofirahman.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9maXZlcnIucm9maXJhaG1hbi5jb20\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "L4-E-2, Level 4, Enterprise 4, Technology Park Malaysia, Bukit Jalil",
+  "city": "Kuala Lumpur",
+  "country": "Malaysia",
+  "creation_date": [
+   "11/15/2018, 14:55:32",
+   "11/15/2018, 14:55:34"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "ROFIRAHMAN.COM",
+   "rofirahman.com"
+  ],
+  "emails": [
+   "compliance_abuse@webnic.cc",
+   "reg_15588374@whoisprotection.cc",
+   "adm_15588374@whoisprotection.cc",
+   "tec_15588374@whoisprotection.cc"
+  ],
+  "expiration_date": "11/15/2022, 14:55:32",
+  "name": "Domain Admin",
+  "name_servers": [
+   "NS01.CLOUDHOST.ID",
+   "NS02.CLOUDHOST.ID"
+  ],
+  "org": "Whoisprotection.cc",
+  "referral_url": null,
+  "registrar": "WEBCC",
+  "state": "Wilayah Persekutuan",
+  "status": "ok https://icann.org/epp#ok",
+  "updated_date": [
+   "11/04/2021, 13:51:54",
+   "11/15/2018, 14:55:30"
+  ],
+  "whois_server": "whois.webnic.cc",
+  "zipcode": "57000"
+ }
+}

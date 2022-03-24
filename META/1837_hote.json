@@ -1,0 +1,73 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "inactive"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 22nd 2022 8:04 PM",
+  "awg_id": 7469348
+ },
+ "ip_data": {
+  "city": "Frankfurt am Main",
+  "country": "DE",
+  "country_name": "Germany",
+  "hostname": "217-160-0-249.elastic-ssl.ui-r.com",
+  "ip": "217.160.0.249",
+  "latitude": "50.1155",
+  "loc": "50.1155,8.6842",
+  "longitude": "8.6842",
+  "org": "AS8560 IONOS SE",
+  "postal": "60306",
+  "region": "Hesse",
+  "timezone": "Europe/Berlin"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.hotelesyviajesmexico.com/galeria",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cuaG90ZWxlc3l2aWFqZXNtZXhpY28uY29tL2dhbGVyaWE\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "REDACTED FOR PRIVACY",
+  "city": "REDACTED FOR PRIVACY",
+  "country": "US",
+  "creation_date": "01/04/2022, 16:52:13",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": [
+   "HOTELESYVIAJESMEXICO.COM",
+   "hotelesyviajesmexico.com"
+  ],
+  "emails": [
+   "abuse@ionos.com",
+   "dataprivacyprotected@ionos.de"
+  ],
+  "expiration_date": "01/04/2023, 16:52:13",
+  "name": "REDACTED FOR PRIVACY",
+  "name_servers": [
+   "NS1018.UI-DNS.ORG",
+   "NS1048.UI-DNS.COM",
+   "NS1066.UI-DNS.BIZ",
+   "NS1099.UI-DNS.DE"
+  ],
+  "org": "1&1 Internet Inc",
+  "referral_url": null,
+  "registrar": "IONOS SE",
+  "state": "PA",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited",
+   "addPeriod https://www.icann.org/epp#addPeriod"
+  ],
+  "updated_date": "01/04/2022, 16:52:15",
+  "whois_server": "whois.ionos.com",
+  "zipcode": "REDACTED FOR PRIVACY"
+ }
+}

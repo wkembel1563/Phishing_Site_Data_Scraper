@@ -1,0 +1,70 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 6:04 PM",
+  "awg_id": 7470033
+ },
+ "ip_data": {
+  "anycast": true,
+  "city": "San Francisco",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "104.20.138.65",
+  "latitude": "37.7621",
+  "loc": "37.7621,-122.3971",
+  "longitude": "-122.3971",
+  "org": "AS13335 Cloudflare, Inc.",
+  "postal": "94107",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://tinyurl.com/app/nospam/tinyurl.com/ycdnmbtx/terminated",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly90aW55dXJsLmNvbS9hcHAvbm9zcGFtL3Rpbnl1cmwuY29tL3ljZG5tYnR4L3Rlcm1pbmF0ZWQ\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "REDACTED FOR PRIVACY",
+  "city": "REDACTED FOR PRIVACY",
+  "country": "US",
+  "creation_date": "01/27/2002, 06:17:41",
+  "dnssec": "unsigned",
+  "domain_name": "TINYURL.COM",
+  "emails": "domainabuse@tucows.com",
+  "expiration_date": "01/27/2029, 06:17:41",
+  "name": "REDACTED FOR PRIVACY",
+  "name_servers": [
+   "CONSTITUTION.NS.TINYURL.COM",
+   "FREEDOM.NS.TINYURL.COM",
+   "LIBERTY.NS.TINYURL.COM",
+   "REVOLUTION.NS.TINYURL.COM",
+   "revolution.ns.tinyurl.com",
+   "constitution.ns.tinyurl.com",
+   "liberty.ns.tinyurl.com",
+   "freedom.ns.tinyurl.com"
+  ],
+  "org": "REDACTED FOR PRIVACY",
+  "referral_url": null,
+  "registrar": "TUCOWS, INC.",
+  "state": "SD",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+  ],
+  "updated_date": [
+   "09/10/2020, 20:57:29",
+   "01/07/2021, 23:17:08"
+  ],
+  "whois_server": "whois.tucows.com",
+  "zipcode": "REDACTED FOR PRIVACY"
+ }
+}
