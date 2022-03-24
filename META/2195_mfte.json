@@ -1,0 +1,69 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 9:22 PM",
+  "awg_id": 7470108
+ },
+ "ip_data": {
+  "city": "Tallinn",
+  "country": "EE",
+  "country_name": "Estonia",
+  "hostname": "oak57.web-host.gen.in",
+  "ip": "109.94.209.57",
+  "latitude": "59.4370",
+  "loc": "59.4370,24.7535",
+  "longitude": "24.7535",
+  "org": "AS202376 Arvid Logicum OU",
+  "postal": "10111",
+  "region": "Harjumaa",
+  "timezone": "Europe/Tallinn"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://mftele.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9tZnRlbGUuY29t\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Baku",
+  "city": "Baku",
+  "country": "AZ",
+  "creation_date": "12/21/2016, 07:43:22",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "MFTELE.COM",
+  "emails": [
+   "abuse-contact@publicdomainregistry.com",
+   "mf-foks-telekom@box.az"
+  ],
+  "expiration_date": "12/21/2022, 07:43:22",
+  "name": "Farid Mammadov Sabuhi",
+  "name_servers": [
+   "NS1.WEB-HOST.GEN.IN",
+   "NS2.WEB-HOST.GEN.IN",
+   "ns1.web-host.gen.in",
+   "ns2.web-host.gen.in"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "PDR Ltd. d/b/a PublicDomainRegistry.com",
+  "state": null,
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "12/27/2021, 12:14:15",
+   "12/27/2021, 12:14:16"
+  ],
+  "whois_server": "whois.publicdomainregistry.com",
+  "zipcode": "AZ1000"
+ }
+}

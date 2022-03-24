@@ -1,0 +1,47 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 11:35 PM",
+  "awg_id": 7470162
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://susaksha.com/exodus/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9zdXNha3NoYS5jb20vZXhvZHVzLw\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": "06/16/2021, 11:17:21",
+  "dnssec": "unsigned",
+  "domain_name": "SUSAKSHA.COM",
+  "emails": "abuse@namecheap.com",
+  "expiration_date": "06/16/2022, 11:17:21",
+  "name": null,
+  "name_servers": [
+   "DNS1.NAMECHEAPHOSTING.COM",
+   "DNS2.NAMECHEAPHOSTING.COM"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "NameCheap, Inc.",
+  "state": null,
+  "status": [
+   "clientHold https://icann.org/epp#clientHold",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/23/2022, 23:44:02",
+  "whois_server": "whois.namecheap.com",
+  "zipcode": null
+ }
+}

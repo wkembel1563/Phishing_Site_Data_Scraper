@@ -1,0 +1,70 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 7:16 PM",
+  "awg_id": 7470057
+ },
+ "ip_data": {
+  "city": "Amsterdam",
+  "country": "NL",
+  "country_name": "Netherlands",
+  "ip": "81.171.28.44",
+  "latitude": "52.3740",
+  "loc": "52.3740,4.8897",
+  "longitude": "4.8897",
+  "org": "AS60781 LeaseWeb Netherlands B.V.",
+  "postal": "1012",
+  "region": "North Holland",
+  "timezone": "Europe/Amsterdam"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://nplusonecustoms.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL25wbHVzb25lY3VzdG9tcy5jb20\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Ocean Centre, Montagu Foreshore, East Bay Street",
+  "city": "Nassau",
+  "country": "BS",
+  "creation_date": "04/06/2021, 16:25:22",
+  "dnssec": "unsigned",
+  "domain_name": "NPLUSONECUSTOMS.COM",
+  "emails": [
+   "abuse@internet.bs",
+   "nplusonecustoms.com-owner-xcxo@customers.whoisprivacycorp.com",
+   "nplusonecustoms.com-admin-fdhd@customers.whoisprivacycorp.com",
+   "nplusonecustoms.com-tech-aszw@customers.whoisprivacycorp.com"
+  ],
+  "expiration_date": "04/06/2022, 16:25:22",
+  "name": "Domain Admin",
+  "name_servers": [
+   "NS1.THEDNSCLOUD.COM",
+   "NS2.THEDNSCLOUD.COM",
+   "ns1.thednscloud.com",
+   "ns2.thednscloud.com"
+  ],
+  "org": "Whois Privacy Corp.",
+  "referral_url": null,
+  "registrar": "Internet Domain Service BS Corp.",
+  "state": "New Providence",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited - http://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": [
+   "10/04/2021, 01:15:17",
+   "10/04/2021, 01:15:18"
+  ],
+  "whois_server": "whois.internet.bs",
+  "zipcode": null
+ }
+}

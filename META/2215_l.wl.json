@@ -1,0 +1,55 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 11:03 PM",
+  "awg_id": 7470148
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "edge-star-shv-02-dfw5.facebook.com",
+  "ip": "31.13.93.19",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS32934 Facebook, Inc.",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://l.wl.co/l?u=https://is.gd/VohPj6?trackingid=lqLOF65S&signature=newsletter",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9sLndsLmNvL2w_dT1odHRwczovL2lzLmdkL1ZvaFBqNj90cmFja2luZ2lkPWxxTE9GNjVTJnNpZ25hdHVyZT1uZXdzbGV0dGVy\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": null,
+  "dnssec": null,
+  "domain_name": null,
+  "emails": null,
+  "expiration_date": null,
+  "name": null,
+  "name_servers": null,
+  "org": null,
+  "referral_url": null,
+  "registrar": null,
+  "state": null,
+  "status": null,
+  "updated_date": null,
+  "whois_server": null,
+  "zipcode": null
+ }
+}

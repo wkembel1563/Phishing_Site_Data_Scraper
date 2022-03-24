@@ -1,0 +1,61 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 8:31 PM",
+  "awg_id": 7470096
+ },
+ "ip_data": {
+  "city": "Fullerton",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "server190-1.web-hosting.com",
+  "ip": "198.54.114.197",
+  "latitude": "33.8703",
+  "loc": "33.8703,-117.9253",
+  "longitude": "-117.9253",
+  "org": "AS22612 Namecheap, Inc.",
+  "postal": "92832",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://bestipagefcu.com/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9iZXN0aXBhZ2VmY3UuY29tLw\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": "02/22/2022, 12:11:05",
+  "dnssec": "unsigned",
+  "domain_name": "BESTIPAGEFCU.COM",
+  "emails": "abuse@namecheap.com",
+  "expiration_date": "02/22/2023, 12:11:05",
+  "name": null,
+  "name_servers": [
+   "DNS1.NAMECHEAPHOSTING.COM",
+   "DNS2.NAMECHEAPHOSTING.COM"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "NameCheap, Inc.",
+  "state": null,
+  "status": [
+   "clientHold https://icann.org/epp#clientHold",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/23/2022, 21:03:29",
+  "whois_server": "whois.namecheap.com",
+  "zipcode": null
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 11:16 PM",
+  "awg_id": 7470153
+ },
+ "ip_data": {
+  "city": "Houston",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "162-241-71-236.unifiedlayer.com",
+  "ip": "162.241.71.236",
+  "latitude": "29.7633",
+  "loc": "29.7633,-95.3633",
+  "longitude": "-95.3633",
+  "org": "AS46606 Unified Layer",
+  "postal": "77002",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://tax-refund-lrs-homepage.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly90YXgtcmVmdW5kLWxycy1ob21lcGFnZS5jb20\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": "03/23/2022, 12:53:29",
+  "dnssec": "unsigned",
+  "domain_name": "TAX-REFUND-LRS-HOMEPAGE.COM",
+  "emails": "domain-abuse@wix.com",
+  "expiration_date": "03/23/2023, 12:53:29",
+  "name": null,
+  "name_servers": [
+   "NS12.WIXDNS.NET",
+   "NS13.WIXDNS.NET",
+   "ns13.wixdns.net",
+   "ns12.wixdns.net"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "Wix.Com Ltd.",
+  "state": null,
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+  ],
+  "updated_date": [
+   "03/23/2022, 12:53:30",
+   "03/23/2022, 13:02:24"
+  ],
+  "whois_server": "whois.wix.com",
+  "zipcode": null
+ }
+}
