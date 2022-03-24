@@ -275,6 +275,7 @@ def checkDomainActivity(domains, screenshot_paths):
     model = load_model('model2.h5')
     print("END IGNORE #################\n")
 
+    print("CHECKING DOMAIN ACTIVITY...", end="")
     for url in domains:
         activity_data[url] = {}
         # get screenshot
@@ -303,6 +304,8 @@ def checkDomainActivity(domains, screenshot_paths):
         except Exception as e:
             activity_data[url]["req"] = "unknown"
 
+    print("DONE")
+
     return activity_data
 
 
@@ -322,6 +325,8 @@ def searchPhishTank(domains):
         phishtank data for url including data added to phishtank and phishtank id
         data can be accessed via 'phish_data[<url>]['date' or 'phish_id']
     """
+    print("GETTING PHISHTANK DATA...", end="")
+
     # generate path to file
     path_to_file = os.getcwd()
     filename = 'log.csv'
@@ -361,6 +366,7 @@ def searchPhishTank(domains):
         # reset for nxt iteration
         container.clear()
     
+    print("DONE")
     return phish_data
 
 
@@ -401,6 +407,8 @@ def getWhoIs(domains):
             a dictionary of the whois data for each domain
             the dictionary is indexed by domain url
     """
+    print("GETTING WHOIS DATA...", end="")
+
     whois_data = {}
 
     # build dictionary of whois data for each domain
@@ -450,55 +458,58 @@ def getWhoIs(domains):
 
         whois_data[url] = w
 
+    print("DONE")
     return whois_data
 
 
 def getVirusTotal(token, domains): 
-	"""GET VIRUS TOTAL 
-	
-	retrieves relevant data from virustotal api including:
-	1) virus total phishing score for each domain
-	2) virus total engines which labeled domain as a threat
+    """GET VIRUS TOTAL 
+    
+    retrieves relevant data from virustotal api including:
+    1) virus total phishing score for each domain
+    2) virus total engines which labeled domain as a threat
 
-	Parameters
-	----------
-        token: (string)
-            virus total access token 
+    Parameters
+    ----------
+    token: (string)
+        virus total access token 
 
-	domains: (list)
-		list of domains to gather data on
+    domains: (list)
+            list of domains to gather data on
 
-	Returns
-	-------
-	virus_data: (dict)
-		a dictionary of the virustotal data for each domain
-		the dictionary is indexed by domain url
-	"""
-	virus_data = {}
+    Returns
+    -------
+    virus_data: (dict)
+            a dictionary of the virustotal data for each domain
+            the dictionary is indexed by domain url
+    """
+    print("GETTING VIRUSTOTAL DATA...", end="")
+    virus_data = {}
 
-	# request virustotal scan each domain in list
-	for domain in domains:
-            # encode domain
-            payload = "url=" + domain
-            domain_id = base64.urlsafe_b64encode(domain.encode()).decode().strip("=")
+    # request virustotal scan each domain in list
+    for domain in domains:
+        # encode domain
+        payload = "url=" + domain
+        domain_id = base64.urlsafe_b64encode(domain.encode()).decode().strip("=")
 
-            # get scan report 
-            url = "https://www.virustotal.com/api/v3/urls"
-            url = url + '/' + domain_id
-            headers = {
+        # get scan report 
+        url = "https://www.virustotal.com/api/v3/urls"
+        url = url + '/' + domain_id
+        headers = {
 
-                "Accept": "application/json",
+            "Accept": "application/json",
 
-                "x-apikey": token
+            "x-apikey": token
 
-            }
-            response = requests.request("GET", url, headers=headers)
-            report = response.json()
+        }
+        response = requests.request("GET", url, headers=headers)
+        report = response.json()
 
-            # create dict entry for report
-            virus_data[domain] = report
+        # create dict entry for report
+        virus_data[domain] = report
 
-	return virus_data
+    print("DONE")
+    return virus_data
 
 
 def getIpInfo(handler, domains): 
@@ -535,6 +546,7 @@ def getIpInfo(handler, domains):
             the dictionary is indexed by domain url
             
     """
+    print("GETTING IP DATA...", end="")
     ip_data = {}
 
     # get ip data for each domain
@@ -548,6 +560,7 @@ def getIpInfo(handler, domains):
         except (socket.gaierror, UnicodeError):
             ip_data[url] = failedFetch()
 
+    print("Done")
     return ip_data
 
 def logMeta(data, 
@@ -597,6 +610,7 @@ def logMeta(data,
     -------
     ( None )
     """
+    print("LOGGING METADATA...", end="")
     log = {}
     domain_id = data.CURRENT_DOMAIN_ID + 1
 
@@ -638,6 +652,8 @@ def logMeta(data,
 
             # reset
             log.clear()
+
+    print("DONE")
 
 
 def writeCsv(data, 
@@ -681,6 +697,8 @@ def writeCsv(data,
     -------
     ( None )
     """
+    print("WRITING TO CSV...", end="")
+
     # set csv write mode based on state of file
     if data.CURRENT_DOMAIN_ID == data.EMPTY: 
         data.write_mode = 'w' 
@@ -715,9 +733,17 @@ def writeCsv(data,
                     if url_results[engine]['result'] in blacklist:
                         malicious_list.append(url_results[engine]['engine_name'])
                 engines_malicious[url] = malicious_list
+                
+                try:
+                    m_score = virus_data[url]['data']['attributes']['last_analysis_stats']['malicious']
+                except Exception as e:
+                    m_score = 0
 
-                m_score = virus_data[url]['data']['attributes']['last_analysis_stats']['malicious']
-                s_score = virus_data[url]['data']['attributes']['last_analysis_stats']['suspicious']
+                try:
+                    s_score = virus_data[url]['data']['attributes']['last_analysis_stats']['suspicious']
+                except Exception as e:
+                    s_score = 0
+
                 v_score = m_score + s_score
             except Exception as e:
                 print("No virus total record")
@@ -765,6 +791,8 @@ def writeCsv(data,
 
         # update current domain id
         data.CURRENT_DOMAIN_ID = domain_id - 1
+
+    print("DONE")
 
 
 ###########################
