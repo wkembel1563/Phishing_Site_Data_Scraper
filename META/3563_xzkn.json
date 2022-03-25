@@ -1,0 +1,75 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 5:26 PM",
+  "awg_id": 7471398
+ },
+ "ip_data": {
+  "city": "Des Moines",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "40.122.76.72",
+  "latitude": "41.5878",
+  "loc": "41.5878,-93.6274",
+  "longitude": "-93.6274",
+  "org": "AS8075 Microsoft Corporation",
+  "postal": "50392",
+  "region": "Iowa",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://xzknavjbjzxcaugauasz.net/signin-authflow",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly94emtuYXZqYmp6eGNhdWdhdWFzei5uZXQvc2lnbmluLWF1dGhmbG93\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "5335 Gate Parkway",
+  "city": "Jacksonville",
+  "country": "US",
+  "creation_date": "03/25/2022, 16:00:46",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": [
+   "XZKNAVJBJZXCAUGAUASZ.NET",
+   "xzknavjbjzxcaugauasz.net"
+  ],
+  "emails": [
+   "abuse@web.com",
+   "6gtm3300qkh9m8rvja46go81cb@domaindiscreet.com",
+   "domain.operations@web.com"
+  ],
+  "expiration_date": "03/25/2023, 16:00:46",
+  "name": "PERFECT PRIVACY, LLC",
+  "name_servers": [
+   "DNS1.REGISTER.COM",
+   "DNS2.REGISTER.COM",
+   "dns2.register.com",
+   "dns1.register.com"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "Register.com, Inc.",
+  "state": "FL",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited http://icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": [
+   "03/25/2022, 16:00:46",
+   "03/25/2022, 16:00:47"
+  ],
+  "whois_server": "whois.register.com",
+  "zipcode": "32256"
+ }
+}

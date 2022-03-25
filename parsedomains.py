@@ -199,6 +199,10 @@ def screenshot(current_id, shot_path, urls):
         if consent == 'y':
             print("TAKING SCREENSHOTS...", end="")
             driver = webdriver.Chrome(service=ser, options=op)
+            #######################
+            driver.set_page_load_timeout(10)
+            driver.set_script_timeout(10)
+            #######################
             domain_id = current_id + 1
 
             for i, url in enumerate(urls):

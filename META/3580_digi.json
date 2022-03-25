@@ -1,0 +1,76 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 7:06 PM",
+  "awg_id": 7471452
+ },
+ "ip_data": {
+  "anycast": true,
+  "city": "Mountain View",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "180.136.102.34.bc.googleusercontent.com",
+  "ip": "34.102.136.180",
+  "latitude": "37.4056",
+  "loc": "37.4056,-122.0775",
+  "longitude": "-122.0775",
+  "org": "AS396982 Google LLC",
+  "postal": "94043",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://digiboxtest.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2RpZ2lib3h0ZXN0LmNvbQ\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": "IN",
+  "creation_date": [
+   "08/02/2020, 12:19:46",
+   "08/02/2020, 07:19:46"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "DIGIBOXTEST.COM",
+   "digiboxtest.com"
+  ],
+  "emails": "abuse@godaddy.com",
+  "expiration_date": [
+   "08/02/2022, 12:19:46",
+   "08/02/2022, 07:19:46"
+  ],
+  "name": null,
+  "name_servers": [
+   "NS27.DOMAINCONTROL.COM",
+   "NS28.DOMAINCONTROL.COM"
+  ],
+  "org": "Morph Digital Solutions Pvt Ltd",
+  "referral_url": null,
+  "registrar": "GoDaddy.com, LLC",
+  "state": "Karnataka",
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+  ],
+  "updated_date": [
+   "07/28/2021, 12:47:04",
+   "07/28/2021, 07:47:01"
+  ],
+  "whois_server": "whois.godaddy.com",
+  "zipcode": null
+ }
+}
