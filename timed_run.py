@@ -14,6 +14,11 @@ domains, awg_data = readURLS(data, remove_csv_duplicates = False)
 # prep messaging functionality
 client = Client(data.twilio_sid, data.twilio_auth_token) 
 
+# prepare domain activity classifier
+print("\nIGNORE ERROR #################")
+model = load_model('model2.h5')
+print("END IGNORE #################\n")
+
 # 4 hrs (14,400s) / 10 mins (600s) = 24 rounds
 ROUND_LIMIT = 24
 for i in range(ROUND_LIMIT):
@@ -38,7 +43,7 @@ for i in range(ROUND_LIMIT):
     screenshot_paths = screenshot(data.CURRENT_DOMAIN_ID, data.SHOT_PATH, domains)
 
     # determine if the domains are active
-    activity_data = checkDomainActivity(domains, screenshot_paths)
+    activity_data = checkDomainActivity(domains, screenshot_paths, model)
 
     # retrieve relevant data for each domain
     whois_data = getWhoIs(domains)

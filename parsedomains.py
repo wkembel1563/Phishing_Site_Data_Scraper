@@ -183,6 +183,7 @@ def screenshot(current_id, shot_path, urls):
         # set up selenium web driver
         ser = Service('/home/kaifeng/chromedriver')
         op = webdriver.ChromeOptions()
+        #op.page_load_strategy = 'none'
         op.set_capability('unhandledPromptBehavior', 'accept')
         op.add_argument('--start-maximized')
         op.add_argument('--disable-web-security')
@@ -196,9 +197,8 @@ def screenshot(current_id, shot_path, urls):
         # take screenshots and record activity of site
         screenshot_paths = {}
         if consent == 'y':
+            print("TAKING SCREENSHOTS...", end="")
             driver = webdriver.Chrome(service=ser, options=op)
-            # give each page 2 mins to load
-            driver.set_page_load_timeout(120)
             domain_id = current_id + 1
 
             for i, url in enumerate(urls):
@@ -208,7 +208,7 @@ def screenshot(current_id, shot_path, urls):
                 clean_url = clean_url.replace('www.', '')
                 url_size = len(clean_url)
 
-                # pic name starts with id of domain in csv file
+                # build screenshot path
                 pic = '{id}'.format(id = domain_id + i)
                 if url_size >= 4:
                     # name ends with first 4 chars of the url
@@ -225,12 +225,13 @@ def screenshot(current_id, shot_path, urls):
                     driver.save_screenshot(pic_path)
                     screenshot_paths[url] = pic_path
                     continue
-                driver.save_screenshot(pic_path)
 
-                # store pic path
+                driver.save_screenshot(pic_path)
                 screenshot_paths[url] = pic_path
 
             driver.quit()
+            print("Done")
+
         else:
             print("Exiting...")
             exit(1)
@@ -242,7 +243,7 @@ def screenshot(current_id, shot_path, urls):
     return screenshot_paths
 
 
-def checkDomainActivity(domains, screenshot_paths):
+def checkDomainActivity(domains, screenshot_paths, model):
     """CHECK DOMAIN ACTIVITY
 
     uses request module and CNN image classifier to determine
@@ -257,6 +258,10 @@ def checkDomainActivity(domains, screenshot_paths):
         paths to screenshot of each url
         url is the key to its own path
 
+    model: (class object)
+        convolutional neural net model being used as an domain 
+        activity classifier
+
     Returns
     -------
     activity_data: (dict)
@@ -267,15 +272,11 @@ def checkDomainActivity(domains, screenshot_paths):
             activity_data[<url>]['req']     for req module data
             activity_data[<url>]['image']   for classifier data
     """
+    print("CHECKING DOMAIN ACTIVITY...", end="")
     activity_data = {}
     ACTIVE = 0
     INACTIVE = 1
 
-    print("\nIGNORE ERROR #################")
-    model = load_model('model2.h5')
-    print("END IGNORE #################\n")
-
-    print("CHECKING DOMAIN ACTIVITY...", end="")
     for url in domains:
         activity_data[url] = {}
         # get screenshot
@@ -296,7 +297,7 @@ def checkDomainActivity(domains, screenshot_paths):
 
         # get python request module result
         try:
-            req_result = requests.get(url)
+            req_result = requests.get(url, timeout=10)
             if req_result.ok:
                 activity_data[url]["req"] = "active"
             else:
@@ -304,7 +305,7 @@ def checkDomainActivity(domains, screenshot_paths):
         except Exception as e:
             activity_data[url]["req"] = "unknown"
 
-    print("DONE")
+    print("Done")
 
     return activity_data
 
@@ -903,8 +904,8 @@ class metadata:
 
         #   invalid num of args
         elif arg_len != self.NUM_OF_ARGS:
-                print("Arg Error. Invalid CL input format")
-                exit(1)
+            print("Arg Error. Invalid CL input format")
+            exit(1)
 
         #   one arg means use default files
         else:
