@@ -1,0 +1,49 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 5:25 AM",
+  "awg_id": 7470978
+ },
+ "ip_data": {
+  "city": "Luzern",
+  "country": "CH",
+  "country_name": "Switzerland",
+  "ip": "81.17.29.149",
+  "latitude": "47.0631",
+  "loc": "47.0631,8.2778",
+  "longitude": "8.2778",
+  "org": "AS51852 Private Layer INC",
+  "postal": "6015",
+  "region": "Lucerne",
+  "timezone": "Europe/Zurich"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://inclusionplus.co.uk",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9pbmNsdXNpb25wbHVzLmNvLnVr\" not found"
+  }
+ },
+ "whois_data": {
+  "creation_date": "02/11/2022, 00:00:00",
+  "domain_name": "inclusionplus.co.uk",
+  "expiration_date": "02/11/2023, 00:00:00",
+  "name_servers": "ns1.namedynamics.net",
+  "registrant_city": null,
+  "registrant_country": null,
+  "registrant_name": null,
+  "registrant_street": null,
+  "registrant_type": null,
+  "registrar": "Media Elite Holding Limited [Tag = REGISTERMATRIXCH]",
+  "registrar_url": null,
+  "status": "Registered until expiry date.",
+  "updated_date": "02/11/2022, 00:00:00"
+ }
+}

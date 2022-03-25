@@ -1,0 +1,68 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 8:39 PM",
+  "awg_id": 7471495
+ },
+ "ip_data": {
+  "city": "Covina",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "192.64.119.75",
+  "latitude": "34.0900",
+  "loc": "34.0900,-117.8903",
+  "longitude": "-117.8903",
+  "org": "AS22612 Namecheap, Inc.",
+  "postal": "91723",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://farmvend.net",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2Zhcm12ZW5kLm5ldA\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Kalkofnsvegur 2",
+  "city": "Reykjavik",
+  "country": "IS",
+  "creation_date": "04/17/2020, 13:32:56",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "FARMVEND.NET",
+   "farmvend.net"
+  ],
+  "emails": [
+   "abuse@namecheap.com",
+   "1103eadb5b9b49578812ba1f866f31f5.protect@withheldforprivacy.com"
+  ],
+  "expiration_date": "04/17/2022, 13:32:56",
+  "name": "Redacted for Privacy",
+  "name_servers": [
+   "DNS1.REGISTRAR-SERVERS.COM",
+   "DNS2.REGISTRAR-SERVERS.COM",
+   "dns1.registrar-servers.com",
+   "dns2.registrar-servers.com"
+  ],
+  "org": "Privacy service provided by Withheld for Privacy ehf",
+  "referral_url": null,
+  "registrar": "NAMECHEAP INC",
+  "state": "Capital Region",
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "04/10/2021, 18:41:03",
+   "04/10/2021, 18:41:03"
+  ],
+  "whois_server": "whois.namecheap.com",
+  "zipcode": "101"
+ }
+}

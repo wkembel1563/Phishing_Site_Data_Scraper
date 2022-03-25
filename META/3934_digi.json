@@ -1,0 +1,75 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 6:24 PM",
+  "awg_id": 7471431
+ },
+ "ip_data": {
+  "city": "Torrance",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "ip-208-109-71-15.ip.secureserver.net",
+  "ip": "208.109.71.15",
+  "latitude": "33.8359",
+  "loc": "33.8359,-118.3406",
+  "longitude": "-118.3406",
+  "org": "AS398101 GoDaddy.com, LLC",
+  "postal": "90503",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://digitalpichinsha.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9kaWdpdGFscGljaGluc2hhLmNvbQ\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": "US",
+  "creation_date": [
+   "03/24/2022, 15:59:03",
+   "03/24/2022, 10:59:03"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "DIGITALPICHINSHA.COM",
+   "digitalpichinsha.com"
+  ],
+  "emails": "abuse@godaddy.com",
+  "expiration_date": [
+   "03/24/2023, 15:59:03",
+   "03/24/2023, 10:59:03"
+  ],
+  "name": null,
+  "name_servers": [
+   "NS43.DOMAINCONTROL.COM",
+   "NS44.DOMAINCONTROL.COM"
+  ],
+  "org": "Domains By Proxy, LLC",
+  "referral_url": null,
+  "registrar": "GoDaddy.com, LLC",
+  "state": "Arizona",
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+  ],
+  "updated_date": [
+   "03/24/2022, 15:59:03",
+   "03/24/2022, 10:59:03"
+  ],
+  "whois_server": "whois.godaddy.com",
+  "zipcode": null
+ }
+}

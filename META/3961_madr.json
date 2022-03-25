@@ -1,0 +1,49 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 8:40 PM",
+  "awg_id": 7471500
+ },
+ "ip_data": {
+  "city": "Phoenix",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "198.54.117.216",
+  "latitude": "33.4484",
+  "loc": "33.4484,-112.0740",
+  "longitude": "-112.0740",
+  "org": "AS22612 Namecheap, Inc.",
+  "postal": "85001",
+  "region": "Arizona",
+  "timezone": "America/Phoenix"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://www.madrassabagdirect.co.uk/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL3d3dy5tYWRyYXNzYWJhZ2RpcmVjdC5jby51ay8\" not found"
+  }
+ },
+ "whois_data": {
+  "creation_date": "03/28/2014, 00:00:00",
+  "domain_name": "madrassabagdirect.co.uk",
+  "expiration_date": "03/28/2023, 00:00:00",
+  "name_servers": "dns1.registrar-servers.com",
+  "registrant_city": null,
+  "registrant_country": null,
+  "registrant_name": null,
+  "registrant_street": null,
+  "registrant_type": null,
+  "registrar": "Namecheap, Inc. [Tag = NAMECHEAP-INC]",
+  "registrar_url": "https://www.namecheap.com",
+  "status": "Registered until expiry date.",
+  "updated_date": "02/26/2022, 00:00:00"
+ }
+}

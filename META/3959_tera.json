@@ -1,0 +1,68 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 8:45 PM",
+  "awg_id": 7471502
+ },
+ "ip_data": {
+  "city": "Moscow",
+  "country": "RU",
+  "country_name": "Russia",
+  "ip": "188.127.225.38",
+  "latitude": "55.7522",
+  "loc": "55.7522,37.6156",
+  "longitude": "37.6156",
+  "org": "AS56694 LLC Smart Ape",
+  "postal": "101000",
+  "region": "Moscow",
+  "timezone": "Europe/Moscow"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.tera-swamp.com/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cudGVyYS1zd2FtcC5jb20v\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Kalkofnsvegur 2",
+  "city": "Reykjavik",
+  "country": "IS",
+  "creation_date": "03/24/2022, 11:42:19",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "TERA-SWAMP.COM",
+   "tera-swamp.com"
+  ],
+  "emails": [
+   "abuse@namecheap.com",
+   "1da59767e3744f0a8cf092330dad9ca8.protect@withheldforprivacy.com"
+  ],
+  "expiration_date": "03/24/2023, 11:42:19",
+  "name": "Redacted for Privacy",
+  "name_servers": [
+   "NS1.SMARTAPE.RU",
+   "NS2.SMARTAPE.RU",
+   "ns1.smartape.ru",
+   "ns2.smartape.ru"
+  ],
+  "org": "Privacy service provided by Withheld for Privacy ehf",
+  "referral_url": null,
+  "registrar": "NAMECHEAP INC",
+  "state": "Capital Region",
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "03/24/2022, 11:47:11",
+   "01/01/1, 00:00:00"
+  ],
+  "whois_server": "whois.namecheap.com",
+  "zipcode": "101"
+ }
+}

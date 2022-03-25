@@ -1,0 +1,40 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 6:02 PM",
+  "awg_id": 7471422
+ },
+ "ip_data": {
+  "city": "Rosario",
+  "country": "AR",
+  "country_name": "Argentina",
+  "hostname": "c249.dattaweb.com",
+  "ip": "200.58.111.25",
+  "latitude": "-32.9468",
+  "loc": "-32.9468,-60.6393",
+  "longitude": "-60.6393",
+  "org": "AS27823 Dattatec.com",
+  "postal": "2000",
+  "region": "Santa Fe",
+  "timezone": "America/Argentina/Cordoba"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://plataformadigitalngsac.uno",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9wbGF0YWZvcm1hZGlnaXRhbG5nc2FjLnVubw\" not found"
+  }
+ },
+ "whois_data": {
+  "creation_date": null,
+  "domain_name": "PLATAFORMADIGITALNGSAC.UNO",
+  "updated_date": null
+ }
+}

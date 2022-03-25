@@ -1,0 +1,75 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 5:09 PM",
+  "awg_id": 7471396
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "a23-47-49-197.deploy.static.akamaitechnologies.com",
+  "ip": "23.47.49.197",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS20940 Akamai International B.V.",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.tiktok.com/@.morsa_",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9ALm1vcnNhXw\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "REDACTED FOR PRIVACY",
+  "city": "REDACTED FOR PRIVACY",
+  "country": "KY",
+  "creation_date": [
+   "07/21/1996, 04:00:00",
+   "07/21/1996, 02:00:00"
+  ],
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": [
+   "TIKTOK.COM",
+   "tiktok.com"
+  ],
+  "emails": [
+   "abuse@support.gandi.net",
+   "f19c697400249b00ba26da776aeaa3b0-20984370@contact.gandi.net"
+  ],
+  "expiration_date": "07/20/2023, 04:00:00",
+  "name": "REDACTED FOR PRIVACY",
+  "name_servers": [
+   "NS-1475.AWSDNS-56.ORG",
+   "NS-1574.AWSDNS-04.CO.UK",
+   "NS-440.AWSDNS-55.COM",
+   "NS-722.AWSDNS-26.NET"
+  ],
+  "org": "TIKTOK LTD",
+  "referral_url": null,
+  "registrar": "GANDI SAS",
+  "state": null,
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "08/25/2021, 18:04:44",
+  "whois_server": "whois.gandi.net",
+  "zipcode": "REDACTED FOR PRIVACY"
+ }
+}

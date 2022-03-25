@@ -1,0 +1,92 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 5:07 PM",
+  "awg_id": 7471394
+ },
+ "ip_data": {
+  "anycast": true,
+  "city": "San Francisco",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "104.244.42.1",
+  "latitude": "37.7725",
+  "loc": "37.7725,-122.4147",
+  "longitude": "-122.4147",
+  "org": "AS13414 Twitter Inc.",
+  "postal": "94103",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://twitter.com/CryptoTaxPolice",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly90d2l0dGVyLmNvbS9DcnlwdG9UYXhQb2xpY2U\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "1355 Market Street",
+  "city": "San Francisco",
+  "country": "US",
+  "creation_date": [
+   "01/21/2000, 16:28:17",
+   "01/21/2000, 11:28:17"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "TWITTER.COM",
+   "twitter.com"
+  ],
+  "emails": [
+   "domainabuse@cscglobal.com",
+   "domains@twitter.com",
+   "domains-tech@twitter.com"
+  ],
+  "expiration_date": "01/21/2023, 16:28:17",
+  "name": "Twitter, Inc.",
+  "name_servers": [
+   "A.R06.TWTRDNS.NET",
+   "B.R06.TWTRDNS.NET",
+   "C.R06.TWTRDNS.NET",
+   "D.R06.TWTRDNS.NET",
+   "D01-01.NS.TWTRDNS.NET",
+   "D01-02.NS.TWTRDNS.NET",
+   "NS3.P34.DYNECT.NET",
+   "NS4.P34.DYNECT.NET",
+   "c.r06.twtrdns.net",
+   "d01-01.ns.twtrdns.net",
+   "d.r06.twtrdns.net",
+   "d01-02.ns.twtrdns.net",
+   "b.r06.twtrdns.net",
+   "a.r06.twtrdns.net"
+  ],
+  "org": "Twitter, Inc.",
+  "referral_url": null,
+  "registrar": "CSC CORPORATE DOMAINS, INC.",
+  "state": "CA",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited",
+   "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+   "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+   "clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited",
+   "serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited",
+   "serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited",
+   "serverUpdateProhibited http://www.icann.org/epp#serverUpdateProhibited"
+  ],
+  "updated_date": [
+   "01/17/2022, 06:08:20",
+   "01/17/2022, 01:08:20"
+  ],
+  "whois_server": "whois.corporatedomains.com",
+  "zipcode": "94103"
+ }
+}
