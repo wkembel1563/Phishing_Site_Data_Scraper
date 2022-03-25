@@ -1,0 +1,46 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 2:10 PM",
+  "awg_id": 7471210
+ },
+ "ip_data": {
+  "city": "Rotterdam",
+  "country": "NL",
+  "country_name": "Netherlands",
+  "hostname": "213.63.111.193.eushared05.twinservers.net",
+  "ip": "193.111.63.213",
+  "latitude": "51.9225",
+  "loc": "51.9225,4.4792",
+  "longitude": "4.4792",
+  "org": "AS56851 PE Skurykhin Mukola Volodumurovuch",
+  "postal": "3011",
+  "region": "South Holland",
+  "timezone": "Europe/Amsterdam"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://dexterousl.pl/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2RleHRlcm91c2wucGwv\" not found"
+  }
+ },
+ "whois_data": {
+  "creation_date": "02/23/2022, 16:12:26",
+  "domain_name": "dexterousl.pl",
+  "expiration_date": "02/23/2023, 16:12:26",
+  "name_servers": "dns1.hostiq.ua. \r\r\n                       dns2.hostiq.ua.",
+  "registrant_name": null,
+  "registrar": "Hosting Concepts B.V.",
+  "registrar_url": null,
+  "status": null,
+  "updated_date": "02/23/2022, 16:12:26"
+ }
+}
