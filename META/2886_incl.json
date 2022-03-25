@@ -1,0 +1,50 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 5:25 AM",
+  "awg_id": 7470978
+ },
+ "ip_data": {
+  "city": "Kansas City",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "tyg.qwiqo.live",
+  "ip": "192.187.111.221",
+  "latitude": "39.0997",
+  "loc": "39.0997,-94.5786",
+  "longitude": "-94.5786",
+  "org": "AS33387 Nocix, LLC",
+  "postal": "64170",
+  "region": "Missouri",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://inclusionplus.co.uk",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9pbmNsdXNpb25wbHVzLmNvLnVr\" not found"
+  }
+ },
+ "whois_data": {
+  "creation_date": "02/11/2022, 00:00:00",
+  "domain_name": "inclusionplus.co.uk",
+  "expiration_date": "02/11/2023, 00:00:00",
+  "name_servers": "ns1.namedynamics.net",
+  "registrant_city": null,
+  "registrant_country": null,
+  "registrant_name": null,
+  "registrant_street": null,
+  "registrant_type": null,
+  "registrar": "Media Elite Holding Limited [Tag = REGISTERMATRIXCH]",
+  "registrar_url": null,
+  "status": "Registered until expiry date.",
+  "updated_date": "02/11/2022, 00:00:00"
+ }
+}

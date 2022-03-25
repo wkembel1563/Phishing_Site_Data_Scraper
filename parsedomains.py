@@ -183,7 +183,7 @@ def screenshot(current_id, shot_path, urls):
         # set up selenium web driver
         ser = Service('/home/kaifeng/chromedriver')
         op = webdriver.ChromeOptions()
-        #op.page_load_strategy = 'none'
+        op.page_load_strategy = 'eager'
         op.set_capability('unhandledPromptBehavior', 'accept')
         op.add_argument('--start-maximized')
         op.add_argument('--disable-web-security')
@@ -221,6 +221,8 @@ def screenshot(current_id, shot_path, urls):
                 # screenshot
                 try:
                     driver.get('https://' + clean_url)
+                    time.sleep(3)
+                    driver.execute_script("window.stop();")
                 except Exception as e:
                     driver.save_screenshot(pic_path)
                     screenshot_paths[url] = pic_path
@@ -408,7 +410,7 @@ def getWhoIs(domains):
             a dictionary of the whois data for each domain
             the dictionary is indexed by domain url
     """
-    print("GETTING WHOIS DATA...", end="")
+    print("GETTING WHOIS DATA...")
 
     whois_data = {}
 
@@ -556,9 +558,9 @@ def getIpInfo(handler, domains):
             # retrieve data
             parsed_url = up.urlparse(url)
             ip = socket.gethostbyname(parsed_url.netloc)
-            details = handler.getDetails(ip)
+            details = handler.getDetails(ip, timeout=10)
             ip_data[url] = details
-        except (socket.gaierror, UnicodeError):
+        except Exception as e:
             ip_data[url] = failedFetch()
 
     print("Done")
@@ -771,6 +773,8 @@ def writeCsv(data,
 
             if ip_data[url].ip is not '-':
                 ip_country = ip_data[url].details.get('country', None)
+            else:
+                ip_country = '-'
 
             writer.writerow({
                 data.FIELD_TITLES[data.DOMAINID]:domain_id,

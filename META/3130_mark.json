@@ -1,0 +1,82 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 5:58 AM",
+  "awg_id": 7470985
+ },
+ "ip_data": {
+  "city": "Johannesburg",
+  "country": "ZA",
+  "country_name": "South Africa",
+  "hostname": "cp32-jhb.za-dns.com",
+  "ip": "164.160.91.25",
+  "latitude": "-26.2023",
+  "loc": "-26.2023,28.0436",
+  "longitude": "28.0436",
+  "org": "AS328037 Optify Systems (Pty) Ltd",
+  "postal": "2041",
+  "region": "Gauteng",
+  "timezone": "Africa/Johannesburg"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://marksandspencer.thinkhuman.africa",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9tYXJrc2FuZHNwZW5jZXIudGhpbmtodW1hbi5hZnJpY2E\" not found"
+  }
+ },
+ "whois_data": {
+  "address": [
+   "REDACTED",
+   "REDACTED FOR PRIVACY"
+  ],
+  "city": [
+   "REDACTED",
+   "REDACTED FOR PRIVACY"
+  ],
+  "country": "ZA",
+  "creation_date": [
+   "04/12/2021, 08:56:16",
+   "04/12/2021, 10:56:16"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": "thinkhuman.africa",
+  "emails": "abuse@registrar.eu",
+  "expiration_date": [
+   "04/12/2022, 08:56:16",
+   "04/12/2022, 10:56:16"
+  ],
+  "name": [
+   "REDACTED",
+   "REDACTED FOR PRIVACY"
+  ],
+  "name_servers": [
+   "ns3.za-dns.com",
+   "ns5.za-dns.com"
+  ],
+  "org": "Grinn",
+  "referral_url": null,
+  "registrar": "Hosting Concepts B.V. d/b/a Registrar.eu",
+  "state": "Western Cape",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "ok https://icann.org/epp#ok"
+  ],
+  "updated_date": [
+   "04/19/2021, 08:56:17",
+   "03/14/2022, 07:31:56"
+  ],
+  "whois_server": "whois.registrar.eu",
+  "zipcode": [
+   "REDACTED",
+   "REDACTED FOR PRIVACY"
+  ]
+ }
+}

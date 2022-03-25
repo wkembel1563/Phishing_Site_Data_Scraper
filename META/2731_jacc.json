@@ -1,0 +1,98 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 1:11 PM",
+  "awg_id": 7471172
+ },
+ "ip_data": {
+  "city": "Los Angeles",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "155.94.140.225",
+  "latitude": "34.0443",
+  "loc": "34.0443,-118.2509",
+  "longitude": "-118.2509",
+  "org": "AS8100 QuadraNet Enterprises LLC",
+  "postal": "90014",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.jaccs.co.jp.kiwesi.com/one.php",
+ "virus_data": {
+  "data": {
+   "attributes": {
+    "categories": {},
+    "first_submission_date": 1648225848,
+    "last_analysis_results": {},
+    "last_analysis_stats": {
+     "harmless": 0,
+     "malicious": 0,
+     "suspicious": 0,
+     "timeout": 0,
+     "undetected": 0
+    },
+    "last_final_url": "https://www.jaccs.co.jp.kiwesi.com/one.php",
+    "last_modification_date": 1648226160,
+    "last_submission_date": 1648225848,
+    "reputation": 0,
+    "tags": [],
+    "threat_names": [],
+    "times_submitted": 1,
+    "total_votes": {
+     "harmless": 0,
+     "malicious": 0
+    },
+    "url": "https://www.jaccs.co.jp.kiwesi.com/one.php"
+   },
+   "id": "75981942743575a2e903881a662ad405c457620b3df368d9d833bcc4082808be",
+   "links": {
+    "self": "https://www.virustotal.com/api/v3/urls/75981942743575a2e903881a662ad405c457620b3df368d9d833bcc4082808be"
+   },
+   "type": "url"
+  }
+ },
+ "whois_data": {
+  "address": "1100-1200 West 73rd Avenue",
+  "city": "Vancouver",
+  "country": "CA",
+  "creation_date": "04/01/2021, 05:50:43",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "KIWESI.COM",
+   "kiwesi.com"
+  ],
+  "emails": [
+   "domain-abuse@psi-usa.info",
+   "info@privatename.com"
+  ],
+  "expiration_date": "04/01/2022, 05:50:43",
+  "name": "Admin Contact",
+  "name_servers": [
+   "JM1.DNS.COM",
+   "JM2.DNS.COM",
+   "jm1.dns.com",
+   "jm2.dns.com"
+  ],
+  "org": "PrivateName Services Inc.",
+  "referral_url": null,
+  "registrar": "PSI-USA, Inc. dba Domain Robot",
+  "state": "BC",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": [
+   "03/25/2022, 10:28:55",
+   "03/25/2022, 10:28:57"
+  ],
+  "whois_server": "whois.psi-usa.info",
+  "zipcode": "V6P 6G5"
+ }
+}

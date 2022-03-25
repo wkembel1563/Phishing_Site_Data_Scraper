@@ -1,0 +1,36 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 11:26 AM",
+  "awg_id": 7471115
+ },
+ "ip_data": {
+  "city": "Fremont",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "rw-in-f128.1e100.net",
+  "ip": "142.250.138.128",
+  "latitude": "37.5483",
+  "loc": "37.5483,-121.9886",
+  "longitude": "-121.9886",
+  "org": "AS15169 Google LLC",
+  "postal": "94536",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://domain-registrar.storage.googleapis.com/expired.html?nonplusgames.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2RvbWFpbi1yZWdpc3RyYXIuc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9leHBpcmVkLmh0bWw_bm9ucGx1c2dhbWVzLmNvbQ\" not found"
+  }
+ },
+ "whois_data": {}
+}

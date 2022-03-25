@@ -1,0 +1,71 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 12:44 PM",
+  "awg_id": 7471156
+ },
+ "ip_data": {
+  "city": "Clifton",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "138.197.54.90",
+  "latitude": "40.8344",
+  "loc": "40.8344,-74.1377",
+  "longitude": "-74.1377",
+  "org": "AS14061 DigitalOcean, LLC",
+  "postal": "07014",
+  "region": "New Jersey",
+  "timezone": "America/New_York"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://traceschol.com/?a=57&c=22645&p=r&s1=471510&s2=1170481711&s3=49",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL3RyYWNlc2Nob2wuY29tLz9hPTU3JmM9MjI2NDUmcD1yJnMxPTQ3MTUxMCZzMj0xMTcwNDgxNzExJnMzPTQ5\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Kalkofnsvegur 2",
+  "city": "Reykjavik",
+  "country": "IS",
+  "creation_date": "12/15/2021, 17:20:06",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "TRACESCHOL.COM",
+   "traceschol.com"
+  ],
+  "emails": [
+   "abuse@namecheap.com",
+   "eb78a1d5f8c04fafb9f2358fc7f3925f.protect@withheldforprivacy.com"
+  ],
+  "expiration_date": "12/15/2022, 17:20:06",
+  "name": "Redacted for Privacy",
+  "name_servers": [
+   "DNS1.REGISTRAR-SERVERS.COM",
+   "DNS2.REGISTRAR-SERVERS.COM",
+   "dns1.registrar-servers.com",
+   "dns2.registrar-servers.com"
+  ],
+  "org": "Privacy service provided by Withheld for Privacy ehf",
+  "referral_url": null,
+  "registrar": "NAMECHEAP INC",
+  "state": "Capital Region",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "addPeriod https://icann.org/epp#addPeriod"
+  ],
+  "updated_date": [
+   "12/15/2021, 17:20:10",
+   "01/01/1, 00:00:00"
+  ],
+  "whois_server": "whois.namecheap.com",
+  "zipcode": "101"
+ }
+}
