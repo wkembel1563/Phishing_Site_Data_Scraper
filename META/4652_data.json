@@ -1,0 +1,80 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 30th 2022 7:14 AM",
+  "awg_id": 7474020
+ },
+ "ip_data": {
+  "city": "Frankfurt am Main",
+  "country": "DE",
+  "country_name": "Germany",
+  "ip": "206.81.24.156",
+  "latitude": "50.1025",
+  "loc": "50.1025,8.6299",
+  "longitude": "8.6299",
+  "org": "AS14061 DigitalOcean, LLC",
+  "postal": "60326",
+  "region": "Hesse",
+  "timezone": "Europe/Berlin"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://data-food.com/op/sqr/mg.html",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2RhdGEtZm9vZC5jb20vb3Avc3FyL21nLmh0bWw\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "REDACTED FOR PRIVACY",
+  "city": "REDACTED FOR PRIVACY",
+  "country": "FR",
+  "creation_date": [
+   "01/04/2018, 14:52:15",
+   "01/04/2018, 13:52:15"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "DATA-FOOD.COM",
+   "data-food.com"
+  ],
+  "emails": [
+   "abuse@ovh.net",
+   "l8ffycjoswagdmjbo3u4@h.o-w-o.info",
+   "p68y0yiu98fn5tbb1ztd@g.o-w-o.info"
+  ],
+  "expiration_date": [
+   "01/04/2023, 14:52:15",
+   "01/04/2023, 13:52:15"
+  ],
+  "name": "REDACTED FOR PRIVACY",
+  "name_servers": [
+   "NS1.DIGITALOCEAN.COM",
+   "NS2.DIGITALOCEAN.COM",
+   "NS3.DIGITALOCEAN.COM",
+   "ns1.digitalocean.com",
+   "ns2.digitalocean.com",
+   "ns3.digitalocean.com"
+  ],
+  "org": "IRGC",
+  "referral_url": null,
+  "registrar": "OVH, SAS",
+  "state": null,
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": [
+   "01/01/2022, 02:16:56",
+   "01/01/2022, 01:16:56"
+  ],
+  "whois_server": "whois.ovh.com",
+  "zipcode": "REDACTED FOR PRIVACY"
+ }
+}

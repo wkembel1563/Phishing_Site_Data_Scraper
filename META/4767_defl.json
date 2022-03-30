@@ -1,0 +1,73 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 30th 2022 6:41 AM",
+  "awg_id": 7474013
+ },
+ "ip_data": {
+  "city": "Moscow",
+  "country": "RU",
+  "country_name": "Russia",
+  "hostname": "server95.hosting.reg.ru",
+  "ip": "37.140.192.182",
+  "latitude": "55.7522",
+  "loc": "55.7522,37.6156",
+  "longitude": "37.6156",
+  "org": "AS197695 Domain names registrar REG.RU, Ltd",
+  "postal": "101000",
+  "region": "Moscow",
+  "timezone": "Europe/Moscow"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.deflikingdoms.org/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cuZGVmbGlraW5nZG9tcy5vcmcv\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Moscow",
+  "city": "Moscow",
+  "country": "RU",
+  "creation_date": "03/27/2022, 21:08:32",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "DEFLIKINGDOMS.ORG",
+  "emails": [
+   "abuse@reg.ru",
+   "natalineboothe@gmail.com"
+  ],
+  "expiration_date": "03/27/2023, 21:08:32",
+  "name": "Ivanil Mihalkov",
+  "name_servers": [
+   "NS1.HOSTING.REG.RU",
+   "NS2.HOSTING.REG.RU",
+   "ns1.hosting.reg.ru",
+   "ns2.hosting.reg.ru"
+  ],
+  "org": "Private Person",
+  "referral_url": null,
+  "registrar": "Registrar of domain names REG.RU LLC",
+  "state": "Moscow",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+   "addPeriod https://icann.org/epp#addPeriod",
+   "clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited",
+   "serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited",
+   "addPeriod http://www.icann.org/epp#addPeriod"
+  ],
+  "updated_date": "03/27/2022, 21:08:34",
+  "whois_server": "whois.reg.com",
+  "zipcode": "121011"
+ }
+}

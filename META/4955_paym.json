@@ -1,0 +1,22 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 30th 2022 3:29 AM",
+  "awg_id": 7473953
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://paymayar.com/login.php",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9wYXltYXlhci5jb20vbG9naW4ucGhw\" not found"
+  }
+ },
+ "whois_data": {}
+}

@@ -5,6 +5,7 @@ import copy
 import base64
 import socket
 import whois
+import time
 import whois.parser
 import ipinfo
 import requests
@@ -18,6 +19,7 @@ from datetime import datetime
 from pandas.errors import EmptyDataError
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.mobilenet import preprocess_input
@@ -183,6 +185,7 @@ def screenshot(current_id, shot_path, urls):
         # set up selenium web driver
         ser = Service('/home/kaifeng/chromedriver')
         op = webdriver.ChromeOptions()
+        op.headless = True
         op.page_load_strategy = 'eager'
         op.set_capability('unhandledPromptBehavior', 'accept')
         op.add_argument('--start-maximized')
@@ -212,6 +215,7 @@ def screenshot(current_id, shot_path, urls):
                 clean_url = clean_url.replace('www.', '')
                 url_size = len(clean_url)
 
+
                 # build screenshot path
                 pic = '{id}'.format(id = domain_id + i)
                 if url_size >= 4:
@@ -222,11 +226,13 @@ def screenshot(current_id, shot_path, urls):
                 pic += '.png'
                 pic_path = shot_path + '/' + pic
 
+
                 # screenshot
                 try:
                     driver.get('https://' + clean_url)
                     time.sleep(3)
                     driver.execute_script("window.stop();")
+
                 except Exception as e:
                     driver.save_screenshot(pic_path)
                     screenshot_paths[url] = pic_path

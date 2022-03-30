@@ -1,0 +1,36 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 30th 2022 3:29 AM",
+  "awg_id": 7473953
+ },
+ "ip_data": {
+  "city": "Phoenix",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "server310-4.web-hosting.com",
+  "ip": "66.29.141.36",
+  "latitude": "33.4484",
+  "loc": "33.4484,-112.0740",
+  "longitude": "-112.0740",
+  "org": "AS22612 Namecheap, Inc.",
+  "postal": "85001",
+  "region": "Arizona",
+  "timezone": "America/Phoenix"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://paymayar.com/login.php",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9wYXltYXlhci5jb20vbG9naW4ucGhw\" not found"
+  }
+ },
+ "whois_data": {}
+}
