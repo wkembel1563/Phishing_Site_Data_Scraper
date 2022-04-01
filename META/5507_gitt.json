@@ -1,0 +1,58 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 31st 2022 2:47 AM",
+  "awg_id": 7475032
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.gittaeraz.com/PL/PL_dferty/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cuZ2l0dGFlcmF6LmNvbS9QTC9QTF9kZmVydHkv\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Kalkofnsvegur 2",
+  "city": "Reykjavik",
+  "country": "IS",
+  "creation_date": "03/24/2022, 09:37:02",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "GITTAERAZ.COM",
+   "gittaeraz.com"
+  ],
+  "emails": [
+   "abuse@namecheap.com",
+   "62656d625dc54314b405c9d0f8adfa9b.protect@withheldforprivacy.com"
+  ],
+  "expiration_date": "03/24/2023, 09:37:02",
+  "name": "Redacted for Privacy",
+  "name_servers": [
+   "DNS1.REGISTRAR-SERVERS.COM",
+   "DNS2.REGISTRAR-SERVERS.COM",
+   "dns1.registrar-servers.com",
+   "dns2.registrar-servers.com"
+  ],
+  "org": "Privacy service provided by Withheld for Privacy ehf",
+  "referral_url": null,
+  "registrar": "NAMECHEAP INC",
+  "state": "Capital Region",
+  "status": [
+   "clientHold https://icann.org/epp#clientHold",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": [
+   "03/31/2022, 06:45:41",
+   "01/01/1, 00:00:00"
+  ],
+  "whois_server": "whois.namecheap.com",
+  "zipcode": "101"
+ }
+}

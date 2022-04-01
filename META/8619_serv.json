@@ -1,0 +1,70 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 31st 2022 7:25 PM",
+  "awg_id": 7475515
+ },
+ "ip_data": {
+  "city": "Des Moines",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "52.176.45.252",
+  "latitude": "41.5878",
+  "loc": "41.5878,-93.6274",
+  "longitude": "-93.6274",
+  "org": "AS8075 Microsoft Corporation",
+  "postal": "50392",
+  "region": "Iowa",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://servientrega-box.com/wps/portal/ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziTS08TTwMTAz93f1cTAwCg5yMfP0MHY0cfY30wwkpiAJKG-AAjgb6XoQUAF1gVOTr7JuuH1",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL3NlcnZpZW50cmVnYS1ib3guY29tL3dwcy9wb3J0YWwvdXQvcC96MS8wNF9TajlDUHlrc3N5MHhQTE1uTXowdk1BZklqbzh6aVRTMDhUVHdNVEF6OTNmMWNUQXdDZzV5TWZQME1IWTBjZlkzMHd3a3BpQUpLRy1BQWpnYjZYb1FVQUYxZ1ZPVHI3SnV1SDE\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "calle 1092",
+  "city": "Antioquia",
+  "country": "CO",
+  "creation_date": "03/30/2022, 16:51:23",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "SERVIENTREGA-BOX.COM",
+  "emails": [
+   "abuse-contact@publicdomainregistry.com",
+   "lufeteme008@gmail.com"
+  ],
+  "expiration_date": "03/30/2023, 16:51:23",
+  "name": "espinel said",
+  "name_servers": [
+   "NS10.UADNS.COM",
+   "NS11.UADNS.COM",
+   "NS12.UADNS.COM",
+   "ns10.uadns.com",
+   "ns11.uadns.com",
+   "ns12.uadns.com"
+  ],
+  "org": "none",
+  "referral_url": null,
+  "registrar": "PDR Ltd. d/b/a PublicDomainRegistry.com",
+  "state": "Medellin",
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "03/30/2022, 16:52:10",
+   "03/30/2022, 16:52:11"
+  ],
+  "whois_server": "whois.publicdomainregistry.com",
+  "zipcode": "057840"
+ }
+}

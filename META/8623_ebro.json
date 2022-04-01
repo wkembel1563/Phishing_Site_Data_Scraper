@@ -1,0 +1,29 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 31st 2022 7:31 PM",
+  "awg_id": 7475529
+ },
+ "ip_data": {
+  "bogon": true,
+  "country_name": null,
+  "ip": "0.0.0.0",
+  "latitude": null,
+  "longitude": null
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://ebroubankcd.sytes.net/www/frontend/loginStep1",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2Vicm91YmFua2NkLnN5dGVzLm5ldC93d3cvZnJvbnRlbmQvbG9naW5TdGVwMQ\" not found"
+  }
+ },
+ "whois_data": {}
+}

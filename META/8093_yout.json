@@ -1,0 +1,86 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 31st 2022 5:57 PM",
+  "awg_id": 7475484
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "dfw28s30-in-f14.1e100.net",
+  "ip": "142.251.32.174",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS15169 Google LLC",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.youtube.com/watch?v=I4vfag_ZXqI",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1JNHZmYWdfWlhxSQ\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": "US",
+  "creation_date": "02/15/2005, 05:13:12",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "YOUTUBE.COM",
+   "youtube.com"
+  ],
+  "emails": [
+   "abusecomplaints@markmonitor.com",
+   "whoisrequest@markmonitor.com"
+  ],
+  "expiration_date": [
+   "02/15/2023, 05:13:12",
+   "02/15/2023, 00:00:00"
+  ],
+  "name": null,
+  "name_servers": [
+   "NS1.GOOGLE.COM",
+   "NS2.GOOGLE.COM",
+   "NS3.GOOGLE.COM",
+   "NS4.GOOGLE.COM",
+   "ns2.google.com",
+   "ns1.google.com",
+   "ns4.google.com",
+   "ns3.google.com"
+  ],
+  "org": "Google LLC",
+  "referral_url": null,
+  "registrar": "MarkMonitor, Inc.",
+  "state": "CA",
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited",
+   "serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited",
+   "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+   "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+   "clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)",
+   "clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)",
+   "clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)",
+   "serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)",
+   "serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)",
+   "serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)"
+  ],
+  "updated_date": "01/14/2022, 09:38:42",
+  "whois_server": "whois.markmonitor.com",
+  "zipcode": null
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 31st 2022 5:18 PM",
+  "awg_id": 7475467
+ },
+ "ip_data": {
+  "city": "Washington",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "apache2-cid.baron-zemo.dreamhost.com",
+  "ip": "67.205.8.25",
+  "latitude": "38.8951",
+  "loc": "38.8951,-77.0364",
+  "longitude": "-77.0364",
+  "org": "AS26347 New Dream Network, LLC",
+  "postal": "20004",
+  "region": "Washington, D.C.",
+  "timezone": "America/New_York"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://kavebasket.com/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9rYXZlYmFza2V0LmNvbS8\" not found"
+  }
+ },
+ "whois_data": {
+  "address": [
+   "417 Associated Rd #324",
+   "C/O kavebasket.com"
+  ],
+  "city": "Brea",
+  "country": "US",
+  "creation_date": [
+   "03/21/2022, 17:27:33",
+   "03/21/2022, 17:27:00"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "KAVEBASKET.COM",
+   "kavebasket.com"
+  ],
+  "emails": [
+   "ldanlbpbpq3q7nz@proxy.dreamhost.com",
+   "DOMAIN-ABUSE@DREAMHOST.COM"
+  ],
+  "expiration_date": [
+   "03/21/2023, 17:27:33",
+   "03/21/2023, 17:27:00"
+  ],
+  "name": "Proxy Protection LLC",
+  "name_servers": [
+   "NS1.DREAMHOST.COM",
+   "NS2.DREAMHOST.COM",
+   "NS3.DREAMHOST.COM"
+  ],
+  "org": "Proxy Protection LLC",
+  "referral_url": null,
+  "registrar": "DREAMHOST",
+  "state": "CA",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/21/2022, 17:27:33",
+  "whois_server": "WHOIS.DREAMHOST.COM",
+  "zipcode": "92821"
+ }
+}

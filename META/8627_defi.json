@@ -1,0 +1,72 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 31st 2022 7:42 PM",
+  "awg_id": 7475545
+ },
+ "ip_data": {
+  "city": "Zwolle",
+  "country": "NL",
+  "country_name": "Netherlands",
+  "ip": "88.218.168.95",
+  "latitude": "52.5125",
+  "loc": "52.5125,6.0944",
+  "longitude": "6.0944",
+  "org": "AS207651 Hosting technology LTD",
+  "postal": "8011",
+  "region": "Overijssel",
+  "timezone": "Europe/Amsterdam"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.defiklngdomes-game.com/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cuZGVmaWtsbmdkb21lcy1nYW1lLmNvbS8\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Zhdanova str., 15., ap 34",
+  "city": "Sarapul",
+  "country": "RU",
+  "creation_date": "03/30/2022, 23:50:05",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "DEFIKLNGDOMES-GAME.COM",
+  "emails": [
+   "abuse@reg.ru",
+   "jw219430@gmail.com"
+  ],
+  "expiration_date": "03/30/2023, 23:50:05",
+  "name": "Dmitrii Zharov",
+  "name_servers": [
+   "NS1.VDSINA.RU",
+   "NS2.VDSINA.RU",
+   "NS3.VDSINA.RU",
+   "NS4.VDSINA.RU",
+   "ns1.vdsina.ru",
+   "ns2.vdsina.ru",
+   "ns3.vdsina.ru",
+   "ns4.vdsina.ru"
+  ],
+  "org": "Private Person",
+  "referral_url": null,
+  "registrar": "Registrar of domain names REG.RU LLC",
+  "state": "Sarapul",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/30/2022, 23:53:03",
+  "whois_server": "whois.reg.com",
+  "zipcode": "427960"
+ }
+}

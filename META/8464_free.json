@@ -1,0 +1,69 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 31st 2022 5:09 PM",
+  "awg_id": 7475462
+ },
+ "ip_data": {
+  "city": "Strasbourg",
+  "country": "FR",
+  "country_name": "France",
+  "ip": "151.106.5.114",
+  "latitude": "48.5839",
+  "loc": "48.5839,7.7455",
+  "longitude": "7.7455",
+  "org": "AS29066 Host Europe GmbH",
+  "postal": "67000",
+  "region": "Grand Est",
+  "timezone": "Europe/Paris"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://freenone.com/c4ca4238a0b923820dcc509a6f75849b/2114390f3d60b87925df019c63d5ac5c/562c073ad286a793b9d03a7fff90429c/7516fd43adaa5e0b8a65a672c39845d2",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2ZyZWVub25lLmNvbS9jNGNhNDIzOGEwYjkyMzgyMGRjYzUwOWE2Zjc1ODQ5Yi8yMTE0MzkwZjNkNjBiODc5MjVkZjAxOWM2M2Q1YWM1Yy81NjJjMDczYWQyODZhNzkzYjlkMDNhN2ZmZjkwNDI5Yy83NTE2ZmQ0M2FkYWE1ZTBiOGE2NWE2NzJjMzk4NDVkMg\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "PO Box 1769",
+  "city": "Denver",
+  "country": "US",
+  "creation_date": "09/29/2020, 22:14:15",
+  "dnssec": [
+   "unsigned",
+   "unSigned"
+  ],
+  "domain_name": "FREENONE.COM",
+  "emails": "abuse@name.com",
+  "expiration_date": "09/29/2022, 22:14:15",
+  "name": "Whois Agent",
+  "name_servers": [
+   "NS1MPZ.NAME.COM",
+   "NS2BTZ.NAME.COM",
+   "NS3JMT.NAME.COM",
+   "NS4LNY.NAME.COM",
+   "ns1mpz.name.com",
+   "ns2btz.name.com",
+   "ns3jmt.name.com",
+   "ns4lny.name.com"
+  ],
+  "org": "Domain Protection Services, Inc.",
+  "referral_url": null,
+  "registrar": "Name.com, Inc.",
+  "state": "CO",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "09/30/2021, 07:34:59",
+  "whois_server": "whois.name.com",
+  "zipcode": "80201"
+ }
+}

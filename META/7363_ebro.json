@@ -1,0 +1,36 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 31st 2022 7:31 PM",
+  "awg_id": 7475529
+ },
+ "ip_data": {
+  "city": "Los Angeles",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "67.215.225.238.static.quadranet.com",
+  "ip": "67.215.225.238",
+  "latitude": "33.9631",
+  "loc": "33.9631,-118.3941",
+  "longitude": "-118.3941",
+  "org": "AS8100 QuadraNet Enterprises LLC",
+  "postal": "90045",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://ebroubankcd.sytes.net/www/frontend/loginStep1",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2Vicm91YmFua2NkLnN5dGVzLm5ldC93d3cvZnJvbnRlbmQvbG9naW5TdGVwMQ\" not found"
+  }
+ },
+ "whois_data": {}
+}
