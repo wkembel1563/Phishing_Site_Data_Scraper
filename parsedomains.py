@@ -183,7 +183,7 @@ def screenshot(current_id, shot_path, urls):
     """
     try:
         # set up selenium web driver
-        ser = Service('/home/kaifeng/chromedriver')
+        ser = Service('/home/willk/Downloads/chromedriver')
         op = webdriver.ChromeOptions()
         op.headless = True
         op.page_load_strategy = 'eager'
