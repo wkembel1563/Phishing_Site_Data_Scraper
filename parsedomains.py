@@ -823,19 +823,16 @@ class metadata:
         self.twilio_auth_token = '4794ef24fc522c0f5569afbd672896f0' 
 
         # FILES PATHS
-        self.CSV_FILE_CHOICE = 'phish_data.csv'           # csv file to write to 
-        self.URL_FILE_CHOICE = 'phishtank_urls.txt'      # url file to read from
-        self.META_FILE_CHOICE = 'log.txt'
-        self.CSV_RELATIVE_PATH = '/CSV'                  # relative path to csv folder 
-        self.SHOT_RELATIVE_PATH = '/SCREENSHOTS'         # relative path to screenshot folder 
-        self.URL_RELATIVE_PATH = '/URLFILES'             # relative path to url dir
-        self.META_RELATIVE_PATH = '/META'                # relative path to metadata dir
+        self.BASE_PATH = os.path.dirname(os.path.realpath(__file__))
+        self.CSV_FILE_CHOICE = 'CSV/phish_data.csv'           # csv file to write to
+        self.URL_FILE_CHOICE = 'URLFILES/phishtank_urls.txt'      # url file to read from
+        self.SHOT_RELATIVE_PATH = 'SCREENSHOTS'         # relative path to screenshot folder
+        self.META_RELATIVE_PATH = 'META'                # relative path to metadata dir
 
-                                                         # PATHS BELOW ARE UPDATED IN init()
         self.CSV_FILE_PATH = ''	                         # absolute path to csv file
+        self.URL_FILE_PATH = ''                          # absolute path to urlfile
         self.SHOT_PATH = ''                              # absolute path to screenshot dir
         self.META_PATH = ''                              # absolute path to metadata dir
-        self.URL_FILE_PATH = ''                          # absolute path to urlfile 
 
         # VALUES UPDATED IN init()
         self.HANDLER = 0                                 # ipinfo handler to get ip data
@@ -903,18 +900,18 @@ class metadata:
         """
 
         # build file paths
-        # to urlfile dir, screenshot dir, metadata dir and csv file
-        base_path = os.getcwd()
-        self.CSV_FILE_PATH = base_path + self.CSV_RELATIVE_PATH + '/' + self.CSV_FILE_CHOICE
+        self.CSV_FILE_PATH = os.path.join(self.BASE_PATH, self.CSV_FILE_CHOICE)
         self.SHOT_PATH = base_path + self.SHOT_RELATIVE_PATH
-        #self.META_PATH = base_path + self.META_RELATIVE_PATH + '/' + self.META_FILE_CHOICE
-        self.META_PATH = base_path + self.META_RELATIVE_PATH
+        self.SHOT_PATH = os.path.join(self.BASE_PATH, self.SHOT_RELATIVE_PATH)
+        self.META_PATH = os.path.join(self.BASE_PATH, self.META_RELATIVE_PATH)
 
         # validate CL input length
         #   two args means a url file was passed, contains relative path
         arg_len = len(args)
         if arg_len == 2:
             self.URL_FILE_PATH = base_path + '/' + args[self.URLFILE]
+            self.URL_FILE_PATH = os.path.join(self.BASE_PATH, args[self.URLFILE])
+
 
         #   invalid num of args
         elif arg_len != self.NUM_OF_ARGS:
@@ -924,7 +921,7 @@ class metadata:
         #   one arg means use default files
         else:
             print("\nNO URL FILE SPECIFIED. Reverting to default...\n")
-            self.URL_FILE_PATH = base_path + self.URL_RELATIVE_PATH + '/' + self.URL_FILE_CHOICE
+            self.URL_FILE_PATH = os.path.join(self.BASE_PATH, self.URL_FILE_CHOICE)
 
         # initialize global variables
         self.HANDLER = ipinfo.getHandler(self.IPINFO_ACCESS_TOKEN)
