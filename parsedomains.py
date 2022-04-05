@@ -11,7 +11,9 @@ import ipinfo
 import requests
 import urllib.parse as up
 import pandas as pd
+print("\nIGNORE ERROR ##################")
 import tensorflow as tf
+print("END ERROR    ##################\n")
 import numpy as np
 from ipinfo.handler_utils import cache_key
 from ipwhois import IPWhois
@@ -341,9 +343,9 @@ def searchPhishTank(domains):
     print("GETTING PHISHTANK DATA...", end="")
 
     # generate path to file
-    path_to_file = os.getcwd()
-    filename = 'log.csv'
-    full_path = path_to_file + '/PHISHERMAN/' + filename
+    base_path = os.path.dirname(os.path.realpath(__file__)) 
+    filename = 'PHISHERMAN/log.csv'
+    full_path = os.path.join(base_path, filename)
 
     # extract phishtank csv data
     try:
@@ -901,7 +903,6 @@ class metadata:
 
         # build file paths
         self.CSV_FILE_PATH = os.path.join(self.BASE_PATH, self.CSV_FILE_CHOICE)
-        self.SHOT_PATH = base_path + self.SHOT_RELATIVE_PATH
         self.SHOT_PATH = os.path.join(self.BASE_PATH, self.SHOT_RELATIVE_PATH)
         self.META_PATH = os.path.join(self.BASE_PATH, self.META_RELATIVE_PATH)
 
@@ -909,9 +910,7 @@ class metadata:
         #   two args means a url file was passed, contains relative path
         arg_len = len(args)
         if arg_len == 2:
-            self.URL_FILE_PATH = base_path + '/' + args[self.URLFILE]
             self.URL_FILE_PATH = os.path.join(self.BASE_PATH, args[self.URLFILE])
-
 
         #   invalid num of args
         elif arg_len != self.NUM_OF_ARGS:
