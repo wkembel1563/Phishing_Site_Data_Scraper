@@ -1,0 +1,47 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 7:34 AM",
+  "awg_id": 7479624
+ },
+ "ip_data": {
+  "city": "Sydney",
+  "country": "AU",
+  "country_name": "Australia",
+  "hostname": "sau-094e3-or.servercontrol.com.au",
+  "ip": "27.50.88.65",
+  "latitude": "-33.8678",
+  "loc": "-33.8678,151.2073",
+  "longitude": "151.2073",
+  "org": "AS45671 Wholesale Services Provider",
+  "postal": "1001",
+  "region": "New South Wales",
+  "timezone": "Australia/Sydney"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://dev.procaregroup.com.au/wp-content/uploads/2020/04/koola/mojeing/app/pass?_id=4ffb774146a5d8379de608565bedd2a3-session_id%3D4ffb774146a5d8379de608565bedd2a34ffb774146a5d8379de608565bedd2a3&id=trevor.huels",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9kZXYucHJvY2FyZWdyb3VwLmNvbS5hdS93cC1jb250ZW50L3VwbG9hZHMvMjAyMC8wNC9rb29sYS9tb2plaW5nL2FwcC9wYXNzP19pZD00ZmZiNzc0MTQ2YTVkODM3OWRlNjA4NTY1YmVkZDJhMy1zZXNzaW9uX2lkJTNENGZmYjc3NDE0NmE1ZDgzNzlkZTYwODU2NWJlZGQyYTM0ZmZiNzc0MTQ2YTVkODM3OWRlNjA4NTY1YmVkZDJhMyZpZD10cmV2b3IuaHVlbHM\" not found"
+  }
+ },
+ "whois_data": {
+  "domain_name": "PROCAREGROUP.COM.AU",
+  "name_servers": [
+   "JACK.NS.CLOUDFLARE.COM",
+   "REZA.NS.CLOUDFLARE.COM"
+  ],
+  "registrant_contact_name": "Coralie Young",
+  "registrant_name": "THE PROCARE GROUP PTY LTD",
+  "registrar": "Domain Directors Pty Ltd trading as Instra",
+  "status": "serverRenewProhibited https://afilias.com.au/get-au/whois-status-codes#serverRenewProhibited",
+  "updated_date": "02/17/2021, 08:44:40"
+ }
+}

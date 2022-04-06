@@ -1,0 +1,66 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "inactive"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 2:15 PM",
+  "awg_id": 7479835
+ },
+ "ip_data": {
+  "city": "Los Angeles",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "server.hublyn.com.mx",
+  "ip": "199.250.215.210",
+  "latitude": "34.0522",
+  "loc": "34.0522,-118.2437",
+  "longitude": "-118.2437",
+  "org": "AS22611 InMotion Hosting, Inc.",
+  "postal": "90009",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://ezc.mx/fonts/banger/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9lemMubXgvZm9udHMvYmFuZ2VyLw\" not found"
+  }
+ },
+ "whois_data": {
+  "admin": "Locker Agencia Creativa SA de CV",
+  "admin_city": "Merida",
+  "admin_country": "Mexico",
+  "admin_state": "Yucatan",
+  "billing_city": "Merida",
+  "billing_country": "Mexico",
+  "billing_name": "Locker Agencia Creativa SA de CV",
+  "billing_state": "Yucatan",
+  "creation_date": "07/20/2012, 00:00:00",
+  "domain_name": "ezc.mx",
+  "expiration_date": "07/20/2022, 00:00:00",
+  "name_servers": [
+   "ns.inmotionhosting.com",
+   "ns2.inmotionhosting.com"
+  ],
+  "registrant_city": "merida",
+  "registrant_country": "Mexico",
+  "registrant_name": "Hosttweiler Premium Hosting",
+  "registrant_state": "Yucatan",
+  "registrar": "AKKY ONLINE SOLUTIONS, S.A. DE C.V.",
+  "tech_city": "Merida",
+  "tech_country": "Mexico",
+  "tech_name": "Locker Agencia Creativa SA de CV",
+  "tech_state": "Yucatan",
+  "updated_date": "07/22/2021, 00:00:00",
+  "url": [
+   "http://www.akky.mx",
+   "http://www.akky.mx/herramientas/whois.jsf"
+  ]
+ }
+}

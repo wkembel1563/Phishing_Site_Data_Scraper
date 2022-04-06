@@ -1,0 +1,67 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 3:11 PM",
+  "awg_id": 7479958
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "edge-star-shv-02-dfw5.facebook.com",
+  "ip": "31.13.93.19",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS32934 Facebook, Inc.",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://l.wl.co/l?u=https://bit.ly/3mLmUfL?trackingid=aSgftI6F&signature=newsletter",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9sLndsLmNvL2w_dT1odHRwczovL2JpdC5seS8zbUxtVWZMP3RyYWNraW5naWQ9YVNnZnRJNkYmc2lnbmF0dXJlPW5ld3NsZXR0ZXI\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "139 5th Avenue 5th Floor",
+  "city": "New York",
+  "country": "US",
+  "creation_date": "05/17/2008, 22:00:00",
+  "dnssec": "unsigned",
+  "domain_name": "bit.ly",
+  "emails": [
+   "abuse@register.ly",
+   "hostmaster@bit.ly"
+  ],
+  "expiration_date": "05/17/2022, 22:00:00",
+  "name": "bitly operations",
+  "name_servers": [
+   "ns-1372.awsdns-43.org",
+   "ns-705.awsdns-24.net",
+   "ns-cloud-c1.googledomains.com",
+   "ns-cloud-c2.googledomains.com",
+   "ns-cloud-c3.googledomains.com"
+  ],
+  "org": "Bitly",
+  "referral_url": null,
+  "registrar": "Libyan Spider Network (int)",
+  "state": "NY",
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "11/24/2020, 15:02:24",
+  "whois_server": "whois.nic.ly",
+  "zipcode": "10010"
+ }
+}

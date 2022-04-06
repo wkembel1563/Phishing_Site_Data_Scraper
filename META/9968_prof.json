@@ -1,0 +1,22 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 12:03 PM",
+  "awg_id": 7479774
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://profile-taxclaim-irs.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9wcm9maWxlLXRheGNsYWltLWlycy5jb20\" not found"
+  }
+ },
+ "whois_data": {}
+}

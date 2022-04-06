@@ -1,0 +1,771 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 1:19 AM",
+  "awg_id": 7479313
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://unionlog.xyz/",
+ "virus_data": {
+  "data": {
+   "attributes": {
+    "categories": {
+     "Forcepoint ThreatSeeker": "phishing and other frauds",
+     "Sophos": "spyware and malware",
+     "Webroot": "Phishing and Other Frauds"
+    },
+    "first_submission_date": 1649123289,
+    "html_meta": {
+     "abstract": [
+      "Union Bank\u00ae offers personal and business banking, investments, commercial banking, corporate accounts and private banking services - Open a bank account today."
+     ],
+     "article:modified_time": [
+      "Thu, 01/13/2022 - 10:14"
+     ],
+     "article:published_time": [
+      "Mon, 05/06/2019 - 09:21"
+     ],
+     "description": [
+      "Union Bank is a commercial bank, specializing in personal and small business banking solutions, investment, wealth management, and corporate banking services."
+     ],
+     "google-site-verification": [
+      "uyAnBHyJKAfPopCIWAgMKV6W5IX2rWTcob370L1BSfw"
+     ],
+     "keywords": [
+      "small business banking, personal banking, online banking, home mortgages, commercial bank, corporate banking, non profit account, wealth and investment management, union bank of california, mufg union bank, uboc, union bank, unionbank.com"
+     ],
+     "og:description": [
+      "Union Bank\u00ae offers personal and business banking, investments, commercial banking, corporate accounts and private banking services - Open a bank account today."
+     ],
+     "og:site_name": [
+      "Union Bank"
+     ],
+     "og:title": [
+      "Personal, Business, Commercial Banking Services | Union Bank"
+     ],
+     "og:type": [
+      "webpage"
+     ],
+     "og:url": [
+      "https://www.unionbank.com"
+     ],
+     "pin:description": [
+      "Union Bank\u00ae offers personal and business banking, investments, commercial banking, corporate accounts and private banking services - Open a bank account today."
+     ],
+     "pin:url": [
+      "https://www.unionbank.com"
+     ],
+     "title": [
+      "Personal, Business & Commercial Banking Services | Union Bank"
+     ],
+     "twitter:card": [
+      "summary_large_image"
+     ],
+     "twitter:creator": [
+      "@unionbank"
+     ],
+     "twitter:creator:id": [
+      "17199641"
+     ],
+     "twitter:description": [
+      "Union Bank\u00ae offers personal and business banking, investments, commercial banking, corporate accounts and private banking services - Open a bank account today."
+     ],
+     "twitter:site": [
+      "@unionbank"
+     ],
+     "twitter:title": [
+      "Personal, Business, Commercial Banking Services | Union Bank"
+     ],
+     "twitter:url": [
+      "https://www.unionbank.com"
+     ],
+     "viewport": [
+      "width=device-width, initial-scale=1, viewport-fit=cover"
+     ]
+    },
+    "last_analysis_date": 1649150607,
+    "last_analysis_results": {
+     "0xSI_f33d": {
+      "category": "undetected",
+      "engine_name": "0xSI_f33d",
+      "method": "blacklist",
+      "result": "unrated"
+     },
+     "ADMINUSLabs": {
+      "category": "harmless",
+      "engine_name": "ADMINUSLabs",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "AICC (MONITORAPP)": {
+      "category": "harmless",
+      "engine_name": "AICC (MONITORAPP)",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Abusix": {
+      "category": "harmless",
+      "engine_name": "Abusix",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Acronis": {
+      "category": "harmless",
+      "engine_name": "Acronis",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "AlienVault": {
+      "category": "harmless",
+      "engine_name": "AlienVault",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Antiy-AVL": {
+      "category": "harmless",
+      "engine_name": "Antiy-AVL",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Armis": {
+      "category": "harmless",
+      "engine_name": "Armis",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Artists Against 419": {
+      "category": "harmless",
+      "engine_name": "Artists Against 419",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "AutoShun": {
+      "category": "undetected",
+      "engine_name": "AutoShun",
+      "method": "blacklist",
+      "result": "unrated"
+     },
+     "Avira": {
+      "category": "harmless",
+      "engine_name": "Avira",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "BADWARE.INFO": {
+      "category": "harmless",
+      "engine_name": "BADWARE.INFO",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Baidu-International": {
+      "category": "harmless",
+      "engine_name": "Baidu-International",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Bfore.Ai PreCrime": {
+      "category": "harmless",
+      "engine_name": "Bfore.Ai PreCrime",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "BitDefender": {
+      "category": "malicious",
+      "engine_name": "BitDefender",
+      "method": "blacklist",
+      "result": "malware"
+     },
+     "BlockList": {
+      "category": "harmless",
+      "engine_name": "BlockList",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Blueliv": {
+      "category": "harmless",
+      "engine_name": "Blueliv",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "CINS Army": {
+      "category": "harmless",
+      "engine_name": "CINS Army",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "CMC Threat Intelligence": {
+      "category": "harmless",
+      "engine_name": "CMC Threat Intelligence",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "CRDF": {
+      "category": "harmless",
+      "engine_name": "CRDF",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Certego": {
+      "category": "harmless",
+      "engine_name": "Certego",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Chong Lua Dao": {
+      "category": "harmless",
+      "engine_name": "Chong Lua Dao",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Comodo Valkyrie Verdict": {
+      "category": "harmless",
+      "engine_name": "Comodo Valkyrie Verdict",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "CyRadar": {
+      "category": "harmless",
+      "engine_name": "CyRadar",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Cyan": {
+      "category": "undetected",
+      "engine_name": "Cyan",
+      "method": "blacklist",
+      "result": "unrated"
+     },
+     "CyberCrime": {
+      "category": "harmless",
+      "engine_name": "CyberCrime",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Cyren": {
+      "category": "harmless",
+      "engine_name": "Cyren",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "DNS8": {
+      "category": "harmless",
+      "engine_name": "DNS8",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Dr.Web": {
+      "category": "harmless",
+      "engine_name": "Dr.Web",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "ESET": {
+      "category": "malicious",
+      "engine_name": "ESET",
+      "method": "blacklist",
+      "result": "phishing"
+     },
+     "EmergingThreats": {
+      "category": "harmless",
+      "engine_name": "EmergingThreats",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Emsisoft": {
+      "category": "harmless",
+      "engine_name": "Emsisoft",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "EonScope": {
+      "category": "harmless",
+      "engine_name": "EonScope",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Feodo Tracker": {
+      "category": "harmless",
+      "engine_name": "Feodo Tracker",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Forcepoint ThreatSeeker": {
+      "category": "malicious",
+      "engine_name": "Forcepoint ThreatSeeker",
+      "method": "blacklist",
+      "result": "phishing"
+     },
+     "Fortinet": {
+      "category": "malicious",
+      "engine_name": "Fortinet",
+      "method": "blacklist",
+      "result": "phishing"
+     },
+     "FraudScore": {
+      "category": "harmless",
+      "engine_name": "FraudScore",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "G-Data": {
+      "category": "malicious",
+      "engine_name": "G-Data",
+      "method": "blacklist",
+      "result": "malware"
+     },
+     "Google Safebrowsing": {
+      "category": "harmless",
+      "engine_name": "Google Safebrowsing",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "GreenSnow": {
+      "category": "harmless",
+      "engine_name": "GreenSnow",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Heimdal Security": {
+      "category": "harmless",
+      "engine_name": "Heimdal Security",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Hoplite Industries": {
+      "category": "harmless",
+      "engine_name": "Hoplite Industries",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "IPsum": {
+      "category": "harmless",
+      "engine_name": "IPsum",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "K7AntiVirus": {
+      "category": "harmless",
+      "engine_name": "K7AntiVirus",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Kaspersky": {
+      "category": "harmless",
+      "engine_name": "Kaspersky",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Lionic": {
+      "category": "harmless",
+      "engine_name": "Lionic",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Lumu": {
+      "category": "undetected",
+      "engine_name": "Lumu",
+      "method": "blacklist",
+      "result": "unrated"
+     },
+     "MalBeacon": {
+      "category": "harmless",
+      "engine_name": "MalBeacon",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "MalSilo": {
+      "category": "harmless",
+      "engine_name": "MalSilo",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "MalwareDomainList": {
+      "category": "harmless",
+      "engine_name": "MalwareDomainList",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "MalwarePatrol": {
+      "category": "harmless",
+      "engine_name": "MalwarePatrol",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Malwared": {
+      "category": "harmless",
+      "engine_name": "Malwared",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Netcraft": {
+      "category": "harmless",
+      "engine_name": "Netcraft",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "NotMining": {
+      "category": "undetected",
+      "engine_name": "NotMining",
+      "method": "blacklist",
+      "result": "unrated"
+     },
+     "Nucleon": {
+      "category": "harmless",
+      "engine_name": "Nucleon",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "OpenPhish": {
+      "category": "harmless",
+      "engine_name": "OpenPhish",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "PREBYTES": {
+      "category": "harmless",
+      "engine_name": "PREBYTES",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "PhishLabs": {
+      "category": "undetected",
+      "engine_name": "PhishLabs",
+      "method": "blacklist",
+      "result": "unrated"
+     },
+     "Phishing Database": {
+      "category": "harmless",
+      "engine_name": "Phishing Database",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Phishtank": {
+      "category": "malicious",
+      "engine_name": "Phishtank",
+      "method": "blacklist",
+      "result": "phishing"
+     },
+     "Quick Heal": {
+      "category": "harmless",
+      "engine_name": "Quick Heal",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Quttera": {
+      "category": "harmless",
+      "engine_name": "Quttera",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Rising": {
+      "category": "harmless",
+      "engine_name": "Rising",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "SCUMWARE.org": {
+      "category": "harmless",
+      "engine_name": "SCUMWARE.org",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "SafeToOpen": {
+      "category": "undetected",
+      "engine_name": "SafeToOpen",
+      "method": "blacklist",
+      "result": "unrated"
+     },
+     "Sangfor": {
+      "category": "harmless",
+      "engine_name": "Sangfor",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Scantitan": {
+      "category": "harmless",
+      "engine_name": "Scantitan",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "SecureBrain": {
+      "category": "harmless",
+      "engine_name": "SecureBrain",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Snort IP sample list": {
+      "category": "harmless",
+      "engine_name": "Snort IP sample list",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Sophos": {
+      "category": "malicious",
+      "engine_name": "Sophos",
+      "method": "blacklist",
+      "result": "malware"
+     },
+     "Spam404": {
+      "category": "harmless",
+      "engine_name": "Spam404",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Spamhaus": {
+      "category": "harmless",
+      "engine_name": "Spamhaus",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "StopBadware": {
+      "category": "undetected",
+      "engine_name": "StopBadware",
+      "method": "blacklist",
+      "result": "unrated"
+     },
+     "StopForumSpam": {
+      "category": "harmless",
+      "engine_name": "StopForumSpam",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Sucuri SiteCheck": {
+      "category": "harmless",
+      "engine_name": "Sucuri SiteCheck",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Tencent": {
+      "category": "harmless",
+      "engine_name": "Tencent",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "ThreatHive": {
+      "category": "harmless",
+      "engine_name": "ThreatHive",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Threatsourcing": {
+      "category": "harmless",
+      "engine_name": "Threatsourcing",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Trustwave": {
+      "category": "undetected",
+      "engine_name": "Trustwave",
+      "method": "blacklist",
+      "result": "unrated"
+     },
+     "URLhaus": {
+      "category": "harmless",
+      "engine_name": "URLhaus",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "VX Vault": {
+      "category": "harmless",
+      "engine_name": "VX Vault",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "ViriBack": {
+      "category": "harmless",
+      "engine_name": "ViriBack",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Virusdie External Site Scan": {
+      "category": "harmless",
+      "engine_name": "Virusdie External Site Scan",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Web Security Guard": {
+      "category": "harmless",
+      "engine_name": "Web Security Guard",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "Webroot": {
+      "category": "malicious",
+      "engine_name": "Webroot",
+      "method": "blacklist",
+      "result": "malicious"
+     },
+     "Yandex Safebrowsing": {
+      "category": "harmless",
+      "engine_name": "Yandex Safebrowsing",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "ZeroCERT": {
+      "category": "harmless",
+      "engine_name": "ZeroCERT",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "alphaMountain.ai": {
+      "category": "harmless",
+      "engine_name": "alphaMountain.ai",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "benkow.cc": {
+      "category": "harmless",
+      "engine_name": "benkow.cc",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "desenmascara.me": {
+      "category": "harmless",
+      "engine_name": "desenmascara.me",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "malwares.com URL checker": {
+      "category": "harmless",
+      "engine_name": "malwares.com URL checker",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "securolytics": {
+      "category": "harmless",
+      "engine_name": "securolytics",
+      "method": "blacklist",
+      "result": "clean"
+     },
+     "zvelo": {
+      "category": "harmless",
+      "engine_name": "zvelo",
+      "method": "blacklist",
+      "result": "clean"
+     }
+    },
+    "last_analysis_stats": {
+     "harmless": 76,
+     "malicious": 8,
+     "suspicious": 0,
+     "timeout": 0,
+     "undetected": 9
+    },
+    "last_final_url": "https://unionlog.xyz/",
+    "last_http_response_code": 200,
+    "last_http_response_content_length": 517054,
+    "last_http_response_content_sha256": "428541db7f92891d3ec0e4d513682e1bcd15ef9ac4a414d37783327f10a2a6fa",
+    "last_http_response_headers": {
+     "connection": "keep-alive",
+     "content-type": "text/html; charset=utf-8",
+     "date": "Tue, 05 Apr 2022 01:48:26 GMT",
+     "etag": "W/\"7e3be-5db86ae498fbc\"",
+     "last-modified": "Thu, 31 Mar 2022 17:06:19 GMT",
+     "server": "nginx/1.20.2",
+     "transfer-encoding": "chunked",
+     "vary": "Accept-Encoding"
+    },
+    "last_modification_date": 1649153968,
+    "last_submission_date": 1649150607,
+    "outgoing_links": [
+     "https://www.unionbank.com/personal/investing/college-savings",
+     "https://www.unionbank.com/personal",
+     "https://investor.wealthscape.com/ubis/investor-index.html",
+     "https://sso.unionbank.com/unp/havingtrouble.jsp",
+     "https://www.unionbank.com/personal/checking-accounts/bank-freely",
+     "https://mufg.swoogo.com/RoadtorecoveryforWomenOwnedBusinessesSept",
+     "https://www.unionbank.com/business/checking-accounts",
+     "https://www.unionbank.com/personal/mortgage-solutions",
+     "https://www.unionbank.com/business/checking-accounts/bank-freely",
+     "https://www.unionbank.com/personal/checking-accounts/overdraft-protection",
+     "https://www.unionbank.com/personal/financial-insights/investing",
+     "https://www.unionbank.com/personal/credit-cards/preferred-rewards-visa",
+     "https://www.unionbank.com/learn/personal/help-center/checking-faq",
+     "https://www.unionbank.com/business/checking-accounts/business-analyzed-checking",
+     "https://www.unionbank.com/personal/home-mortgages/buying-a-home",
+     "https://www.unionbank.com/personal/checking-accounts",
+     "https://bke.unionbank.com/enrollment/enrollloginselection.action",
+     "https://www.unionbank.com/personal/savings-accounts/money-market",
+     "https://www.unionbank.com/personal/investing/insurance",
+     "https://www.unionbank.com/personal/personal-loans",
+     "https://www.unionbank.com/personal/credit-cards/travel-rewards-visa",
+     "https://www.unionbank.com/personal/investing/retirement-planning",
+     "https://www.unionbank.com/personal/visa-credit-cards-all",
+     "https://www.unionbank.com/personal/savings-accounts/cds",
+     "https://www.unionbank.com/personal/financial-insights",
+     "https://www.unionbank.com/personal/home-equity/heloc-options-flexible-financing-homeowners-ca-or-wa-lender",
+     "https://www.unionbank.com/about-us",
+     "https://www.unionbank.com/personal/home-equity",
+     "https://www.unionbank.com/business",
+     "https://www.unionbank.com/personal/digital-banking",
+     "https://www.unionbank.com/personal/investing/investment-services",
+     "https://www.unionbank.com/",
+     "https://unionbank1.fdecs.com/eCustService/",
+     "https://www.unionbank.com/personal/checking-accounts/priority-banking",
+     "https://www.unionbank.com/personal/savings-accounts",
+     "https://www.unionbank.com/personal/savings-accounts/bank-freely",
+     "https://www.unionbank.com/personal/credit-cards/bank-freely-unlimited-cash-back-rewards-visa",
+     "https://www.unionbank.com/personal/home-mortgages",
+     "https://www.unionbank.com/personal/credit-cards/platinum-visa",
+     "https://www.unionbank.com/personal/credit-cards/secured-visa",
+     "https://www.unionbank.com/personal/investing/ira",
+     "https://www.unionbank.com/learn",
+     "https://www.unionbank.com/personal/home-mortgages/refinance",
+     "https://www.unionbank.com/personal/investing",
+     "https://www.unionbank.com/personal/digital-wallet"
+    ],
+    "reputation": 0,
+    "tags": [],
+    "threat_names": [
+     "Mal/HTMLGen-A"
+    ],
+    "times_submitted": 2,
+    "title": "Personal, Business & Commercial Banking Services | Union Bank",
+    "total_votes": {
+     "harmless": 0,
+     "malicious": 0
+    },
+    "url": "https://unionlog.xyz/"
+   },
+   "id": "f9d5826bf0be45e8acd050d03638c626a3f71169b28c9faf7adcd0ebb312b110",
+   "links": {
+    "self": "https://www.virustotal.com/api/v3/urls/f9d5826bf0be45e8acd050d03638c626a3f71169b28c9faf7adcd0ebb312b110"
+   },
+   "type": "url"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": "IS",
+  "creation_date": "03/30/2022, 12:17:19",
+  "dnssec": "unsigned",
+  "domain_name": "UNIONLOG.XYZ",
+  "emails": "abuse@namecheap.com",
+  "expiration_date": "03/30/2023, 23:59:59",
+  "name": null,
+  "name_servers": [
+   "DNS1.REGISTRAR-SERVERS.COM",
+   "DNS2.REGISTRAR-SERVERS.COM"
+  ],
+  "org": "Privacy service provided by Withheld for Privacy ehf",
+  "referral_url": null,
+  "registrar": "Namecheap",
+  "state": "Capital Region",
+  "status": [
+   "serverHold https://icann.org/epp#serverHold",
+   "serverTransferProhibited https://icann.org/epp#serverTransferProhibited",
+   "clientHold https://icann.org/epp#clientHold",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "04/05/2022, 16:58:27",
+  "whois_server": "whois.namecheap.com",
+  "zipcode": null
+ }
+}

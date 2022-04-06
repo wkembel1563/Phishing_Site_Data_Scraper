@@ -1,0 +1,48 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 3:15 PM",
+  "awg_id": 7479965
+ },
+ "ip_data": {
+  "city": "Moscow",
+  "country": "RU",
+  "country_name": "Russia",
+  "hostname": "scp107.hosting.reg.ru",
+  "ip": "31.31.198.236",
+  "latitude": "55.7522",
+  "loc": "55.7522,37.6156",
+  "longitude": "37.6156",
+  "org": "AS197695 Domain names registrar REG.RU, Ltd",
+  "postal": "101000",
+  "region": "Moscow",
+  "timezone": "Europe/Moscow"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://u1637698.cp.regruhosting.ru/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL3UxNjM3Njk4LmNwLnJlZ3J1aG9zdGluZy5ydS8\" not found"
+  }
+ },
+ "whois_data": {
+  "creation_date": "04/17/2008, 20:00:00",
+  "domain_name": "REGRUHOSTING.RU",
+  "emails": null,
+  "expiration_date": "04/17/2023, 21:00:00",
+  "name_servers": [
+   "ns1.reg.ru.",
+   "ns2.reg.ru."
+  ],
+  "org": "Domain name registrar REG.RU Ltd.",
+  "registrar": "REGRU-RU",
+  "status": "REGISTERED, DELEGATED, VERIFIED"
+ }
+}

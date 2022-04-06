@@ -1,0 +1,55 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 3:46 PM",
+  "awg_id": 7479991
+ },
+ "ip_data": {
+  "city": "San Francisco",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "wildcard.square.site",
+  "ip": "199.34.228.39",
+  "latitude": "37.7749",
+  "loc": "37.7749,-122.4194",
+  "longitude": "-122.4194",
+  "org": "AS27647 Weebly, Inc.",
+  "postal": "94102",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://gfdsfrdrattonline2022.square.site/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9nZmRzZnJkcmF0dG9ubGluZTIwMjIuc3F1YXJlLnNpdGUv\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": null,
+  "dnssec": null,
+  "domain_name": null,
+  "emails": null,
+  "expiration_date": null,
+  "name": null,
+  "name_servers": null,
+  "org": null,
+  "referral_url": null,
+  "registrar": null,
+  "state": null,
+  "status": null,
+  "updated_date": null,
+  "whois_server": null,
+  "zipcode": null
+ }
+}

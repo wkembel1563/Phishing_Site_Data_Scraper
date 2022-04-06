@@ -1,0 +1,75 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 2:59 PM",
+  "awg_id": 7479886
+ },
+ "ip_data": {
+  "city": "Dearing",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "74-208-236-151.elastic-ssl.ui-r.com",
+  "ip": "74.208.236.151",
+  "latitude": "37.0587",
+  "loc": "37.0587,-95.7133",
+  "longitude": "-95.7133",
+  "org": "AS8560 IONOS SE",
+  "postal": "67340",
+  "region": "Kansas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://bjh.co/?fa7Vr",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2JqaC5jby8_ZmE3VnI\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "REDACTED FOR PRIVACY",
+  "city": "REDACTED FOR PRIVACY",
+  "country": [
+   "CA",
+   "CV"
+  ],
+  "creation_date": "07/22/2010, 04:27:20",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "bjh.co",
+  "emails": [
+   "abuse@ionos.com",
+   "dataprivacyprotected@ionos.de"
+  ],
+  "expiration_date": "07/21/2022, 23:59:59",
+  "name": "REDACTED FOR PRIVACY",
+  "name_servers": [
+   "ns1049.ui-dns.de",
+   "ns1049.ui-dns.org",
+   "ns1049.ui-dns.com",
+   "ns1049.ui-dns.biz"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "IONOS SE",
+  "state": "ON",
+  "status": [
+   "ok https://icann.org/epp#ok",
+   "ok https://www.icann.org/epp#ok"
+  ],
+  "updated_date": [
+   "07/26/2021, 04:17:21",
+   "08/08/2017, 10:52:34"
+  ],
+  "whois_server": "whois.ionos.com",
+  "zipcode": "REDACTED FOR PRIVACY"
+ }
+}

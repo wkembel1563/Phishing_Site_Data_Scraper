@@ -1,0 +1,41 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 2:47 PM",
+  "awg_id": 7479859
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://nuw4.site/dakibci/BCI_InternetBanking2.html",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9udXc0LnNpdGUvZGFraWJjaS9CQ0lfSW50ZXJuZXRCYW5raW5nMi5odG1s\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": null,
+  "dnssec": null,
+  "domain_name": null,
+  "emails": null,
+  "expiration_date": null,
+  "name": null,
+  "name_servers": null,
+  "org": null,
+  "referral_url": null,
+  "registrar": null,
+  "state": null,
+  "status": null,
+  "updated_date": null,
+  "whois_server": null,
+  "zipcode": null
+ }
+}

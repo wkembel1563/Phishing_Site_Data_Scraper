@@ -1,0 +1,53 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 1:42 PM",
+  "awg_id": 7479826
+ },
+ "ip_data": {
+  "city": "Sydney",
+  "country": "AU",
+  "country_name": "Australia",
+  "hostname": "s01cd.syd6.hostingplatform.net.au",
+  "ip": "110.232.143.9",
+  "latitude": "-33.8678",
+  "loc": "-33.8678,151.2073",
+  "longitude": "151.2073",
+  "org": "AS45638 SYNERGY WHOLESALE PTY LTD",
+  "postal": "1001",
+  "region": "New South Wales",
+  "timezone": "Australia/Sydney"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://sportsnutrition.nz/text/today/zimbra/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9zcG9ydHNudXRyaXRpb24ubnovdGV4dC90b2RheS96aW1icmEv\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": "10/02/2017, 15:28:09",
+  "domain_name": "sportsnutrition.nz",
+  "emails": "registry@dreamscapenetworks.com",
+  "expiration_date": null,
+  "name": null,
+  "name_servers": [
+   "ns2.syd6.hostingplatform.net.au",
+   "ns1.syd6.hostingplatform.net.au"
+  ],
+  "registrar": "Dreamscape Networks International Pte Ltd T/A Crazy Domains",
+  "status": "200 Active",
+  "updated_date": "09/15/2021, 21:47:50",
+  "zipcode": null
+ }
+}

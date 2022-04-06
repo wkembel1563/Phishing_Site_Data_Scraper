@@ -1,0 +1,69 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 4:22 AM",
+  "awg_id": 7479581
+ },
+ "ip_data": {
+  "city": "Saint Petersburg",
+  "country": "RU",
+  "country_name": "Russia",
+  "hostname": "ssl.fobos.beget.com",
+  "ip": "87.236.16.247",
+  "latitude": "59.9386",
+  "loc": "59.9386,30.3141",
+  "longitude": "30.3141",
+  "org": "AS198610 Beget LLC",
+  "postal": "190000",
+  "region": "St.-Petersburg",
+  "timezone": "Europe/Moscow"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.defikfinsgdoms.com/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cuZGVmaWtmaW5zZ2RvbXMuY29tLw\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "96 Mowat Ave",
+  "city": "Toronto",
+  "country": "CA",
+  "creation_date": "04/04/2022, 13:05:11",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "DEFIKFINSGDOMS.COM",
+   "defikfinsgdoms.com"
+  ],
+  "emails": [
+   "registrar-abuse@google.com",
+   "blnd903bljna@contactprivacy.email"
+  ],
+  "expiration_date": "04/04/2023, 13:05:11",
+  "name": "Contact Privacy Inc. Customer 12412668506",
+  "name_servers": [
+   "NS1.BEGET.COM",
+   "NS1.BEGET.PRO",
+   "NS2.BEGET.COM",
+   "NS2.BEGET.PRO"
+  ],
+  "org": "Contact Privacy Inc. Customer 12412668506",
+  "referral_url": null,
+  "registrar": "Google LLC",
+  "state": "ON",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "04/04/2022, 13:08:05",
+  "whois_server": "whois.google.com",
+  "zipcode": "M4K 3K1"
+ }
+}

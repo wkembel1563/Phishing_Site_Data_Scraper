@@ -1,0 +1,77 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 12:52 PM",
+  "awg_id": 7479805
+ },
+ "ip_data": {
+  "city": "Newton",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "31.220.57.159",
+  "latitude": "35.6699",
+  "loc": "35.6699,-81.2215",
+  "longitude": "-81.2215",
+  "org": "AS47583 Hostinger International Limited",
+  "postal": "28658",
+  "region": "North Carolina",
+  "timezone": "America/New_York"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://naranhja.com/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9uYXJhbmhqYS5jb20v\" not found"
+  }
+ },
+ "whois_data": {
+  "address": [
+   "DomainsByProxy.com",
+   "2155 E Warner Rd"
+  ],
+  "city": "Tempe",
+  "country": "US",
+  "creation_date": [
+   "03/27/2022, 10:20:42",
+   "03/27/2022, 05:20:42"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "NARANHJA.COM",
+   "naranhja.com"
+  ],
+  "emails": "abuse@godaddy.com",
+  "expiration_date": [
+   "03/27/2023, 10:20:42",
+   "03/27/2023, 05:20:42"
+  ],
+  "name": "Registration Private",
+  "name_servers": [
+   "NS15.DOMAINCONTROL.COM",
+   "NS16.DOMAINCONTROL.COM"
+  ],
+  "org": "Domains By Proxy, LLC",
+  "referral_url": null,
+  "registrar": "GoDaddy.com, LLC",
+  "state": "Arizona",
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+  ],
+  "updated_date": [
+   "03/27/2022, 10:20:42",
+   "03/27/2022, 05:20:42"
+  ],
+  "whois_server": "whois.godaddy.com",
+  "zipcode": "85284"
+ }
+}

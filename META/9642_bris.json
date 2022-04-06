@@ -1,0 +1,75 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "inactive"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 1:57 PM",
+  "awg_id": 7479833
+ },
+ "ip_data": {
+  "city": "Los Angeles",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "server.hublyn.com.mx",
+  "ip": "199.250.215.210",
+  "latitude": "34.0522",
+  "loc": "34.0522,-118.2437",
+  "longitude": "-118.2437",
+  "org": "AS22611 InMotion Hosting, Inc.",
+  "postal": "90009",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://brisassantaclara.com/2F7CV6I",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2JyaXNhc3NhbnRhY2xhcmEuY29tLzJGN0NWNkk\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": "MX",
+  "creation_date": [
+   "09/21/2021, 00:03:44",
+   "09/20/2021, 19:03:44"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "BRISASSANTACLARA.COM",
+   "brisassantaclara.com"
+  ],
+  "emails": "abuse@godaddy.com",
+  "expiration_date": [
+   "09/21/2022, 00:03:44",
+   "09/20/2022, 19:03:44"
+  ],
+  "name": null,
+  "name_servers": [
+   "NS1.HUBLYN.COM.MX",
+   "NS2.HUBLYN.COM.MX"
+  ],
+  "org": "Locker Agencia Creativa",
+  "referral_url": null,
+  "registrar": "GoDaddy.com, LLC",
+  "state": "Yucatan",
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+  ],
+  "updated_date": [
+   "09/21/2021, 00:12:28",
+   "09/20/2021, 19:03:44"
+  ],
+  "whois_server": "whois.godaddy.com",
+  "zipcode": null
+ }
+}

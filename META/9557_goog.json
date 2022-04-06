@@ -1,0 +1,72 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 8:22 AM",
+  "awg_id": 7479638
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "dfw25s46-in-f3.1e100.net",
+  "ip": "142.251.35.195",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS15169 Google LLC",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.google.com.ly/url?usg=AFQjCNFoEIYtubtk2ExOBaHZg0GhEAJ5_Q&sntz=1&sa=D&q=https://spk-mitarbeiter-nummer.com/LPHF0IAY32#0SSrOaXvYfy",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5seS91cmw_dXNnPUFGUWpDTkZvRUlZdHVidGsyRXhPQmFIWmcwR2hFQUo1X1Emc250ej0xJnNhPUQmcT1odHRwczovL3Nway1taXRhcmJlaXRlci1udW1tZXIuY29tL0xQSEYwSUFZMzIjMFNTck9hWHZZZnk\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": "UK",
+  "creation_date": [
+   "04/01/2022, 13:02:06",
+   "04/01/2022, 13:03:31"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "SPK-MITARBEITER-NUMMER.COM",
+   "spk-mitarbeiter-nummer.com"
+  ],
+  "emails": "support@nicenic.net",
+  "expiration_date": "04/01/2023, 13:02:06",
+  "name": null,
+  "name_servers": [
+   "A.DNSPOD.COM",
+   "C.DNSPOD.COM"
+  ],
+  "org": "Oleg Zalipko",
+  "referral_url": null,
+  "registrar": "NICENIC INTERNATIONAL GROUP CO., LIMITED",
+  "state": "England",
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientDeleteProhibited <a href=\"https://icann.org/epp#clientDeleteProhibited\" target=\"_blank\">https://icann.org/epp#clientDeleteProhibited</a>",
+   "clientTransferProhibited <a href=\"https://icann.org/epp#clientTransferProhibited\" target=\"_blank\">https://icann.org/epp#clientTransferProhibited</a>"
+  ],
+  "updated_date": [
+   "04/01/2022, 13:02:06",
+   "04/01/2022, 13:03:31"
+  ],
+  "whois_server": "whois.nicenic.net",
+  "zipcode": null
+ }
+}

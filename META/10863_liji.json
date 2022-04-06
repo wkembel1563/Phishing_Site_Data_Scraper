@@ -1,0 +1,50 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 12:45 PM",
+  "awg_id": 7479794
+ },
+ "ip_data": {
+  "city": "Moscow",
+  "country": "RU",
+  "country_name": "Russia",
+  "hostname": "hjhjhj.com",
+  "ip": "109.237.96.24",
+  "latitude": "55.7522",
+  "loc": "55.7522,37.6156",
+  "longitude": "37.6156",
+  "org": "AS202306 HOSTGLOBAL.PLUS LTD",
+  "postal": "101000",
+  "region": "Moscow",
+  "timezone": "Europe/Moscow"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://lijigapolis.co.uk/track/c1987trQvn1427614sKjB109xRA79554GhwR218",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL2xpamlnYXBvbGlzLmNvLnVrL3RyYWNrL2MxOTg3dHJRdm4xNDI3NjE0c0tqQjEwOXhSQTc5NTU0R2h3UjIxOA\" not found"
+  }
+ },
+ "whois_data": {
+  "creation_date": "07/01/2021, 00:00:00",
+  "domain_name": "lijigapolis.co.uk",
+  "expiration_date": "07/01/2022, 00:00:00",
+  "name_servers": "dns1.registrar-servers.com",
+  "registrant_city": null,
+  "registrant_country": null,
+  "registrant_name": null,
+  "registrant_street": null,
+  "registrant_type": null,
+  "registrar": "Namecheap, Inc. [Tag = NAMECHEAP-INC]",
+  "registrar_url": "https://www.namecheap.com",
+  "status": "Registered until expiry date.",
+  "updated_date": "07/01/2021, 00:00:00"
+ }
+}

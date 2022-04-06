@@ -1,0 +1,58 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 2:36 PM",
+  "awg_id": 7479841
+ },
+ "ip_data": {
+  "city": "New York City",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "s13.my-control-panel.com",
+  "ip": "198.251.81.14",
+  "latitude": "40.7143",
+  "loc": "40.7143,-74.0060",
+  "longitude": "-74.0060",
+  "org": "AS53667 FranTech Solutions",
+  "postal": "10004",
+  "region": "New York",
+  "timezone": "America/New_York"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://rekasanayii.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9yZWthc2FuYXlpaS5jb20\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": "11/18/2021, 14:40:11",
+  "dnssec": "unsigned",
+  "domain_name": "REKASANAYII.COM",
+  "emails": "abuse@namecheap.com",
+  "expiration_date": "11/18/2022, 14:40:11",
+  "name": null,
+  "name_servers": [
+   "NS19.ASURAHOSTING.COM",
+   "NS20.ASURAHOSTING.COM"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "NameCheap, Inc.",
+  "state": null,
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": "11/18/2021, 14:42:30",
+  "whois_server": "whois.namecheap.com",
+  "zipcode": null
+ }
+}

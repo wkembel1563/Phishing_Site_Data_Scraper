@@ -1,0 +1,70 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 1:12 PM",
+  "awg_id": 7479814
+ },
+ "ip_data": {
+  "city": "Moscow",
+  "country": "RU",
+  "country_name": "Russia",
+  "ip": "31.222.255.203",
+  "latitude": "55.7522",
+  "loc": "55.7522,37.6156",
+  "longitude": "37.6156",
+  "org": "AS49392 LLC Baxet",
+  "postal": "101000",
+  "region": "Moscow",
+  "timezone": "Europe/Moscow"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://rigidsupper.com/0/0/0/c51704871fe546cce440d519e92b7563/15",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9yaWdpZHN1cHBlci5jb20vMC8wLzAvYzUxNzA0ODcxZmU1NDZjY2U0NDBkNTE5ZTkyYjc1NjMvMTU\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "PO Box 1769",
+  "city": "Denver",
+  "country": "US",
+  "creation_date": "03/28/2022, 20:02:18",
+  "dnssec": [
+   "unsigned",
+   "unSigned"
+  ],
+  "domain_name": "RIGIDSUPPER.COM",
+  "emails": "abuse@name.com",
+  "expiration_date": "03/28/2023, 20:02:18",
+  "name": "Whois Agent",
+  "name_servers": [
+   "NS1BDG.NAME.COM",
+   "NS2HKT.NAME.COM",
+   "NS3GNV.NAME.COM",
+   "NS4HMP.NAME.COM",
+   "ns1bdg.name.com",
+   "ns2hkt.name.com",
+   "ns3gnv.name.com",
+   "ns4hmp.name.com"
+  ],
+  "org": "Domain Protection Services, Inc.",
+  "referral_url": null,
+  "registrar": "Name.com, Inc.",
+  "state": "CO",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "addPeriod https://www.icann.org/epp#addPeriod",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/28/2022, 20:02:18",
+  "whois_server": "whois.name.com",
+  "zipcode": "80201"
+ }
+}

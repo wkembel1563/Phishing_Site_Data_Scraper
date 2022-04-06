@@ -1,0 +1,79 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 5:58 AM",
+  "awg_id": 7479603
+ },
+ "ip_data": {
+  "city": "Lyon",
+  "country": "FR",
+  "country_name": "France",
+  "hostname": "ip59.ip-51-210-135.eu",
+  "ip": "51.210.135.59",
+  "latitude": "45.7485",
+  "loc": "45.7485,4.8467",
+  "longitude": "4.8467",
+  "org": "AS16276 OVH SAS",
+  "postal": "69000",
+  "region": "Auvergne-Rh\u00f4ne-Alpes",
+  "timezone": "Europe/Paris"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://biswap.faganok.com/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9iaXN3YXAuZmFnYW5vay5jb20v\" not found"
+  }
+ },
+ "whois_data": {
+  "address": [
+   "DomainsByProxy.com",
+   "2155 E Warner Rd"
+  ],
+  "city": "Tempe",
+  "country": "US",
+  "creation_date": [
+   "06/20/2021, 10:07:34",
+   "06/20/2021, 05:07:34"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "FAGANOK.COM",
+   "faganok.com"
+  ],
+  "emails": "abuse@godaddy.com",
+  "expiration_date": [
+   "06/20/2022, 10:07:34",
+   "06/20/2022, 05:07:34"
+  ],
+  "name": "Registration Private",
+  "name_servers": [
+   "NS1.DIGITALOCEAN.COM",
+   "NS2.DIGITALOCEAN.COM",
+   "NS3.DIGITALOCEAN.COM"
+  ],
+  "org": "Domains By Proxy, LLC",
+  "referral_url": null,
+  "registrar": "GoDaddy.com, LLC",
+  "state": "Arizona",
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
+  ],
+  "updated_date": [
+   "07/02/2021, 08:37:30",
+   "06/20/2021, 05:07:34"
+  ],
+  "whois_server": "whois.godaddy.com",
+  "zipcode": "85284"
+ }
+}
