@@ -1,0 +1,61 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 6th 2022 7:11 AM",
+  "awg_id": 7480525
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "dfw28s31-in-f3.1e100.net",
+  "ip": "142.251.33.35",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS15169 Google LLC",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.google.md/url?usg=AFQjCNGivfYSHvFRCmgQqLO_c-a_vQuzHg&sntz=1&sa=D&q=https://spk-kunden-nutzen.com/8QY67Y8Z54#LUqrwaNfJtb",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cuZ29vZ2xlLm1kL3VybD91c2c9QUZRakNOR2l2ZllTSHZGUkNtZ1FxTE9fYy1hX3ZRdXpIZyZzbnR6PTEmc2E9RCZxPWh0dHBzOi8vc3BrLWt1bmRlbi1udXR6ZW4uY29tLzhRWTY3WThaNTQjTFVxcndhTmZKdGI\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": "04/01/2022, 13:02:01",
+  "dnssec": "unsigned",
+  "domain_name": "SPK-KUNDEN-NUTZEN.COM",
+  "emails": null,
+  "expiration_date": "04/01/2023, 13:02:01",
+  "name": null,
+  "name_servers": [
+   "A.DNSPOD.COM",
+   "C.DNSPOD.COM"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "NICENIC INTERNATIONAL GROUP CO., LIMITED",
+  "state": null,
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "04/01/2022, 13:02:01",
+  "whois_server": "whois.nicenic.net",
+  "zipcode": null
+ }
+}

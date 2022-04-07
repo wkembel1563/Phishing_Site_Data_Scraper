@@ -442,31 +442,37 @@ def getWhoIs(domains):
             if upd_date in keys:
                 if isinstance(w[upd_date], list):
                     for i in range(len(w[upd_date])): 
-                        up_date = w[upd_date][i].strftime(time_pattern)
-                        w[upd_date][i] = up_date
+                        if not isinstance(w[upd_date][i], str):
+                            up_date = w[upd_date][i].strftime(time_pattern)
+                            w[upd_date][i] = up_date
                 elif w[upd_date] is not None:
-                    up_date = w[upd_date].strftime(time_pattern)
-                    w[upd_date] = up_date
+                    if not isinstance(w[upd_date], str):
+                        up_date = w[upd_date].strftime(time_pattern)
+                        w[upd_date] = up_date
 
             #   creation date
             if c_date in keys:
                 if isinstance(w[c_date], list):
                     for i in range(len(w[c_date])): 
-                        create_date = w[c_date][i].strftime(time_pattern)
-                        w[c_date][i] = create_date
+                        if not isinstance(w[c_date][i], str):
+                            create_date = w[c_date][i].strftime(time_pattern)
+                            w[c_date][i] = create_date
                 elif w[c_date] is not None:
-                    create_date = w[c_date].strftime(time_pattern)
-                    w[c_date] = create_date
+                    if not isinstance(w[c_date], str):
+                        create_date = w[c_date].strftime(time_pattern)
+                        w[c_date] = create_date
 
             #   expiration date
             if exper_date in keys:
                 if isinstance(w[exper_date], list):
                     for i in range(len(w[exper_date])): 
-                        exp_date = w[exper_date][i].strftime(time_pattern)
-                        w[exper_date][i] = exp_date
+                        if not isinstance(w[exper_date][i], str):
+                            exp_date = w[exper_date][i].strftime(time_pattern)
+                            w[exper_date][i] = exp_date
                 elif w[exper_date] is not None:
-                    exp_date = w[exper_date].strftime(time_pattern)
-                    w[exper_date] = exp_date
+                    if not isinstance(w[exper_date], str):
+                        exp_date = w[exper_date].strftime(time_pattern)
+                        w[exper_date] = exp_date
 
         except whois.parser.PywhoisError:
             w = {}

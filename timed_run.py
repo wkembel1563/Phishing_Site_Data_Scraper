@@ -10,10 +10,12 @@ data = metadata()
 data.init(args)
 
 # retrieve list of domains
+print("READING URLS")
 domains, awg_data = readURLS(data, remove_csv_duplicates = False)
+print("DONE READING URLS")
 
 # prep messaging functionality
-client = Client(data.twilio_sid, data.twilio_auth_token) 
+#client = Client(data.twilio_sid, data.twilio_auth_token) 
 
 ############### MODEL
 model_name = "model2.h5"
@@ -32,7 +34,9 @@ print("\nTime: %s\n" % data.now)
 data.print_state()
 
 # take screenshots of each domain
+print("TAKING SCREENSHOTS")
 screenshot_paths = screenshot(data.CURRENT_DOMAIN_ID, data.SHOT_PATH, domains)
+print("DONE TAKING SCREENSHOTS")
 
 # determine if the domains are active
 activity_data = checkDomainActivity(domains, screenshot_paths, model)
