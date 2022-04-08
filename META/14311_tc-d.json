@@ -1,0 +1,50 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 7th 2022 5:02 PM",
+  "awg_id": 7482007
+ },
+ "ip_data": {
+  "city": "Duisburg",
+  "country": "DE",
+  "country_name": "Germany",
+  "hostname": "alfa3028.alfahosting-server.de",
+  "ip": "109.237.138.38",
+  "latitude": "51.4325",
+  "loc": "51.4325,6.7652",
+  "longitude": "6.7652",
+  "org": "AS45012 dogado GmbH",
+  "postal": "47051",
+  "region": "North Rhine-Westphalia",
+  "timezone": "Europe/Berlin"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://tc-donaustetten.de/administrator/components/com_dpcalendar/libraries/caldav/vendor/sabre/vobject/lib/Sabre/VObject/Property/ICalendar/admin.php?r=bD1odHRwczovL3Nway1rdW5kZW5kZXBvdC5jb20vMjQ3UjZHWjkxWg==",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly90Yy1kb25hdXN0ZXR0ZW4uZGUvYWRtaW5pc3RyYXRvci9jb21wb25lbnRzL2NvbV9kcGNhbGVuZGFyL2xpYnJhcmllcy9jYWxkYXYvdmVuZG9yL3NhYnJlL3ZvYmplY3QvbGliL1NhYnJlL1ZPYmplY3QvUHJvcGVydHkvSUNhbGVuZGFyL2FkbWluLnBocD9yPWJEMW9kSFJ3Y3pvdkwzTndheTFyZFc1a1pXNWtaWEJ2ZEM1amIyMHZNalEzVWpaSFdqa3hXZz09\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country_code": null,
+  "domain_name": "tc-donaustetten.de",
+  "emails": null,
+  "fax": null,
+  "name": null,
+  "name_servers": null,
+  "org": null,
+  "phone": null,
+  "status": "connect",
+  "updated_date": null,
+  "zipcode": null
+ }
+}

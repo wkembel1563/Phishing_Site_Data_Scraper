@@ -1,8 +1,5 @@
 #!/bin/bash
 from parsedomains import *
-import sys 
-import time
-from twilio.rest import Client
 
 # initialize and validate program state
 args = sys.argv
@@ -29,8 +26,8 @@ print("END IGNORE #################\n")
 
 # reset for next run
 print("\n____RUN____")
-data.now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
-print("\nTime: %s\n" % data.now)
+data.now = int(time())
+print("\nTime: %s\n" % (datetime.now().strftime("%m/%d/%Y, %H:%M:%S")))
 data.print_state()
 
 # take screenshots of each domain
