@@ -1,0 +1,59 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 6th 2022 10:50 AM",
+  "awg_id": 7480637
+ },
+ "ip_data": {
+  "city": "Prague",
+  "country": "CZ",
+  "country_name": "Czech Republic",
+  "hostname": "127-41.hukot.cloud",
+  "ip": "46.36.41.127",
+  "latitude": "50.0880",
+  "loc": "50.0880,14.4208",
+  "longitude": "14.4208",
+  "org": "AS42422 SecurityNet.cz s.r.o.",
+  "postal": "110 00",
+  "region": "Hlavn\u00ed m\u011bsto Praha",
+  "timezone": "Europe/Prague"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://flowserver.xyz",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9mbG93c2VydmVyLnh5eg\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": "CZ",
+  "creation_date": "06/16/2021, 11:31:04",
+  "dnssec": "unsigned",
+  "domain_name": "FLOWSERVER.XYZ",
+  "emails": "abuse@regtons.com",
+  "expiration_date": "06/16/2022, 23:59:59",
+  "name": null,
+  "name_servers": [
+   "NS1.HUKOT.CZ",
+   "NS2.SECURITYNET.CZ",
+   "NS3.HUKOT.CZ"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "Gransy s.r.o.",
+  "state": null,
+  "status": "ok https://icann.org/epp#ok",
+  "updated_date": "06/28/2021, 13:30:18",
+  "whois_server": "whois.regtons.com",
+  "zipcode": null
+ }
+}

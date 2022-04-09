@@ -1,0 +1,69 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 6th 2022 3:29 AM",
+  "awg_id": 7480488
+ },
+ "ip_data": {
+  "city": "Kuala Lumpur",
+  "country": "MY",
+  "country_name": "Malaysia",
+  "hostname": "fox19.ip-asia.com",
+  "ip": "111.90.134.98",
+  "latitude": "3.1412",
+  "loc": "3.1412,101.6865",
+  "longitude": "101.6865",
+  "org": "AS45839 Shinjiru Technology Sdn Bhd",
+  "postal": "50050",
+  "region": "Kuala Lumpur",
+  "timezone": "Asia/Kuala_Lumpur"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://garenagaming.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9nYXJlbmFnYW1pbmcuY29t\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "10 Corporate Drive",
+  "city": "Burlington",
+  "country": "US",
+  "creation_date": "02/20/2022, 04:35:10",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "GARENAGAMING.COM",
+  "emails": [
+   "abuse@ilovewww.com",
+   "contact@privacyprotect.org"
+  ],
+  "expiration_date": "02/20/2023, 04:35:10",
+  "name": "Domain Admin",
+  "name_servers": [
+   "NS1.SIGMADNS.NET",
+   "NS2.SIGMADNS.NET",
+   "ns1.sigmadns.net",
+   "ns2.sigmadns.net"
+  ],
+  "org": "Privacy Protect, LLC (PrivacyProtect.org)",
+  "referral_url": null,
+  "registrar": "Shinjiru Technology Sdn Bhd",
+  "state": "MA",
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "02/20/2022, 04:35:11",
+   "02/20/2022, 04:35:12"
+  ],
+  "whois_server": "whois.ilovewww.com",
+  "zipcode": "01803"
+ }
+}

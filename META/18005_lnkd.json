@@ -1,0 +1,51 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 8th 2022 1:10 AM",
+  "awg_id": 7482661
+ },
+ "ip_data": {
+  "anycast": true,
+  "city": "Redmond",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "13.107.42.14",
+  "latitude": "47.6740",
+  "loc": "47.6740,-122.1215",
+  "longitude": "-122.1215",
+  "org": "AS8068 Microsoft Corporation",
+  "postal": "98052",
+  "region": "Washington",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://lnkd.in/gxsUkN_z?=hMaWYn6K",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9sbmtkLmluL2d4c1VrTl96Pz1oTWFXWW42Sw\" not found"
+  }
+ },
+ "whois_data": {
+  "country": null,
+  "creation_date": null,
+  "dnssec": null,
+  "domain_name": null,
+  "emails": null,
+  "expiration_date": null,
+  "name_servers": null,
+  "organization": null,
+  "registrar": null,
+  "registrar_iana": null,
+  "registrar_url": null,
+  "state": null,
+  "status": null,
+  "updated_date": null
+ }
+}

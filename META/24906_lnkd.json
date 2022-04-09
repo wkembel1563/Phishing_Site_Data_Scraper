@@ -1,0 +1,64 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 8th 2022 1:10 AM",
+  "awg_id": 7482661
+ },
+ "ip_data": {
+  "anycast": true,
+  "city": "Redmond",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "13.107.42.14",
+  "latitude": "47.6740",
+  "loc": "47.6740,-122.1215",
+  "longitude": "-122.1215",
+  "org": "AS8068 Microsoft Corporation",
+  "postal": "98052",
+  "region": "Washington",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://lnkd.in/gxsUkN_z?=hMaWYn6K",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9sbmtkLmluL2d4c1VrTl96Pz1oTWFXWW42Sw\" not found"
+  }
+ },
+ "whois_data": {
+  "country": "US",
+  "creation_date": "04/09/2009, 18:34:38",
+  "dnssec": "unsigned",
+  "domain_name": "lnkd.in",
+  "emails": null,
+  "expiration_date": "04/09/2024, 18:34:38",
+  "name_servers": [
+   "ns4.p43.dynect.net",
+   "ns1.p43.dynect.net",
+   "dns4.p09.nsone.net",
+   "dns2.p09.nsone.net",
+   "ns3.p43.dynect.net",
+   "ns2.p43.dynect.net",
+   "dns1.p09.nsone.net",
+   "dns3.p09.nsone.net"
+  ],
+  "organization": "LinkedIn Corporation",
+  "registrar": "MarkMonitor Inc.",
+  "registrar_iana": "292",
+  "registrar_url": "http://www.markmonitor.com",
+  "state": "CA",
+  "status": [
+   "clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited",
+   "clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited",
+   "clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/13/2022, 09:35:58"
+ }
+}
