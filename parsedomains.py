@@ -188,7 +188,8 @@ def screenshot(current_id, shot_path, urls):
     """
     try:
         # set up selenium web driver
-        ser = Service('/home/willk/Downloads/chromedriver')
+        #ser = Service('/home/zombiedomains/wkembelZombie/chromedriver')
+        ser = Service('~/wkembelZombie/chromedriver')
         op = webdriver.ChromeOptions()
         op.headless = True
         op.page_load_strategy = 'eager'
