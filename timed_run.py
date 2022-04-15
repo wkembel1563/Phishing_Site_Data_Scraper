@@ -7,8 +7,26 @@ data = metadata()
 data.init(args)
 
 # retrieve list of domains
+############################### URL SOURCE DIRs
+phish_url_dir = os.path.join(data.BASE_PATH, '../splab_phish_urls/output/')
+cert_url_dir = os.path.join(data.BASE_PATH, '../splab_phish_urls/output_2/')
+###############################
+
+############################### URL FILES
+collected_phish_url_file = os.path.join(data.BASE_PATH, 'URLFILES/phish_urls.csv')
+collected_cert_url_file = os.path.join(data.BASE_PATH, 'URLFILES/cert_urls.csv')
+###############################
+
+MAX_URL_NUM = 1000
+print("UPDATING PHISHTANK URLS")
+updateUrls(phish_url_dir, collected_phish_url_file, max_num_urls=MAX_URL_NUM)
+print("UPDATING CERTSTREAM URLS")
+updateUrls(cert_url_dir, collected_cert_url_file, max_num_urls=MAX_URL_NUM)
+print("DONE UPDATING URLS")
+
+# retrieve list of domains
 print("READING URLS")
-domains, awg_data = readURLS(data, remove_csv_duplicates = False)
+domains, awg_data = readUrls(data, remove_csv_duplicates = False)
 print("DONE READING URLS")
 
 # prep messaging functionality
