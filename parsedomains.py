@@ -21,6 +21,7 @@ from twilio.rest import Client
 from ipinfo.handler_utils import cache_key
 from ipwhois import IPWhois
 from datetime import datetime
+from datetime import date
 from pandas.errors import EmptyDataError
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -927,12 +928,12 @@ class metadata:
 
         # FILES PATHS
         self.BASE_PATH = os.path.dirname(os.path.realpath(__file__))
-        self.CSV_FILE_CHOICE = 'CSV/phish_data.csv'           # csv file to write to
-        self.URL_FILE_CHOICE = 'URLFILES/phishtank_urls.txt'      # url file to read from
-        self.SHOT_RELATIVE_PATH = 'SCREENSHOTS'         # relative path to screenshot folder
-        self.META_RELATIVE_PATH = 'META'                # relative path to metadata dir
+        self.CSV_FILE_CHOICE = ''                       # csv file to write to
+        self.URL_FILE_CHOICE = ''                       # url file to read from
+        self.SHOT_RELATIVE_PATH = ''                    # relative path to screenshot folder
+        self.META_RELATIVE_PATH = ''                    # relative path to metadata dir
 
-        self.CSV_FILE_PATH = ''	                         # absolute path to csv file
+        self.CSV_FILE_PATH = ''	                     # absolute path to csv file
         self.URL_FILE_PATH = ''                          # absolute path to urlfile
         self.SHOT_PATH = ''                              # absolute path to screenshot dir
         self.META_PATH = ''                              # absolute path to metadata dir
@@ -946,8 +947,7 @@ class metadata:
 
         # CONSTS
         self.NUM_OF_ARGS = 2                             # num of command line arguments
-        self.URLFILE = 1                                 # arg position for name of url file
-        self.DATASOURCE = 2                              # arg position for data source (cert or phish)
+        self.DATASOURCE = 1                              # arg position for data source (cert or phish)
         self.write_mode = 'w'                            # csv file write mode upon opening
         self.now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
 
@@ -1001,19 +1001,19 @@ class metadata:
 
         """
 
-
         # validate CL input length build file paths
         ## two args means a url file was passed, contains relative path
         arg_len = len(args)
         if arg_len == self.NUM_OF_ARGS:
-            self.URL_FILE_PATH = os.path.join(self.BASE_PATH, args[self.URLFILE])
             if args[self.DATASOURCE] == 'cert':
-                self.CSV_FILE_CHOICE = 'cert_data.csv'
+                self.CSV_FILE_CHOICE = 'CSV/cert_data.csv'
+                self.URL_FILE_CHOICE = 'URLFILES/cert_urls.csv'
                 self.SHOT_RELATIVE_PATH = 'SCREENSHOTS/CERT'
                 self.META_RELATIVE_PATH = 'META/CERT'
 
             elif args[self.DATASOURCE] == 'phish':
-                self.CSV_FILE_CHOICE = 'phish_data.csv'
+                self.CSV_FILE_CHOICE = 'CSV/phish_data.csv'
+                self.URL_FILE_CHOICE = 'URLFILES/phish_urls.csv'
                 self.SHOT_RELATIVE_PATH = 'SCREENSHOTS/PHISH'
                 self.META_RELATIVE_PATH = 'META/PHISH'
 
@@ -1023,13 +1023,14 @@ class metadata:
 
         ## invalid num of args
         elif arg_len != self.NUM_OF_ARGS:
-            print("Arg Error. Invalid CL input format: <urlfile> <data source>")
+            print("Arg Error. Invalid CL input format: <data source>")
             exit(1)
 
         ## build file paths
         self.CSV_FILE_PATH = os.path.join(self.BASE_PATH, self.CSV_FILE_CHOICE)
         self.SHOT_PATH = os.path.join(self.BASE_PATH, self.SHOT_RELATIVE_PATH)
         self.META_PATH = os.path.join(self.BASE_PATH, self.META_RELATIVE_PATH)
+        self.URL_FILE_PATH = os.path.join(self.BASE_PATH, self.URL_FILE_CHOICE)
 
         # initialize global variables
         self.HANDLER = ipinfo.getHandler(self.IPINFO_ACCESS_TOKEN)
