@@ -1,0 +1,69 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 12:53 PM",
+  "awg_id": 7471164
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "dfw25s44-in-f3.1e100.net",
+  "ip": "142.251.33.3",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS15169 Google LLC",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.google.com.cy/url?usg=AFQjCNGmfO7Vhm9AKsxqVYGcGUxED5-BNw&sntz=1&sa=D&q=https://spk-itsicherheit2022.com/LQDJU9JB2W#YEx5PgXwOWC",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5jeS91cmw_dXNnPUFGUWpDTkdtZk83VmhtOUFLc3hxVllHY0dVeEVENS1CTncmc250ej0xJnNhPUQmcT1odHRwczovL3Nway1pdHNpY2hlcmhlaXQyMDIyLmNvbS9MUURKVTlKQjJXI1lFeDVQZ1h3T1dD\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "PO box 87, REG.RU Protection Service",
+  "city": "Moscow",
+  "country": "RU",
+  "creation_date": "03/24/2022, 11:27:29",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "SPK-ITSICHERHEIT2022.COM",
+  "emails": [
+   "abuse@reg.ru",
+   "SPK-ITSICHERHEIT2022.COM@regprivate.ru"
+  ],
+  "expiration_date": "03/24/2023, 11:27:29",
+  "name": "Protection of Private Person",
+  "name_servers": [
+   "A.DNSPOD.COM",
+   "C.DNSPOD.COM",
+   "a.dnspod.com",
+   "c.dnspod.com"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "Registrar of domain names REG.RU LLC",
+  "state": null,
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/24/2022, 11:29:05",
+  "whois_server": "whois.reg.com",
+  "zipcode": "123007"
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 6:42 PM",
+  "awg_id": 7471438
+ },
+ "ip_data": {
+  "city": "Sheridan",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "193.149.176.182",
+  "latitude": "44.7972",
+  "loc": "44.7972,-106.9562",
+  "longitude": "-106.9562",
+  "org": "AS399629 BL Networks",
+  "postal": "82801",
+  "region": "Wyoming",
+  "timezone": "America/Denver"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://helllenicbank.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9oZWxsbGVuaWNiYW5rLmNvbQ\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "GDPR Masked",
+  "city": "GDPR Masked",
+  "country": "GB",
+  "creation_date": "03/25/2022, 16:04:03",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "HELLLENICBANK.COM",
+  "emails": [
+   "abuse-contact@publicdomainregistry.com",
+   "gdpr-masking@gdpr-masked.com"
+  ],
+  "expiration_date": "03/25/2023, 16:04:03",
+  "name": "GDPR Masked",
+  "name_servers": [
+   "IIII.EARTH.ORDERBOX-DNS.COM",
+   "IIII.MARS.ORDERBOX-DNS.COM",
+   "IIII.MERCURY.ORDERBOX-DNS.COM",
+   "IIII.VENUS.ORDERBOX-DNS.COM",
+   "iiii.earth.orderbox-dns.com",
+   "iiii.mars.orderbox-dns.com",
+   "iiii.mercury.orderbox-dns.com",
+   "iiii.venus.orderbox-dns.com"
+  ],
+  "org": "GDPR Masked",
+  "referral_url": null,
+  "registrar": "PDR Ltd. d/b/a PublicDomainRegistry.com",
+  "state": "London",
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "03/25/2022, 16:04:03",
+   "03/25/2022, 16:04:04"
+  ],
+  "whois_server": "whois.publicdomainregistry.com",
+  "zipcode": "GDPR Masked"
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 4:55 PM",
+  "awg_id": 7471388
+ },
+ "ip_data": {
+  "city": "Sofia",
+  "country": "BG",
+  "country_name": "Bulgaria",
+  "hostname": "fly.icnhost.net",
+  "ip": "91.215.216.36",
+  "latitude": "42.6975",
+  "loc": "42.6975,23.3241",
+  "longitude": "23.3241",
+  "org": "AS49699 SuperHosting.BG Ltd.",
+  "postal": "1000",
+  "region": "Sofia-Capital",
+  "timezone": "Europe/Sofia"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://viterratrading.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly92aXRlcnJhdHJhZGluZy5jb20\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "GDPR Masked",
+  "city": "GDPR Masked",
+  "country": "BG",
+  "creation_date": "09/12/2019, 12:22:18",
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "VITERRATRADING.COM",
+  "emails": [
+   "abuse-contact@publicdomainregistry.com",
+   "gdpr-masking@gdpr-masked.com"
+  ],
+  "expiration_date": "09/12/2022, 12:22:18",
+  "name": "GDPR Masked",
+  "name_servers": [
+   "NS85.ICNDNS.NET",
+   "NS86.ICNDNS.NET",
+   "ns85.icndns.net",
+   "ns86.icndns.net"
+  ],
+  "org": "GDPR Masked",
+  "referral_url": null,
+  "registrar": "PDR Ltd. d/b/a PublicDomainRegistry.com",
+  "state": "Sofija",
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "08/12/2021, 08:25:28",
+   "08/12/2021, 08:25:29"
+  ],
+  "whois_server": "whois.publicdomainregistry.com",
+  "zipcode": "GDPR Masked"
+ }
+}

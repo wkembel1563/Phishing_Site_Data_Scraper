@@ -1,0 +1,61 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 8:13 AM",
+  "awg_id": 7471046
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "dfw25s43-in-f3.1e100.net",
+  "ip": "142.251.32.227",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS15169 Google LLC",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://www.google.com.co/url?usg=AFQjCNHN876A3G9goxW3VHV2QpexxnxZUw&sntz=1&sa=D&q=https://spk-kunden-abruf.com/DRH8HHONKP#Q8BDX1EOKdL",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5jby91cmw_dXNnPUFGUWpDTkhOODc2QTNHOWdveFczVkhWMlFwZXh4bnhaVXcmc250ej0xJnNhPUQmcT1odHRwczovL3Nway1rdW5kZW4tYWJydWYuY29tL0RSSDhISE9OS1AjUThCRFgxRU9LZEw\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": "03/22/2022, 20:07:09",
+  "dnssec": "unsigned",
+  "domain_name": "SPK-KUNDEN-ABRUF.COM",
+  "emails": null,
+  "expiration_date": "03/22/2023, 20:07:09",
+  "name": null,
+  "name_servers": [
+   "A.DNSPOD.COM",
+   "C.DNSPOD.COM"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "NICENIC INTERNATIONAL GROUP CO., LIMITED",
+  "state": null,
+  "status": [
+   "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/22/2022, 20:07:09",
+  "whois_server": "whois.nicenic.net",
+  "zipcode": null
+ }
+}

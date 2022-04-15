@@ -6,23 +6,24 @@ args = sys.argv
 data = metadata()
 data.init(args)
 
-# retrieve list of domains
-############################### URL SOURCE DIRs
-phish_url_dir = os.path.join(data.BASE_PATH, '../splab_phish_urls/output/')
-cert_url_dir = os.path.join(data.BASE_PATH, '../splab_phish_urls/output_2/')
-###############################
-
-############################### URL FILES
-collected_phish_url_file = os.path.join(data.BASE_PATH, 'URLFILES/phish_urls.csv')
-collected_cert_url_file = os.path.join(data.BASE_PATH, 'URLFILES/cert_urls.csv')
-###############################
-
+# update url list
 MAX_URL_NUM = 1000
-print("UPDATING PHISHTANK URLS")
-updateUrls(phish_url_dir, collected_phish_url_file, max_num_urls=MAX_URL_NUM)
-print("UPDATING CERTSTREAM URLS")
-updateUrls(cert_url_dir, collected_cert_url_file, max_num_urls=MAX_URL_NUM)
+if "phish_urls" in data.URL_FILE_PATH:
+        source_url_dir = os.path.join(data.BASE_PATH, '../splab_phish_urls/output/')
+        collected_phish_url_file = os.path.join(data.BASE_PATH, 'URLFILES/phish_urls.csv')
+
+        print("UPDATING PHISHTANK URLS")
+        updateUrls(phish_url_dir, collected_phish_url_file, max_num_urls=MAX_URL_NUM)
+
+elif "cert_urls" in data.URL_FILE_PATH:
+        source_url_dir = os.path.join(data.BASE_PATH, '../splab_phish_urls/output_2/')
+        collected_cert_url_file = os.path.join(data.BASE_PATH, 'URLFILES/cert_urls.csv')
+
+        print("UPDATING CERTSTREAM URLS")
+        updateUrls(cert_url_dir, collected_cert_url_file, max_num_urls=MAX_URL_NUM)
+
 print("DONE UPDATING URLS")
+
 
 # retrieve list of domains
 print("READING URLS")

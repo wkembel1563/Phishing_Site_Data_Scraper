@@ -945,11 +945,10 @@ class metadata:
         self.EMPTY = 0                                   # used to determine if csv file is empty
 
         # CONSTS
-        self.NUM_OF_ARGS = 1                             # num of command line arguments
-        self.URLFILE = 1                                # arg position for name of url file
+        self.NUM_OF_ARGS = 2                             # num of command line arguments
+        self.URLFILE = 1                                 # arg position for name of url file
+        self.DATASOURCE = 2                              # arg position for data source (cert or phish)
         self.write_mode = 'w'                            # csv file write mode upon opening
-        self.read_mode = 'r'                             # csv file read mode upon opening
-        self.append_mode = 'a'                           # csv file append mode upon opening
         self.now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
 
         ###################
@@ -1002,26 +1001,35 @@ class metadata:
 
         """
 
-        # build file paths
+
+        # validate CL input length build file paths
+        ## two args means a url file was passed, contains relative path
+        arg_len = len(args)
+        if arg_len == self.NUM_OF_ARGS:
+            self.URL_FILE_PATH = os.path.join(self.BASE_PATH, args[self.URLFILE])
+            if args[self.DATASOURCE] == 'cert':
+                self.CSV_FILE_CHOICE = 'cert_data.csv'
+                self.SHOT_RELATIVE_PATH = 'SCREENSHOTS/CERT'
+                self.META_RELATIVE_PATH = 'META/CERT'
+
+            elif args[self.DATASOURCE] == 'phish':
+                self.CSV_FILE_CHOICE = 'phish_data.csv'
+                self.SHOT_RELATIVE_PATH = 'SCREENSHOTS/PHISH'
+                self.META_RELATIVE_PATH = 'META/PHISH'
+
+            else:
+                print("DATA INIT ERROR: invalid data source specified. \
+                'cert' or 'phish' is accepted.")
+
+        ## invalid num of args
+        elif arg_len != self.NUM_OF_ARGS:
+            print("Arg Error. Invalid CL input format: <urlfile> <data source>")
+            exit(1)
+
+        ## build file paths
         self.CSV_FILE_PATH = os.path.join(self.BASE_PATH, self.CSV_FILE_CHOICE)
         self.SHOT_PATH = os.path.join(self.BASE_PATH, self.SHOT_RELATIVE_PATH)
         self.META_PATH = os.path.join(self.BASE_PATH, self.META_RELATIVE_PATH)
-
-        # validate CL input length
-        #   two args means a url file was passed, contains relative path
-        arg_len = len(args)
-        if arg_len == 2:
-            self.URL_FILE_PATH = os.path.join(self.BASE_PATH, args[self.URLFILE])
-
-        #   invalid num of args
-        elif arg_len != self.NUM_OF_ARGS:
-            print("Arg Error. Invalid CL input format")
-            exit(1)
-
-        #   one arg means use default files
-        else:
-            print("\nNO URL FILE SPECIFIED. Reverting to default...\n")
-            self.URL_FILE_PATH = os.path.join(self.BASE_PATH, self.URL_FILE_CHOICE)
 
         # initialize global variables
         self.HANDLER = ipinfo.getHandler(self.IPINFO_ACCESS_TOKEN)

@@ -1,0 +1,70 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 11:26 AM",
+  "awg_id": 7471114
+ },
+ "ip_data": {
+  "anycast": true,
+  "city": "Mountain View",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "any-in-2215.1e100.net",
+  "ip": "216.239.34.21",
+  "latitude": "37.4056",
+  "loc": "37.4056,-122.0775",
+  "longitude": "-122.0775",
+  "org": "AS15169 Google LLC",
+  "postal": "94043",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://nonplusgames.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL25vbnBsdXNnYW1lcy5jb20\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "96 Mowat Ave",
+  "city": "Toronto",
+  "country": "CA",
+  "creation_date": "03/06/2020, 21:20:58",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "NONPLUSGAMES.COM",
+   "nonplusgames.com"
+  ],
+  "emails": [
+   "registrar-abuse@google.com",
+   "isor4qxnnnre@contactprivacy.email"
+  ],
+  "expiration_date": "03/06/2023, 21:20:58",
+  "name": "Contact Privacy Inc. Customer 1246624071",
+  "name_servers": [
+   "NS-CLOUD-D1.GOOGLEDOMAINS.COM",
+   "NS-CLOUD-D2.GOOGLEDOMAINS.COM",
+   "NS-CLOUD-D3.GOOGLEDOMAINS.COM",
+   "NS-CLOUD-D4.GOOGLEDOMAINS.COM"
+  ],
+  "org": "Contact Privacy Inc. Customer 1246624071",
+  "referral_url": null,
+  "registrar": "Google LLC",
+  "state": "ON",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/07/2022, 08:34:18",
+  "whois_server": "whois.google.com",
+  "zipcode": "M4K 3K1"
+ }
+}

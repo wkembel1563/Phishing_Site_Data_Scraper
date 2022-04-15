@@ -1,0 +1,22 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 11:59 AM",
+  "awg_id": 7479771
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://return-information-irstax.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9yZXR1cm4taW5mb3JtYXRpb24taXJzdGF4LmNvbQ\" not found"
+  }
+ },
+ "whois_data": {}
+}

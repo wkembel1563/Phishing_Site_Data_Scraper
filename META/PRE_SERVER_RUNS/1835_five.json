@@ -1,0 +1,57 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 9:26 PM",
+  "awg_id": 7470111
+ },
+ "ip_data": {
+  "city": "Dallas",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "204.11.56.48",
+  "latitude": "32.7831",
+  "loc": "32.7831,-96.8067",
+  "longitude": "-96.8067",
+  "org": "AS19905 NeuStar, Inc.",
+  "postal": "75201",
+  "region": "Texas",
+  "timezone": "America/Chicago"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://fiverr.dotverity.com",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9maXZlcnIuZG90dmVyaXR5LmNvbQ\" not found"
+  }
+ },
+ "whois_data": {
+  "address": null,
+  "city": null,
+  "country": null,
+  "creation_date": "02/14/2022, 19:06:40",
+  "dnssec": "unsigned",
+  "domain_name": "DOTVERITY.COM",
+  "emails": "abuse@web.com",
+  "expiration_date": "02/14/2023, 19:06:40",
+  "name": null,
+  "name_servers": [
+   "NS1626.ZTOMY.COM",
+   "NS2626.ZTOMY.COM"
+  ],
+  "org": null,
+  "referral_url": null,
+  "registrar": "SNAPNAMES 74, LLC",
+  "state": null,
+  "status": "ok https://icann.org/epp#ok",
+  "updated_date": "02/14/2022, 21:46:40",
+  "whois_server": "whois.web.com",
+  "zipcode": null
+ }
+}

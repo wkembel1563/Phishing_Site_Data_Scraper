@@ -1,0 +1,83 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 23rd 2022 4:03 AM",
+  "awg_id": 7469454
+ },
+ "ip_data": {
+  "city": "Frankfurt am Main",
+  "country": "DE",
+  "country_name": "Germany",
+  "hostname": "217-160-0-123.elastic-ssl.ui-r.com",
+  "ip": "217.160.0.123",
+  "latitude": "50.1155",
+  "loc": "50.1155,8.6842",
+  "longitude": "8.6842",
+  "org": "AS8560 IONOS SE",
+  "postal": "60306",
+  "region": "Hesse",
+  "timezone": "Europe/Berlin"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "http://tucana.cloud",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cDovL3R1Y2FuYS5jbG91ZA\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "REDACTED FOR PRIVACY",
+  "city": "REDACTED FOR PRIVACY",
+  "country": "DE",
+  "creation_date": [
+   "03/22/2022, 08:25:16",
+   "03/22/2022, 08:25:16"
+  ],
+  "dnssec": [
+   "unsigned",
+   "Unsigned"
+  ],
+  "domain_name": "tucana.cloud",
+  "emails": [
+   "abuse@ionos.com",
+   "dataprivacyprotected@ionos.de"
+  ],
+  "expiration_date": [
+   "03/22/2023, 08:25:16",
+   "03/22/2023, 08:25:16"
+  ],
+  "name": "REDACTED FOR PRIVACY",
+  "name_servers": [
+   "ns1092.ui-dns.de",
+   "ns1070.ui-dns.biz",
+   "ns1119.ui-dns.org",
+   "ns1076.ui-dns.com"
+  ],
+  "org": [
+   "Data Privacy Protected",
+   "Tucana Handels GmbH"
+  ],
+  "referral_url": null,
+  "registrar": "IONOS SE",
+  "state": "BW",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "addPeriod https://icann.org/epp#addPeriod",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited",
+   "addPeriod https://www.icann.org/epp#addPeriod"
+  ],
+  "updated_date": [
+   "03/22/2022, 08:25:19",
+   "03/22/2022, 08:25:19"
+  ],
+  "whois_server": "whois.ionos.com",
+  "zipcode": "REDACTED FOR PRIVACY"
+ }
+}

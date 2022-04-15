@@ -1,0 +1,46 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Mar 25th 2022 2:10 PM",
+  "awg_id": 7471215
+ },
+ "ip_data": {
+  "city": "Rotterdam",
+  "country": "NL",
+  "country_name": "Netherlands",
+  "hostname": "213.63.111.193.eushared05.twinservers.net",
+  "ip": "193.111.63.213",
+  "latitude": "51.9225",
+  "loc": "51.9225,4.4792",
+  "longitude": "4.4792",
+  "org": "AS56851 PE Skurykhin Mukola Volodumurovuch",
+  "postal": "3011",
+  "region": "South Holland",
+  "timezone": "Europe/Amsterdam"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://cripplerss.pl/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9jcmlwcGxlcnNzLnBsLw\" not found"
+  }
+ },
+ "whois_data": {
+  "creation_date": null,
+  "domain_name": null,
+  "expiration_date": null,
+  "name_servers": null,
+  "registrant_name": null,
+  "registrar": null,
+  "registrar_url": null,
+  "status": null,
+  "updated_date": null
+ }
+}

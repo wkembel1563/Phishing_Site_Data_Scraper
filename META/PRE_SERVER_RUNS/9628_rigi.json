@@ -1,0 +1,70 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 12:47 PM",
+  "awg_id": 7479799
+ },
+ "ip_data": {
+  "city": "Moscow",
+  "country": "RU",
+  "country_name": "Russia",
+  "ip": "31.222.255.203",
+  "latitude": "55.7522",
+  "loc": "55.7522,37.6156",
+  "longitude": "37.6156",
+  "org": "AS49392 LLC Baxet",
+  "postal": "101000",
+  "region": "Moscow",
+  "timezone": "Europe/Moscow"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://rigidsupper.com/0/0/0/8d0fe7b360581af9e4608950f64a36be/47/218-1987/1427614-109-79554",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9yaWdpZHN1cHBlci5jb20vMC8wLzAvOGQwZmU3YjM2MDU4MWFmOWU0NjA4OTUwZjY0YTM2YmUvNDcvMjE4LTE5ODcvMTQyNzYxNC0xMDktNzk1NTQ\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "PO Box 1769",
+  "city": "Denver",
+  "country": "US",
+  "creation_date": "03/28/2022, 20:02:18",
+  "dnssec": [
+   "unsigned",
+   "unSigned"
+  ],
+  "domain_name": "RIGIDSUPPER.COM",
+  "emails": "abuse@name.com",
+  "expiration_date": "03/28/2023, 20:02:18",
+  "name": "Whois Agent",
+  "name_servers": [
+   "NS1BDG.NAME.COM",
+   "NS2HKT.NAME.COM",
+   "NS3GNV.NAME.COM",
+   "NS4HMP.NAME.COM",
+   "ns1bdg.name.com",
+   "ns2hkt.name.com",
+   "ns3gnv.name.com",
+   "ns4hmp.name.com"
+  ],
+  "org": "Domain Protection Services, Inc.",
+  "referral_url": null,
+  "registrar": "Name.com, Inc.",
+  "state": "CO",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "addPeriod https://www.icann.org/epp#addPeriod",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": "03/28/2022, 20:02:18",
+  "whois_server": "whois.name.com",
+  "zipcode": "80201"
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "activity_data": {
+  "image": "active",
+  "req": "active"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 2:43 PM",
+  "awg_id": 7479852
+ },
+ "ip_data": {
+  "anycast": true,
+  "city": "San Francisco",
+  "country": "US",
+  "country_name": "United States",
+  "ip": "172.67.184.38",
+  "latitude": "37.7621",
+  "loc": "37.7621,-122.3971",
+  "longitude": "-122.3971",
+  "org": "AS13335 Cloudflare, Inc.",
+  "postal": "94107",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://newsoftwares.net/sess/dhlexp2m/",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9uZXdzb2Z0d2FyZXMubmV0L3Nlc3MvZGhsZXhwMm0v\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "Kalkofnsvegur 2",
+  "city": "Reykjavik",
+  "country": "IS",
+  "creation_date": "04/30/2002, 21:00:04",
+  "dnssec": "unsigned",
+  "domain_name": [
+   "NEWSOFTWARES.NET",
+   "newsoftwares.net"
+  ],
+  "emails": [
+   "abuse@namecheap.com",
+   "2c66b9959d924e3595ddf5436f4841f2.protect@withheldforprivacy.com"
+  ],
+  "expiration_date": "04/30/2025, 21:00:04",
+  "name": "Redacted for Privacy",
+  "name_servers": [
+   "ANDERSON.NS.CLOUDFLARE.COM",
+   "TIA.NS.CLOUDFLARE.COM",
+   "anderson.ns.cloudflare.com",
+   "tia.ns.cloudflare.com"
+  ],
+  "org": "Privacy service provided by Withheld for Privacy ehf",
+  "referral_url": null,
+  "registrar": "NAMECHEAP INC",
+  "state": "Capital Region",
+  "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+  "updated_date": [
+   "02/04/2022, 12:20:04",
+   "10/28/2018, 04:46:54"
+  ],
+  "whois_server": "whois.namecheap.com",
+  "zipcode": "101"
+ }
+}

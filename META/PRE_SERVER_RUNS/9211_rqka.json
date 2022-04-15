@@ -1,0 +1,78 @@
+{
+ "activity_data": {
+  "image": "inactive",
+  "req": "unknown"
+ },
+ "awg_data": {
+  "awg_date_discovered": "Apr 5th 2022 8:46 AM",
+  "awg_id": 7479655
+ },
+ "ip_data": {
+  "city": "Los Angeles",
+  "country": "US",
+  "country_name": "United States",
+  "hostname": "204.152.210.156.static.quadranet.com",
+  "ip": "204.152.210.156",
+  "latitude": "34.0443",
+  "loc": "34.0443,-118.2509",
+  "longitude": "-118.2509",
+  "org": "AS8100 QuadraNet Enterprises LLC",
+  "postal": "90014",
+  "region": "California",
+  "timezone": "America/Los_Angeles"
+ },
+ "phishtank_data": {
+  "date": "-",
+  "phish_id": "-"
+ },
+ "url": "https://rqkacton.shop/404.html",
+ "virus_data": {
+  "error": {
+   "code": "NotFoundError",
+   "message": "URL \"aHR0cHM6Ly9ycWthY3Rvbi5zaG9wLzQwNC5odG1s\" not found"
+  }
+ },
+ "whois_data": {
+  "address": "1928 E. Highland Ave. Ste F104 PMB# 255",
+  "city": "Phoenix",
+  "country": "US",
+  "creation_date": [
+   "04/04/2022, 03:13:49",
+   "04/03/2022, 07:00:00"
+  ],
+  "dnssec": "unsigned",
+  "domain_name": [
+   "RQKACTON.SHOP",
+   "rqkacton.shop"
+  ],
+  "emails": [
+   "abuse@namesilo.com",
+   "pw-3c70ea288328c320c6d69056cc6fe449@privacyguardian.org"
+  ],
+  "expiration_date": [
+   "04/04/2023, 23:59:59",
+   "04/04/2023, 07:00:00"
+  ],
+  "name": "Domain Administrator",
+  "name_servers": [
+   "NS2.DNSOWL.COM",
+   "NS3.DNSOWL.COM",
+   "NS1.DNSOWL.COM"
+  ],
+  "org": "See PrivacyGuardian.org",
+  "referral_url": null,
+  "registrar": "NameSilo, LLC",
+  "state": "AZ",
+  "status": [
+   "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+   "addPeriod https://icann.org/epp#addPeriod",
+   "clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited"
+  ],
+  "updated_date": [
+   "04/04/2022, 03:15:24",
+   "04/04/2022, 07:00:00"
+  ],
+  "whois_server": "whois.namesilo.com",
+  "zipcode": "85016"
+ }
+}
