@@ -60,13 +60,13 @@ print("GETTING WHOIS DATA...")
 whois_data = getWhoIs(domains)
 print("DONE\n")
 
-print("GETTING PHISHTANK DATA...")
-phishtank_data = searchPhishTank(domains)
-print("DONE\n")
+# print("GETTING PHISHTANK DATA...")
+# phishtank_data = searchPhishTank(domains)
+# print("DONE\n")
 
-print("GETTING VIRUSTOTAL DATA...")
-virus_data = getVirusTotal(data.VIRUS_TOTAL_ACCESS_TOKEN, domains)
-print("DONE\n")
+# print("GETTING VIRUSTOTAL DATA...")
+# virus_data = getVirusTotal(data.VIRUS_TOTAL_ACCESS_TOKEN, domains)
+# print("DONE\n")
 
 print("GETTING IP DATA...")
 ip_data = getIpInfo(data.HANDLER, domains)
@@ -75,11 +75,9 @@ print("DONE\n")
 # store metadata
 print("LOGGING METADATA...")
 logMeta(data, 
-        phishtank_data,
         activity_data,
         whois_data,
-        virus_data,
-        ip_data, 
+        ip_data,
         awg_data,
         domains)
 print("DONE\n")
@@ -87,11 +85,9 @@ print("DONE\n")
 # write data to csv file
 print("WRITING DATA...")
 writeCsv(data, 
-        phishtank_data,
         activity_data,
         whois_data,
-        virus_data,
-        ip_data, 
+        ip_data,
         awg_data,
         domains)
 print("DONE\n")

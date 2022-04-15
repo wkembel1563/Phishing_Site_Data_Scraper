@@ -55,20 +55,18 @@ def getFieldNames():
 
     """
     names = ['domain_id']
-    names.append('phish_id')
+    names.append('source_id')
     names.append('domain_name')
     names.append('activity_img')
     names.append('activity_req')
-    names.append('open_code')
-    names.append('virus_total_score')
-    names.append('virus_total_engines')
+    #names.append('virus_total_score')
+    #names.append('virus_total_engines')
     names.append('ip_address')
     names.append('ip_country')
     names.append('registrant_country')
     names.append('registrar')
     names.append('time')
-    names.append('awg_id')
-    names.append('awg_date_discovered')
+    names.append('date_discovered')
 
     return names
 
@@ -666,11 +664,9 @@ def getIpInfo(handler, domains):
     return ip_data
 
 def logMeta(data, 
-            phishtank_data,
             activity_data,
             whois_data,
-            virus_data,
-            ip_data, 
+            ip_data,
             awg_data,
             domains): 
     """LOG METADATA
@@ -734,10 +730,10 @@ def logMeta(data,
 
         with open(file_path, 'w') as logfile:
             log["url"] = url
-            log["phishtank_data"] = phishtank_data[url]
+            #log["phishtank_data"] = phishtank_data[url]
             log["activity_data"] = activity_data[url]
             log["whois_data"] = whois_data[url]
-            log["virus_data"] = virus_data[url]
+            #log["virus_data"] = virus_data[url]
 
             if awg_data is not None:
                 log["awg_data"] = awg_data[url]
@@ -756,11 +752,9 @@ def logMeta(data,
 
 
 def writeCsv(data, 
-            phishtank_data,
             activity_data,
             whois_data,
-            virus_data,
-            ip_data, 
+            ip_data,
             awg_data,
             domains): 
     """WRITE CSV
@@ -823,32 +817,32 @@ def writeCsv(data,
         malicious_list = []
         blacklist = ['malicious', 'phishing', 'suspicious', 'malware']
         for url in domains:
-            # prepare list of engines that concluded malicious
-            try:
-                url_results = virus_data[url]['data']['attributes']['last_analysis_results']
-                for engine in url_results.keys(): 
-                    if url_results[engine]['result'] in blacklist:
-                        malicious_list.append(url_results[engine]['engine_name'])
-                engines_malicious[url] = malicious_list
-                
-                try:
-                    m_score = virus_data[url]['data']['attributes']['last_analysis_stats']['malicious']
-                except Exception as e:
-                    m_score = 0
+            # # prepare list of engines that concluded malicious
+            # try:
+            #     url_results = virus_data[url]['data']['attributes']['last_analysis_results']
+            #     for engine in url_results.keys():
+            #         if url_results[engine]['result'] in blacklist:
+            #             malicious_list.append(url_results[engine]['engine_name'])
+            #     engines_malicious[url] = malicious_list
 
-                try:
-                    s_score = virus_data[url]['data']['attributes']['last_analysis_stats']['suspicious']
-                except Exception as e:
-                    s_score = 0
+            #     try:
+            #         m_score = virus_data[url]['data']['attributes']['last_analysis_stats']['malicious']
+            #     except Exception as e:
+            #         m_score = 0
 
-                v_score = m_score + s_score
-            except Exception as e:
-                print("No virus total record")
-                v_score = 0
-                engines_malicious[url] = "No data"
-            
-            # reset list
-            malicious_list = []
+            #     try:
+            #         s_score = virus_data[url]['data']['attributes']['last_analysis_stats']['suspicious']
+            #     except Exception as e:
+            #         s_score = 0
+
+            #     v_score = m_score + s_score
+            # except Exception as e:
+            #     print("No virus total record")
+            #     v_score = 0
+            #     engines_malicious[url] = "No data"
+
+            # # reset list
+            # malicious_list = []
 
             # save to csv
             #   stopgaps
@@ -872,21 +866,23 @@ def writeCsv(data,
 
             writer.writerow({
                 data.FIELD_TITLES[data.DOMAINID]:domain_id,
-                data.FIELD_TITLES[data.PHISHID]:phishtank_data[url]["phish_id"],
+                data.FIELD_TITLES[data.SOURCE_ID]:awg_id,
                 data.FIELD_TITLES[data.DOMAINNAME]:url,
                 data.FIELD_TITLES[data.ACTIVITY_IMG]:activity_data[url]["image"],
                 data.FIELD_TITLES[data.ACTIVITY_REQ]:activity_data[url]["req"],
-                data.FIELD_TITLES[data.OPENCODE]:'-',
-                data.FIELD_TITLES[data.VSCORE]:v_score,
-                data.FIELD_TITLES[data.VENGINES]:engines_malicious[url],
                 data.FIELD_TITLES[data.IP]:ip_data[url].ip,
                 data.FIELD_TITLES[data.IPCOUNTRY]:ip_country,
                 data.FIELD_TITLES[data.REGCOUNTRY]:country,
                 data.FIELD_TITLES[data.REGISTRAR]:registrar,
                 data.FIELD_TITLES[data.TIME]:data.now,
-                data.FIELD_TITLES[data.AWG_ID]:awg_id,
-                data.FIELD_TITLES[data.AWG_DATE]:awg_date})
+                data.FIELD_TITLES[data.SOURCE_DATE]:awg_date})
             domain_id += 1
+
+            # removed
+            # data.FIELD_TITLES[data.PHISHID]:phishtank_data[url]["phish_id"],
+            # data.FIELD_TITLES[data.OPENCODE]:'-',
+            # data.FIELD_TITLES[data.VSCORE]:v_score,
+            # data.FIELD_TITLES[data.VENGINES]:engines_malicious[url],
 
         # update current domain id
         data.CURRENT_DOMAIN_ID = domain_id - 1
@@ -933,20 +929,19 @@ class metadata:
         # CSV COL INDECES #
         ###################
         self.DOMAINID = 0
-        self.PHISHID = 1
+        #self.PHISHID = 1
+        self.SOURCE_ID = 1
         self.DOMAINNAME = 2
         self.ACTIVITY_IMG = 3
         self.ACTIVITY_REQ = 4
-        self.OPENCODE = 5
-        self.VSCORE = 6
-        self.VENGINES = 7
-        self.IP = 8
-        self.IPCOUNTRY = 9
-        self.REGCOUNTRY = 10
-        self.REGISTRAR = 11
-        self.TIME = 12
-        self.AWG_ID = 13
-        self.AWG_DATE = 14
+        #self.VSCORE = 5
+        #self.VENGINES = 6
+        self.IP = 5
+        self.IPCOUNTRY = 6
+        self.REGCOUNTRY = 7
+        self.REGISTRAR = 8
+        self.TIME = 9
+        self.SOURCE_DATE = 10
 
     def print_state(self):
         # File paths
