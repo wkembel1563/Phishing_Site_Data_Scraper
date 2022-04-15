@@ -23,8 +23,7 @@ from ipwhois import IPWhois
 from datetime import datetime
 from pandas.errors import EmptyDataError
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.mobilenet import preprocess_input
@@ -188,15 +187,15 @@ def screenshot(current_id, shot_path, urls):
     """
     try:
         # set up selenium web driver
-        #ser = Service('/home/zombiedomains/wkembelZombie/chromedriver')
-        ser = Service('~/wkembelZombie/chromedriver')
-        op = webdriver.ChromeOptions()
-        op.headless = True
+        BASE_PATH = os.path.dirname(os.path.realpath(__file__))
+        DRIVER_PATH = os.path.join(BASE_PATH, 'geckodriver')
+        op = Options()
         op.page_load_strategy = 'eager'
         op.set_capability('unhandledPromptBehavior', 'accept')
         op.add_argument('--start-maximized')
         op.add_argument('--disable-web-security')
         op.add_argument('--ignore-certificate-errors')
+        op.add_argument("--headless")
 
         # warn user of potential screenshot overwrite 
         #message = "Begin screenshots? (y/n): "
@@ -207,7 +206,7 @@ def screenshot(current_id, shot_path, urls):
         screenshot_paths = {}
         if consent == 'y':
             print("TAKING SCREENSHOTS...", end="")
-            driver = webdriver.Chrome(service=ser, options=op)
+            driver = webdriver.Firefox(options=op, executable_path=DRIVER_PATH)
             #######################
             driver.set_page_load_timeout(10)
             driver.set_script_timeout(10)
