@@ -298,7 +298,6 @@ def screenshot(current_id, shot_path, urls):
         # take screenshots and record activity of site
         screenshot_paths = {}
         if consent == 'y':
-            print("TAKING SCREENSHOTS...", end="")
             driver = webdriver.Firefox(options=op, executable_path=DRIVER_PATH)
             #######################
             driver.set_page_load_timeout(10)
@@ -340,7 +339,6 @@ def screenshot(current_id, shot_path, urls):
                 screenshot_paths[url] = pic_path
 
             driver.quit()
-            print("Done")
 
         else:
             print("Exiting...")
@@ -382,7 +380,6 @@ def checkDomainActivity(domains, screenshot_paths, model):
             activity_data[<url>]['req']     for req module data
             activity_data[<url>]['image']   for classifier data
     """
-    print("CHECKING DOMAIN ACTIVITY...", end="")
     activity_data = {}
     ACTIVE = 0
     INACTIVE = 1
@@ -415,8 +412,6 @@ def checkDomainActivity(domains, screenshot_paths, model):
         except Exception as e:
             activity_data[url]["req"] = "unknown"
 
-    print("Done")
-
     return activity_data
 
 
@@ -436,8 +431,6 @@ def searchPhishTank(domains):
         phishtank data for url including data added to phishtank and phishtank id
         data can be accessed via 'phish_data[<url>]['date' or 'phish_id']
     """
-    print("GETTING PHISHTANK DATA...", end="")
-
     # generate path to file
     base_path = os.path.dirname(os.path.realpath(__file__)) 
     filename = 'PHISHERMAN/log.csv'
@@ -477,7 +470,6 @@ def searchPhishTank(domains):
         # reset for nxt iteration
         container.clear()
     
-    print("DONE")
     return phish_data
 
 
@@ -518,8 +510,6 @@ def getWhoIs(domains):
             a dictionary of the whois data for each domain
             the dictionary is indexed by domain url
     """
-    print("GETTING WHOIS DATA...")
-
     whois_data = {}
 
     # build dictionary of whois data for each domain
@@ -575,7 +565,6 @@ def getWhoIs(domains):
 
         whois_data[url] = w
 
-    print("DONE")
     return whois_data
 
 
@@ -600,7 +589,6 @@ def getVirusTotal(token, domains):
             a dictionary of the virustotal data for each domain
             the dictionary is indexed by domain url
     """
-    print("GETTING VIRUSTOTAL DATA...", end="")
     virus_data = {}
 
     # request virustotal scan each domain in list
@@ -625,7 +613,6 @@ def getVirusTotal(token, domains):
         # create dict entry for report
         virus_data[domain] = report
 
-    print("DONE")
     return virus_data
 
 
@@ -663,7 +650,6 @@ def getIpInfo(handler, domains):
             the dictionary is indexed by domain url
             
     """
-    print("GETTING IP DATA...", end="")
     ip_data = {}
 
     # get ip data for each domain
@@ -677,7 +663,6 @@ def getIpInfo(handler, domains):
         except Exception as e:
             ip_data[url] = failedFetch()
 
-    print("Done")
     return ip_data
 
 def logMeta(data, 
@@ -727,7 +712,6 @@ def logMeta(data,
     -------
     ( None )
     """
-    print("LOGGING METADATA...", end="")
     log = {}
     domain_id = data.CURRENT_DOMAIN_ID + 1
 
@@ -769,8 +753,6 @@ def logMeta(data,
 
             # reset
             log.clear()
-
-    print("DONE")
 
 
 def writeCsv(data, 
@@ -814,8 +796,6 @@ def writeCsv(data,
     -------
     ( None )
     """
-    print("WRITING TO CSV...", end="")
-
     # set csv write mode based on state of file
     if data.CURRENT_DOMAIN_ID == data.EMPTY: 
         data.write_mode = 'w' 
@@ -910,8 +890,6 @@ def writeCsv(data,
 
         # update current domain id
         data.CURRENT_DOMAIN_ID = domain_id - 1
-
-    print("DONE")
 
 
 ###########################
@@ -1018,8 +996,9 @@ class metadata:
                 self.META_RELATIVE_PATH = 'META/PHISH'
 
             else:
-                print("DATA INIT ERROR: invalid data source specified. \
-                'cert' or 'phish' is accepted.")
+                print("DATA INIT ERROR: invalid data source specified.\
+                'cert' or 'phish' is accepted")
+                exit(1)
 
         ## invalid num of args
         elif arg_len != self.NUM_OF_ARGS:
