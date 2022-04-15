@@ -412,8 +412,25 @@ def checkDomainActivity(domains, screenshot_paths, model):
 
     return activity_data
 
-
 def searchPhishTank(domains):
+    """SEARCH PHISH TANK
+
+    get the activity data for each domain from phishtank api
+
+    Parameters:
+    -----------
+    domains: (list)
+        urls to lookup
+
+    Returns:
+    --------
+    phish_data: (dictionary)
+        phishtank activity value for each url
+        data can be accessed via 'phish_data[<url>][?????]
+    """
+    x = 1
+
+def searchPhisherman(domains):
     """SEARCH PHISH TANK
 
     retrieve url, date added, phishtank id for each url using the phisherman scraper
@@ -898,7 +915,8 @@ class metadata:
         self.IPINFO_ACCESS_TOKEN = '2487a60e548477'                          
         self.VIRUS_TOTAL_ACCESS_TOKEN = 'd80137e9f5e82896483095b49a7f0e73b5fd0dbc7bd98f1d418ff3ae9c83951e'
         self.twilio_sid = 'AC643cb218d386523498c4e54cab0fdcf4' 
-        self.twilio_auth_token = '4794ef24fc522c0f5569afbd672896f0' 
+        self.twilio_auth_token = '4794ef24fc522c0f5569afbd672896f0'
+        self.phishtank_api_key = '8a2c896086a34c5a7c5a076948679e25af31e93b9b34b6265f1763acb04453aa'
 
         # FILES PATHS
         self.BASE_PATH = os.path.dirname(os.path.realpath(__file__))
