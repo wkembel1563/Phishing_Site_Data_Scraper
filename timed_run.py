@@ -61,7 +61,10 @@ whois_data = getWhoIs(domains)
 print("DONE\n")
 
 # print("GETTING PHISHTANK DATA...")
-# phishtank_data = searchPhishTank(domains)
+# phishtank_data = searchPhishTank(data.phishtank_api_key,
+#                                  domains,
+#                                  awg_data,
+#                                  args[data.DATASOURCE])
 # print("DONE\n")
 
 # print("GETTING VIRUSTOTAL DATA...")

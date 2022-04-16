@@ -15,7 +15,8 @@ print("\nIGNORE ERROR ##################")
 import tensorflow as tf
 print("END ERROR    ##################\n")
 import numpy as np
-import sys 
+import sys
+import xml.etree.ElementTree as ET
 from time import time
 from twilio.rest import Client
 from ipinfo.handler_utils import cache_key
@@ -412,7 +413,83 @@ def checkDomainActivity(domains, screenshot_paths, model):
 
     return activity_data
 
-def searchPhishTank(domains):
+
+def encodePhishReqURL(uri):
+    url = "http://checkurl.phishtank.com/checkurl/"
+    new_check_bytes = uri.encode()
+    base64_bytes = base64.b64encode(new_check_bytes)
+    base64_new_check = base64_bytes.decode('ascii')
+    url += base64_new_check
+    return url
+
+
+def queryPhishAPI(key, url):
+    """This function sends a request."""
+    headers = {
+            'format': 'xml',
+            'app_key': key
+     }
+
+    response = requests.request("POST", url=url, headers=headers)
+
+    return response
+
+
+def parsePhishTankResponse(xml_string):
+    #
+    phish_id = 0
+    in_db = False
+
+    root = ET.fromstring(xml_string)
+    results = root.find('results')
+    url0 = results.find('url0')
+    in_db = url0.find('in_database').text
+
+    if in_db == 'true':
+        phish_id = int(url0.find('phish_id').text)
+        in_db = True
+    else:
+        phish_id = -1
+        in_db = False
+
+    return phish_id, in_db
+
+
+def phishTankActivity(phish_id):
+    """PHISH TANK ACTIVITY
+
+    check the phishtank details page for a particular phish_id
+    parses the html code to see if its online
+
+    Parameters:
+    -----------
+    phish_id: (int)
+        phish tank id of the url to check
+
+    Returns:
+    --------
+    ( None )
+    """
+    url = 'https://phishtank.org/phish_detail.php?phish_id='
+    id_str = str(phish_id)
+    url += id_str
+
+    r = requests.request("GET", url=url)
+    s = r.text
+
+    result = ''
+    if "currently ONLINE" in s:
+        result = "active"
+    elif ("currently offline" in s) or ("currently OFFLINE" in s):
+        result = "inactive"
+    else:
+        result = "invalid"
+        print(s)
+
+    return result
+
+
+def searchPhishTank(key, domains, url_file_data, data_source):
     """SEARCH PHISH TANK
 
     get the activity data for each domain from phishtank api
@@ -422,13 +499,40 @@ def searchPhishTank(domains):
     domains: (list)
         urls to lookup
 
+
+
     Returns:
     --------
     phish_data: (dictionary)
         phishtank activity value for each url
         data can be accessed via 'phish_data[<url>][?????]
     """
-    x = 1
+    phish_data = {}
+    for url in domains:
+        # domain came from phishtank
+        if data_source == "phish":
+            phish_id = url_file_data[url]["awg_id"]
+            activity = phishTankActivity(phish_id)
+            phish_data[url] = activity
+            phish_data[phish_id] = phish_id
+
+        else:
+            # check if the domain is in phishtank
+            url_encoded = encodePhishReqURL(url)
+            r = queryPhishAPI(key, url_encoded)
+            phish_id, in_db = parsePhishTankResponse(r.text)
+
+            # scrape phishtanks activity status
+            if in_db:
+                activity = phishTankActivity(phish_id)
+                phish_data[url] = activity
+                phish_data[phish_id] = phish_id
+            else:
+                phish_data[url] = 'n_a'
+                phish_data[phish_id] = 'none'
+
+    return phish_data
+
 
 def searchPhisherman(domains):
     """SEARCH PHISH TANK
