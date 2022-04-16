@@ -865,8 +865,12 @@ def logMeta(data,
                 ip_dict = data.HANDLER.cache[ip_key]
                 log["ip_data"] = ip_dict
 
-            log_js = json.dumps(log, indent=1, sort_keys=True)
-            logfile.write(log_js)
+            try:
+                log_js = json.dumps(log, indent=1, sort_keys=True)
+                logfile.write(log_js)
+            except Exception as e:
+                print("LOG META ERROR: could not log: ", url)
+                print(e)
 
             # reset
             log.clear()
