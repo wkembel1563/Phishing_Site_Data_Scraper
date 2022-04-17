@@ -61,6 +61,7 @@ def getFieldNames():
     names.append('domain_name')
     names.append('activity_img')
     names.append('activity_req')
+    names.append('activity_phishtank')
     #names.append('virus_total_score')
     #names.append('virus_total_engines')
     names.append('ip_address')
@@ -503,11 +504,13 @@ def queryPhishAPI(key, database):
 
     try:
         response = requests.request("POST", url=url)
+        responded = True
     except Exception as e:
         print(e)
         response = False
+        responded = False 
 
-    return response
+    return responded, response
 
 
 def strToDataFrame(file_name, string, data_format):
@@ -540,8 +543,8 @@ def strToDataFrame(file_name, string, data_format):
     if data_format == "csv":
         # log old versions of database
         if os.path.exists(file_path):
-            log_name = "META/PHISHDB/"
-            log_name += datetime.now().strftime("%m/%d/%Y_%H:%M:%S_phishdb.csv")
+            log_name = "CSV/PHISHDB/"
+            log_name += datetime.now().strftime("%m_%d_%Y_%H_%M_%S_phishdb.csv")
             log_path = os.path.join(base_path, log_name)
             shutil.move(file_path, log_path)
 
@@ -550,16 +553,23 @@ def strToDataFrame(file_name, string, data_format):
             f.write(string)
 
         # build dataframe
-        df = pd.read_csv(file_path)
+        try:
+            df = pd.read_csv(file_path)
+            success = True
+        except Exception as e:
+            print(e)
+            df = False
+            success = False
 
     else:
         # unable to read db csv
         df = False
+        success = False
 
-    return df
+    return success, df
 
 
-def searchPhishTank(key, db_name, domains, source):
+def searchPhishTank(key, db_name, db_file, domains, source):
     """SEARCH PHISH TANK
 
     get the activity data for each domain from phishtank api
@@ -570,6 +580,9 @@ def searchPhishTank(key, db_name, domains, source):
         api key
 
     db_name: (string)
+        name of phishtank db to access
+
+    db_file: (string)
         filename to save db as
 
     domains: (list)
@@ -584,19 +597,11 @@ def searchPhishTank(key, db_name, domains, source):
         phishtank activity value for each url
         data can be accessed via 'phish_data[<url>][?????]
     """
-    """
-    get updated database
-
-    check if the url is in it
-
-    if so, log its activity value, otherwise '-'
-    """
     phish_data = {}
     if source == "phish":
-
         # contact phishtank to get db
-        db_response = queryPhishAPI(key, db_name)
-        if not db_response:
+        responded, db_response = queryPhishAPI(key, db_name)
+        if not responded:
             message = "SEARCH PHISH TANK ERROR: could not contact phishtank. "
             message += "phishtank activity values set to 'error'"
             print(message)
@@ -606,8 +611,8 @@ def searchPhishTank(key, db_name, domains, source):
 
 
         # build pandas dataframe of db
-        df = strToDataFrame(db_name, db_response.text, "csv")
-        if not df:
+        success, df = strToDataFrame(db_file, db_response.text, "csv")
+        if not success:
             message = "SEARCH PHISH TANK ERROR: could not create phishtank dataframe. "
             message += "phishtank activity values set to -"
             print(message)
@@ -615,9 +620,9 @@ def searchPhishTank(key, db_name, domains, source):
                 phish_data[url] = 'error'
             return
 
-        # log phishtank activity value for url
+        # log activity value for url
         for url in domains:
-            # get phishtank record
+            # get db record
             filt = (df.url == url)
             record = df[filt]
 
@@ -630,32 +635,6 @@ def searchPhishTank(key, db_name, domains, source):
         # not looking for cert urls activity
         for url in domains:
             phish_data[url] = 'n_a'
-
-
-
-
-    for url in domains:
-        # domain came from phishtank
-        if data_source == "phish":
-            phish_id = url_file_data[url]["awg_id"]
-            activity = phishTankActivity(phish_id)
-            phish_data[url] = activity
-            phish_data[phish_id] = phish_id
-
-        else:
-            # check if the domain is in phishtank
-            url_encoded = encodePhishReqURL(url)
-            r = queryPhishAPI(key, url_encoded)
-            phish_id, in_db = parsePhishTankResponse(r.text)
-
-            # scrape phishtanks activity status
-            if in_db:
-                activity = phishTankActivity(phish_id)
-                phish_data[url] = activity
-                phish_data[phish_id] = phish_id
-            else:
-                phish_data[url] = 'n_a'
-                phish_data[phish_id] = 'none'
 
     return phish_data
 
@@ -915,6 +894,7 @@ def logMeta(data,
             whois_data,
             ip_data,
             awg_data,
+            phishtank_data,
             domains): 
     """LOG METADATA
 
@@ -931,9 +911,6 @@ def logMeta(data,
     data: (metadata class object)
         contains metadata about program state and files
 
-    phishtank_data: (dict)
-        contains url phishtank id and date added
-
     activity_data: (dict)
         contains cnn classifier activity prediction and request
         module result for each url
@@ -942,9 +919,12 @@ def logMeta(data,
         whois data for each domain
         indexed by url from input url file
 
-    virus_data: (dict)
-        virus total api data for each domain
-        indexed by url from input url file
+    #virus_data: (dict)
+    #    virus total api data for each domain
+    #    indexed by url from input url file
+
+    phishtank_data: (dict)
+        contains phishtank activity for each url
 
     ip_data: (dict)
         ip data from ipinfo api for each domain
@@ -975,9 +955,10 @@ def logMeta(data,
         file_name += '.json'
         file_path = data.META_PATH + '/' + file_name
 
+        # write metadata to logfile
         with open(file_path, 'w') as logfile:
             log["url"] = url
-            #log["phishtank_data"] = phishtank_data[url]
+            log["phishtank_data"] = phishtank_data[url]
             log["activity_data"] = activity_data[url]
             log["whois_data"] = whois_data[url]
             #log["virus_data"] = virus_data[url]
@@ -1007,6 +988,7 @@ def writeCsv(data,
             whois_data,
             ip_data,
             awg_data,
+            phishtank_data,
             domains): 
     """WRITE CSV
 
@@ -1121,6 +1103,7 @@ def writeCsv(data,
                 data.FIELD_TITLES[data.DOMAINNAME]:url,
                 data.FIELD_TITLES[data.ACTIVITY_IMG]:activity_data[url]["image"],
                 data.FIELD_TITLES[data.ACTIVITY_REQ]:activity_data[url]["req"],
+                data.FIELD_TITLES[data.ACTIVITY_PHISH]:phishtank_data[url],
                 data.FIELD_TITLES[data.IP]:ip_data[url].ip,
                 data.FIELD_TITLES[data.IPCOUNTRY]:ip_country,
                 data.FIELD_TITLES[data.REGCOUNTRY]:country,
@@ -1187,14 +1170,15 @@ class metadata:
         self.DOMAINNAME = 2
         self.ACTIVITY_IMG = 3
         self.ACTIVITY_REQ = 4
+        self.ACTIVITY_PHISH = 5
         #self.VSCORE = 5
         #self.VENGINES = 6
-        self.IP = 5
-        self.IPCOUNTRY = 6
-        self.REGCOUNTRY = 7
-        self.REGISTRAR = 8
-        self.TIME = 9
-        self.SOURCE_DATE = 10
+        self.IP = 6
+        self.IPCOUNTRY = 7
+        self.REGCOUNTRY = 8
+        self.REGISTRAR = 9
+        self.TIME = 10
+        self.SOURCE_DATE = 11
 
     def print_state(self):
         # File paths

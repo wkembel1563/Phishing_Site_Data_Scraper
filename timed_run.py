@@ -62,9 +62,10 @@ print("DONE\n")
 
 print("GETTING PHISHTANK DATA...")
 phishtank_data = searchPhishTank(data.phishtank_api_key,
-                                 db_name="pt_database.csv",
-                                 domains,
-                                 args[data.DATASOURCE])
+                                 db_name="online-valid.csv",
+                                 db_file="pt_database.csv",
+                                 domains=domains,
+                                 source=args[data.DATASOURCE])
 print("DONE\n")
 
 # print("GETTING VIRUSTOTAL DATA...")
@@ -82,6 +83,7 @@ logMeta(data,
         whois_data,
         ip_data,
         awg_data,
+        phishtank_data,
         domains)
 print("DONE\n")
 
@@ -92,6 +94,7 @@ writeCsv(data,
         whois_data,
         ip_data,
         awg_data,
+        phishtank_data,
         domains)
 print("DONE\n")
 
