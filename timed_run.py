@@ -60,12 +60,12 @@ print("GETTING WHOIS DATA...")
 whois_data = getWhoIs(domains)
 print("DONE\n")
 
-# print("GETTING PHISHTANK DATA...")
-# phishtank_data = searchPhishTank(data.phishtank_api_key,
-#                                  domains,
-#                                  awg_data,
-#                                  args[data.DATASOURCE])
-# print("DONE\n")
+print("GETTING PHISHTANK DATA...")
+phishtank_data = searchPhishTank(data.phishtank_api_key,
+                                 db_name="pt_database.csv",
+                                 domains,
+                                 args[data.DATASOURCE])
+print("DONE\n")
 
 # print("GETTING VIRUSTOTAL DATA...")
 # virus_data = getVirusTotal(data.VIRUS_TOTAL_ACCESS_TOKEN, domains)

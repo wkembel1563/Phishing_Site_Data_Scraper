@@ -495,17 +495,13 @@ def queryPhishAPI(key, database):
 
     makes a POST request for updated phishtank database
 
-    returns request response, or False if error occurred
+    returns request response
     """
     url = 'http://data.phishtank.com/data/'
     url = url + key + '/'
     url += database
 
-    try:
-        response = requests.request("POST", url=url)
-    except Exception as e:
-        print(e)
-        response = False
+    response = requests.request("POST", url=url)
 
     return response
 
@@ -559,24 +555,17 @@ def strToDataFrame(file_name, string, data_format):
     return df
 
 
-def searchPhishTank(key, db_name, domains, source):
+def searchPhishTank(key, db_name, domains):
     """SEARCH PHISH TANK
 
     get the activity data for each domain from phishtank api
 
     Parameters:
     -----------
-    key: (string)
-        api key
-
-    db_name: (string)
-        filename to save db as
-
     domains: (list)
         urls to lookup
 
-    source: (string)
-        url source (certstream or phishtank) for 'domains'
+
 
     Returns:
     --------
@@ -591,49 +580,20 @@ def searchPhishTank(key, db_name, domains, source):
 
     if so, log its activity value, otherwise '-'
     """
+    db_response = queryPhishAPI(key, db_name)
+
+    df = strToDataFrame("pt_database.csv", db_response.text, "csv")
+
+    BASE_PATH = os.path.dirname(os.path.realpath(__file__))
+
+    db_urls = list(db.url)
+
+    # get phishtank activity value for url
+    for url in domains:
+        if url in db_urls:
+
+
     phish_data = {}
-    if source == "phish":
-
-        # contact phishtank to get db
-        db_response = queryPhishAPI(key, db_name)
-        if not db_response:
-            message = "SEARCH PHISH TANK ERROR: could not contact phishtank. "
-            message += "phishtank activity values set to 'error'"
-            print(message)
-            for url in domains:
-                phish_data[url] = 'error'
-            return
-
-
-        # build pandas dataframe of db
-        df = strToDataFrame(db_name, db_response.text, "csv")
-        if not df:
-            message = "SEARCH PHISH TANK ERROR: could not create phishtank dataframe. "
-            message += "phishtank activity values set to -"
-            print(message)
-            for url in domains:
-                phish_data[url] = 'error'
-            return
-
-        # log phishtank activity value for url
-        for url in domains:
-            # get phishtank record
-            filt = (df.url == url)
-            record = df[filt]
-
-            # empty record indicates url is not online
-            if record.empty:
-                phish_data[url] = 'inactive'
-            else:
-                phish_data[url] = 'active'
-    else:
-        # not looking for cert urls activity
-        for url in domains:
-            phish_data[url] = 'n_a'
-
-
-
-
     for url in domains:
         # domain came from phishtank
         if data_source == "phish":
