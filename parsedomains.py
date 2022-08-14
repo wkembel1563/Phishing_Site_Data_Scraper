@@ -1129,11 +1129,11 @@ class metadata:
 
     def __init__(self):
         # ACCESS TOKENS
-        self.IPINFO_ACCESS_TOKEN = '2487a60e548477'                          
-        self.VIRUS_TOTAL_ACCESS_TOKEN = 'd80137e9f5e82896483095b49a7f0e73b5fd0dbc7bd98f1d418ff3ae9c83951e'
-        self.twilio_sid = 'AC643cb218d386523498c4e54cab0fdcf4' 
-        self.twilio_auth_token = '4794ef24fc522c0f5569afbd672896f0'
-        self.phishtank_api_key = '8a2c896086a34c5a7c5a076948679e25af31e93b9b34b6265f1763acb04453aa'
+        self.IPINFO_ACCESS_TOKEN = '-'                          
+        self.VIRUS_TOTAL_ACCESS_TOKEN = '-'
+        self.twilio_sid = '-' 
+        self.twilio_auth_token = '-'
+        self.phishtank_api_key = '-'
         self.phishtank_db = 'online-valid.csv'
 
         # FILES PATHS
